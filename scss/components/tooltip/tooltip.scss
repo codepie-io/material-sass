@@ -1,0 +1,85 @@
+@import "variables";
+
+// ==========  ToolTip   ========== //
+
+.md-tooltip {
+  position: fixed;
+  z-index: 1000;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-width: 1px;
+  max-width: 100%;
+  min-height: 1px;
+  max-height: 100%;
+  pointer-events: none;
+  visibility: hidden;
+
+  &__surface {
+    max-width: 250px;
+    margin: 14px;
+    padding: 6px 8px;
+    font-size: var(--tooltip-desktop-font-size);
+    line-height: 12px;
+    color: var(--tooltip-text-color);
+    background-color: RGBA(var(--tooltip-background), .9);
+    border-radius: var(--tooltip-border-radius);
+    opacity: 0;
+    transform: scale(0);
+
+    @media (max-width: $screen-tablet-breakpoint - 1px) {
+      padding-right: 16px;
+      padding-left: 16px;
+      font-size: var(--tooltip-mobile-font-size);
+      line-height: 20px;
+      border-radius: 4px;
+    }
+  }
+
+  &--primary {
+    --tooltip-background: var(--color-primary);
+    --tooltip-text-color: RGB(var(--color-primary-contrast));
+  }
+
+  &--accent {
+    --tooltip-background: var(--color-accent);
+    --tooltip-text-color: RGB(var(--color-accent-contrast));
+  }
+
+  &--success {
+    --tooltip-background: var(--color-success);
+    --tooltip-text-color: RGB(var(--color-success-contrast));
+  }
+
+  &--warning {
+    --tooltip-background: var(--color-warning);
+    --tooltip-text-color: RGB(var(--color-warning-contrast));
+  }
+
+  &--danger {
+    --tooltip-background: var(--color-danger);
+    --tooltip-text-color: RGB(var(--color-danger-contrast));
+  }
+
+  &--visible {
+    visibility: visible;
+
+    .md-tooltip__surface {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  &--animating {
+    .md-tooltip__surface {
+      will-change: opacity, transform;
+      @include material-animation-default(.15s);
+    }
+  }
+
+  &--hiding {
+    .md-tooltip__surface {
+      transition-duration: 75ms;
+    }
+  }
+}

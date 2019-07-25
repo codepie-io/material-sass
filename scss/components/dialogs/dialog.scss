@@ -1,0 +1,347 @@
+@import "variables";
+
+// ==========  Dialog  ========== //
+
+.md-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 24;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  /* Elements */
+
+  &__scrim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: var(--color-app-dialog-scrim);
+    opacity: 0;
+    will-change: opacity;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    opacity: 0;
+    transform: scale(.8);
+  }
+
+  &__surface {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    min-width: 280px;
+    max-width: 100%;
+    max-height: calc(100vh - 32px);
+    background-color: var(--color-app-card-background);
+    border-radius: var(--dialog-border-radius);
+    box-shadow: var(--shadow-24dp);
+  }
+
+  &__content {
+    flex-grow: 1;
+    margin: 0;
+    overflow: auto;
+    padding: 20px 24px;
+    -webkit-overflow-scrolling: touch;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    letter-spacing: .03125em;
+  }
+
+  &__content-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid transparent;
+
+    & + .md-dialog__content {
+      padding-top: 0;
+    }
+  }
+
+  &__header-action-dismissive {
+    margin-right: 20px;
+    margin-left: -8px;
+  }
+
+  &__header-title {
+    flex: 1 1 100%;
+    margin: 0;
+
+    @include md-typography-title();
+
+    line-height: 24px;
+  }
+
+  &__header-subtitle {
+    color: var(--color-app-text-secondary);
+  }
+
+  &__footer {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 52px;
+    margin: 0;
+    padding: 8px;
+    border-top: 1px solid transparent;
+  }
+
+  &__action:nth-child(2) {
+    margin-left: 8px;
+  }
+
+  &__header-action-affirmative {
+    margin-right: -8px;
+    margin-left: 16px;
+  }
+
+  /* Modifiers */
+
+  &--round-corner {
+    .md-dialog__surface {
+      --dialog-border-radius: 16px;
+    }
+  }
+
+  &--casting-border {
+    .md-dialog__header {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--color-app-divider);
+    }
+
+    .md-dialog__content {
+      padding-top: 24px;
+    }
+  }
+
+  &--sharp-corner {
+    .md-dialog__surface {
+      --dialog-border-radius: 0;
+    }
+  }
+
+  &--center-origin {
+    align-items: center;
+
+    .md-dialog__surface {
+      transform: translateY(0) scale(.8);
+    }
+  }
+
+  &--scroll-lock {
+    overflow: hidden;
+  }
+
+  &--full-screen {
+    justify-content: flex-start;
+
+    .md-dialog__surface {
+      --dialog-border-radius: 0;
+      width: 100%;
+      max-width: none;
+      height: 100%;
+    }
+
+    .md-dialog__header {
+      min-height: 56px;
+      max-height: 92px;
+      overflow: hidden;
+      padding: 0 16px 0;
+      color: RGB(var(--color-primary-contrast));
+      background-color: RGB(var(--color-primary));
+      box-shadow: var(--shadow-4dp);
+    }
+
+    .md-dialog__content {
+      flex-grow: 1;
+    }
+  }
+
+  &--scrollable {
+    .md-dialog__content {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .md-dialog__header {
+      padding-bottom: 15px;
+      border-color: var(--color-app-divider);
+    }
+
+    .md-dialog__footer {
+      border-color: var(--color-app-divider);
+    }
+  }
+
+  &--open,
+  &--opening,
+  &--closing {
+    display: flex;
+  }
+
+  &--closing {
+    .md-dialog__scrim,
+    .md-dialog__container {
+      transition: opacity 75ms linear;
+      will-change: opacity;
+    }
+    .md-dialog__container {
+      transform: scale(1);
+    }
+  }
+
+  &--opening {
+    .md-dialog__scrim {
+      transition: opacity 150ms linear;
+      will-change: opacity;
+    }
+
+    .md-dialog__container {
+      transition: opacity 75ms linear, material-animation-enter(transform, 150ms);
+      will-change: transform, opacity;
+    }
+  }
+
+  &--open {
+    .md-dialog__scrim {
+      opacity: 1;
+    }
+
+    .md-dialog__container {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &--sm {
+    .md-dialog__surface {
+      width: 300px;
+    }
+  }
+
+  &--lg {
+    .md-dialog__surface {
+      width: 900px;
+    }
+  }
+
+  &--primary {
+    .md-dialog__header {
+      color: RGB(var(--color-primary-contrast));
+      background-color: RGB(var(--color-primary));
+    }
+
+    .md-dialog__content {
+      padding-top: 24px;
+    }
+  }
+
+  &--accent {
+    .md-dialog__header {
+      color: RGB(var(--color-accent-contrast));
+      background-color: RGB(var(--color-accent));
+    }
+
+    .md-dialog__content {
+      padding-top: 24px;
+    }
+  }
+
+  &--dense {
+    .md-dialog__header {
+      padding-top: 16px;
+    }
+
+    .md-dialog__header-title {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: $screen-phone-breakpoint) {
+  .md-dialog {
+    min-width: 280px;
+  }
+
+  .md-dialog__surface {
+    min-width: 280px;
+  }
+
+  .md-dialog__content {
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $screen-tablet-breakpoint) {
+  .md-dialog--animating {
+    .md-dialog__shadow {
+      transition-duration: .3s;
+    }
+
+    .md-dialog__surface {
+      transition-duration: .3s;
+    }
+  }
+
+  .md-dialog--leaving {
+    .md-dialog__shadow {
+      transition-duration: .15s;
+    }
+
+    .md-dialog__surface {
+      transition-duration: .15s;
+    }
+  }
+}
+
+.body--dialog-open {
+  overflow: hidden;
+  transition: none !important;
+}
+
+.dialog-virtual-scroll {
+  position: absolute;
+  top: -999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+  visibility: hidden;
+}
+
+@media (max-width: 592px) {
+  .md-dialog .md-dialog__surface {
+    max-width: calc(100vw - 32px);
+  }
+}
+
+@media (min-width: 592px) {
+  .md-dialog .md-dialog__surface {
+    max-width: 560px;
+  }
+}

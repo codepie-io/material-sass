@@ -1,0 +1,24 @@
+// ==========  Collapse  ========== //
+
+.md-collapse {
+
+  &--collapsed {
+    display: none;
+  }
+
+  &--animating {
+    position: relative;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: visible;
+    transition-property: height;
+    will-change: height;
+
+    @include material-animation-default(.35s);
+  }
+
+  &--open {
+    display: block;
+  }
+}

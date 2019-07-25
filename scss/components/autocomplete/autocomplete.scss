@@ -1,0 +1,159 @@
+// ==========  Autocomplete   ========== //
+
+.md-autocomplete {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  min-width: 272px;
+  max-width: 480px;
+  height: 40px;
+  margin: 0;
+  overflow: visible;
+  color: var(--color-app-text-secondary);
+  background-color: var(--color-app-divider);
+  border-radius: 2px;
+  @include material-animation-default(.15s);
+  transition-property: all;
+
+  &__wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-left: 0;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .2s;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    border: none;
+    outline: 0;
+    box-shadow: none;
+    padding: 0 16px;
+    background: none;
+    line-height: 40px;
+    -webkit-appearance: none;
+    appearance: none;
+    color: rgba(0, 0, 0, .54);
+    @include material-animation-default(.15s);
+    transition-property: all;
+
+    &::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, .54);
+    }
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__showcase-icon {
+    &.md-button--icon {
+      pointer-events: none;
+      cursor: none;
+      &::after,
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  &__visible--on-open {
+    opacity: 0;
+    @include material-animation-default(.15s);
+    transition-property: color, opacity;
+    pointer-events: none;
+  }
+
+  &__md-autocomplete__hidden--on-open {
+    opacity: 1;
+    @include material-animation-default(.15s);
+    transition-property: color, opacity;
+  }
+
+  &--with-icon {
+    .md-autocomplete__input {
+      padding-left: 40px;
+    }
+
+    .md-autocomplete__left-icon {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      color: var(--color-light-secondary);
+      @include material-animation-default(.15s);
+      transition-property: color, opacity;
+    }
+  }
+
+  &--has-shadow {
+    box-shadow: none;
+  }
+
+  &--large {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    height: 48px;
+  }
+
+  &--has-shadow-persistent {
+    box-shadow: var(--shadow-1dp);
+    color: var(--color-dark);
+    background-color: var(--color-light--card-background);
+
+    & .md-autocomplete__input::-webkit-input-placeholder {
+      color: var(--color-dark-secondary);
+    }
+
+    & .material-icons {
+      color: var(--color-dark-secondary);
+    }
+  }
+
+  &--open {
+    color: var(--color-dark);
+    background-color: var(--color-light--card-background);
+
+    & .md-autocomplete__input::-webkit-input-placeholder {
+      color: var(--color-dark-secondary);
+    }
+
+    & .material-icons {
+      color: var(--color-dark-secondary);
+    }
+
+    &.md-autocomplete--has-shadow {
+      box-shadow: var(--shadow-2dp);
+    }
+    & .md-autocomplete__visible--on-open {
+      pointer-events: auto;
+      opacity: 1;
+    }
+    & .md-autocomplete__hidden--on-open {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &--fixed {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: -1;
+    width: calc(100% - 16px);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+
+}

@@ -1,0 +1,107 @@
+// ==========  Typography  ========== //
+
+p {
+  @include md-typography-body-1();
+}
+
+.md-typography {
+
+  &-display-4 {
+    @include md-typography-display-4;
+  }
+
+  &-display-3 {
+    @include md-typography-display-3;
+  }
+
+  &-display-2 {
+    @include md-typography-display-2;
+  }
+
+  &-display-1 {
+    @include md-typography-display-1;
+  }
+
+  &-headline {
+    @include md-typography-headline;
+  }
+
+  &-title {
+    @include md-typography-title();
+  }
+
+  &-subhead {
+    @include md-typography-subhead;
+  }
+
+  &-body-2 {
+    @include md-typography-body-2;
+  }
+
+  &-body-1 {
+    @include md-typography-body-1;
+  }
+
+  &-caption {
+    @include md-typography-caption;
+  }
+}
+
+.md-typography {
+
+  &-text-left {
+    text-align: left;
+  }
+
+  &-text-right {
+    text-align: right;
+  }
+
+  &-text-center {
+    text-align: center;
+  }
+
+  &-text-justify {
+    text-align: justify;
+  }
+
+  &-text-nowrap {
+    white-space: nowrap;
+  }
+
+  &-text-lowercase {
+    text-transform: lowercase;
+  }
+
+  &-text-uppercase {
+    text-transform: uppercase;
+  }
+
+  &-text-capitalize {
+    text-transform: capitalize;
+  }
+
+  &-font-thin {
+    font-weight: 200 !important;
+  }
+
+  &-font-light {
+    font-weight: 300 !important;
+  }
+
+  &-font-regular {
+    font-weight: 400 !important;
+  }
+
+  &-font-medium {
+    font-weight: 500 !important;
+  }
+
+  &-font-bold {
+    font-weight: 700 !important;
+  }
+
+  &-font-black {
+    font-weight: 900 !important;
+  }
+}

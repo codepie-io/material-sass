@@ -1,0 +1,31 @@
+@import "./variable";
+
+// ==========  Backdrop   ========== //
+.md-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  content: "";
+  background: var(--color-app-disable);
+  opacity: 0;
+  will-change: opacity;
+
+  &--transparent {
+    background: transparent;
+  }
+
+  &--animating {
+    will-change: opacity;
+    transition-property: opacity;
+    @include material-animation-default(.3s);
+  }
+
+  &--showing {
+    z-index: 4;
+    pointer-events: auto;
+    opacity: 1;
+  }
+}

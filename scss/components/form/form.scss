@@ -1,0 +1,25 @@
+@import "variables";
+
+// ==========  Form  ========== //
+
+.md-form {
+  display: flex;
+  flex-direction: column;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: var(--form-gap-negative);
+    margin-left: var(--form-gap-negative);
+  }
+
+  &__item {
+    // display: inline-flex;
+    flex: 1 1 auto;
+    // align-items: center;
+    min-width: 240px;
+    padding: var(--form-gap);
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,10 @@
+@mixin button-variant($color) {
+  --button-background-hover: RGBA(var(--color-#{$color}), 1);
+  --button-color: RGB(var(--color-#{$color}));
+
+  &.md-button--raised {
+    --button-background-hover: RGBA(var(--color-#{$color}-contrast), 1);
+    --button-color: RGB(var(--color-#{$color}-contrast));
+    --button-background: RGB(var(--color-#{$color}));
+  }
+}

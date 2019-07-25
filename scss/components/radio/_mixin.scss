@@ -1,0 +1,4 @@
+@mixin radio-variant($color) {
+  --radio-theme: RGB(var(--color-#{$color}));
+  --radio-theme-contrast: RGBA(var(--color-#{$color}-contrast), 1);
+}

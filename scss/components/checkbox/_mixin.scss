@@ -1,0 +1,4 @@
+@mixin checkbox-variant($color) {
+  --checkbox-theme: RGB(var(--color-#{$color}));
+  --checkbox-theme-contrast: RGBA(var(--color-#{$color}-contrast), 1);
+}

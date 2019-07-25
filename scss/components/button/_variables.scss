@@ -1,0 +1,31 @@
+// ==========  Buttons  ========== //
+
+:root {
+  --button-color: var(--color-app-text);
+  --button-background: transparent;
+  --button-background-hover: var(--color-theme-contrast);
+  --button-min-width: 64px;
+  --button-width: auto;
+  --button-height: 36px;
+  --button-border-color: var(--button-color);
+  --button-padding-x: 16px;
+  --button-padding-y: 0;
+  --button-font-family: Roboto, sans-serif;
+  --button-font-size: 14px;
+  --button-font-weight: 500;
+  --button-text-transform: none;
+  --button-border-radius: 4px;
+  --button-padding-x-dense: 8px;
+
+  /* button icon */
+  --button-width-icon: 40px;
+  --button-icon-size: 18px;
+
+  /* button group */
+  --button-group-size: 36px;
+  --button-group-width: 48px;
+  --button-group-icon-font-size: 24px;
+  --button-group-font-color: rgba(0, 0, 0, .54);
+  --button-background-disabled: rgba(0, 0, 0, .12);
+  --button-group-border-radius: 4px;
+}

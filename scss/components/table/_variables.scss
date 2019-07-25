@@ -1,0 +1,25 @@
+$table-font-size: 13px !default;
+$table-header-font-size: 14px !default;
+$table-header-sort-icon-size: 16px !default;
+$table-dark-header-color: rgba(#fff, 1) !default;
+$table-dark-header-sorted-color: rgba(#fff, 1) !default;
+$table-header-line-height: 28px !default;
+$table-dark-hover-color: #303030 !default;
+$table-selection-color: #e0e0e0 !default;
+$table-dark-selection-color: #212121 !default;
+$table-row-height: 48px !default;
+$table-last-row-height: 56px !default;
+$table-header-height: 56px !default;
+$table-column-spacing: 36px !default;
+$table-column-padding: $table-column-spacing / 2;
+$table-card-header-height: 64px !default;
+$table-card-title-top: 20px !default;
+$table-card-padding: 24px !default;
+$table-button-padding-right: 16px !default;
+$table-cell-top: $table-card-padding / 2;
+
+:root {
+  --table-font-size: 13px;
+  --table-dark-hover-color: #303030;
+  --table-selection-color: #e0e0e0;
+}

@@ -1,0 +1,245 @@
+@import "mixin";
+@import "variables";
+// ==========  Button   ========== //
+
+.md-button {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  width: var(--button-width);
+  min-width: var(--button-min-width);
+  height: var(--button-height);
+  overflow: hidden;
+  padding: var(--button-padding-y) var(--button-padding-x);
+  font-family: var(--button-font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-height);
+  color: var(--button-color);
+  text-align: center;
+  text-decoration: none;
+  text-transform: var(--button-text-transform);
+  letter-spacing: 0;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background: var(--button-background);
+  border-color: var(--button-border-color);
+  border-width: 0;
+  border-radius: var(--button-border-radius);
+  outline: none;
+  box-shadow: var(--button-box-shadow);
+  will-change: box-shadow, background;
+  transition: background .4s cubic-bezier(.25, .8, .25, 1), color .4s cubic-bezier(.25, .8, .25, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: calc(50% - 100%);
+    left: calc(50% - 100%);
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    content: " ";
+    background-color: var(--button-background-hover);
+    border-radius: 50%;
+    opacity: 0;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-property: opacity;
+    will-change: opacity;
+  }
+
+  &::before {
+    border-radius: 4px;
+    transition-duration: 300ms;
+    transition-property: transform, opacity;
+    transform: scale(0);
+    will-change: transform, opacity;
+  }
+
+  &::after {
+    transition-duration: 85ms;
+  }
+
+  &--active::before,
+  &:hover::before,
+  &:active::before,
+  &:focus::before {
+    opacity: .06;
+    transform: none;
+  }
+
+  &:active::after {
+    opacity: .06;
+  }
+
+  // Child
+  &__icon {
+    margin-right: 4px;
+    font-size: var(--button-icon-size);
+    line-height: 1;
+    vertical-align: middle;
+    pointer-events: none;
+    user-select: none;
+
+    &--right {
+      margin-right: 0;
+      margin-left: 4px;
+    }
+  }
+
+  &__label {
+    flex-grow: 1;
+    pointer-events: none;
+  }
+
+  //Button Modifiers
+
+  &--raised {
+    --button-box-shadow: var(--shadow-2dp);
+
+    &::before {
+      // background-color: transparent;
+    }
+
+    &:active {
+      box-shadow: var(--shadow-4dp);
+    }
+  }
+
+  &--unelevated {
+    --button-box-shadow: none;
+
+    &:active,
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  &--outlined {
+    --button-border-color: var(--button-color);
+    box-sizing: border-box;
+    line-height: 32px;
+    border-style: solid;
+    border-width: 2px;
+
+    &.md-button--large {
+      line-height: 46px;
+    }
+  }
+
+  &--large {
+    --button-height: 48px;
+    --button-font-size: 15px;
+  }
+
+  &--block {
+    --button-width: 100%;
+  }
+
+  &--link {
+    height: 32px;
+    padding: 6px 12px;
+    line-height: 22px;
+
+    &:hover {
+      text-decoration: underline;
+      background: none;
+    }
+  }
+
+  &--compact {
+    --button-padding-x: 8px;
+    --button-padding-y: 0;
+  }
+
+  &--dense {
+    --button-height: 32px;
+    --button-padding-x: 8px;
+    --button-font-size: 13px;
+    --button-icon-size: 15px;
+  }
+
+  @each $variant in $button-variant {
+    &--#{$variant} {
+      @include button-variant($variant);
+    }
+  }
+
+  &[disabled] {
+    --button-color: var(--color-app-disable);
+    pointer-events: none;
+    cursor: default;
+    box-shadow: none;
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+
+  &[disabled].md-button--raised {
+    --button-color: var(--color-app-button-disable);
+    --button-background: var(--color-app-divider);
+  }
+}
+
+//Group Button Block
+.md-button-group {
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 1px solid var(--color-app-divider);
+  border-radius: var(--button-group-border-radius);
+  //Group Button Item
+  &__item {
+    box-sizing: border-box;
+    height: 48px;
+    line-height: normal;
+    background-color: var(--color-app-card-background);
+    border-radius: 0;
+
+    & + .md-button-group__item {
+      border-left: 1px solid var(--color-app-divider);
+    }
+
+    .md-button__icon {
+      margin: 0;
+    }
+
+    &--active:not([disabled]) {
+      &::before {
+        opacity: .12;
+        transform: none;
+      }
+    }
+  }
+
+  &--vertical {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .md-button-group__item {
+      width: 100%;
+      border-bottom: 1px solid var(--color-app-divider);
+      border-left: none;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &--raised {
+    border: none;
+    box-shadow: var(--shadow-2dp);
+
+    .md-button-group__item {
+      border-bottom: none;
+      border-left: none;
+    }
+  }
+}

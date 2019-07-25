@@ -1,0 +1,13 @@
+// ==========  Buttons  ========== //
+
+:root {
+  --icon-button-color: var(--color-app-text);
+  --icon-button-background: transparent;
+  --icon-button-background-hover: var(--color-theme-contrast);
+  --icon-button--width: 48px;
+  --icon-button-height: 48px;
+  --icon-button-padding-x: 12px;
+  --icon-button-padding-y: 12px;
+  --icon-button-border-radius: 50%;
+  --icon-button-font-size: 24px;
+}

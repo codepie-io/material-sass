@@ -1,0 +1,4 @@
+@mixin icon-button-variant($color) {
+  --icon-button-background-hover: RGBA(var(--color-#{$color}), 1);
+  --icon-button-color: RGB(var(--color-#{$color}));
+}

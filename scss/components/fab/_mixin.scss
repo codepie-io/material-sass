@@ -1,0 +1,5 @@
+@mixin fab-variant($color) {
+  --fab-background-hover: RGBA(var(--color-#{$color}-contrast), 1);
+  --fab-color: RGB(var(--color-#{$color}-contrast));
+  --fab-background: RGB(var(--color-#{$color}));
+}

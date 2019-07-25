@@ -1,0 +1,7 @@
+// ==========  Snackbar  ========== //
+
+:root {
+  --snackbar-bg-color: rgb(50, 50, 50);
+  --snackbar-text-color: rgba(255, 255, 255, .87);
+}
+$snackbar-variant: "primary", "accent", "success", "warning", "danger";

@@ -1,0 +1,36 @@
+// ==========  Dividers   ========== //
+
+.md-border {
+  border-bottom: 1px solid var(--color-app-divider);
+
+  &-top {
+    border-top: 1px solid var(--color-app-divider);
+  }
+
+  &-right {
+    border-right: 1px solid var(--color-app-divider);
+  }
+
+  &-bottom {
+    border-bottom: 1px solid var(--color-app-divider);
+  }
+
+  &-left {
+    border-left: 1px solid var(--color-app-divider);
+  }
+
+  &-top {
+    border-top: 1px solid var(--color-app-divider);
+  }
+
+  &--has-margin {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  @each $variant in $theme-variant {
+    &--#{$variant} {
+      border-color: RGB(var(--color-#{$variant}));
+    }
+  }
+}

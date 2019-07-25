@@ -1,0 +1,4 @@
+@mixin chip-variant($color) {
+  color: RGB(var(--color-#{$color}-contrast));
+  background-color: RGB(var(--color-#{$color}));
+}

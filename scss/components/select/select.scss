@@ -1,0 +1,194 @@
+@import "variables";
+
+// ==========  Select  ========== //
+
+.md-select {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  height: 56px;
+  overflow: hidden;
+  background-color: var(--color-app-bar);
+  will-change: opacity, transform, color;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border-radius: 4px 4px 0 0;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: calc(50% - 100%);
+    left: calc(50% - 100%);
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    content: " ";
+    background-color: var(--button-background-hover);
+    border-radius: 50%;
+    opacity: 0;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-property: opacity;
+    will-change: opacity;
+  }
+
+  &::before {
+    border-radius: 4px;
+    transition-duration: 300ms;
+    transition-property: opacity;
+    will-change: transform, opacity;
+  }
+
+  &::after {
+    transition-duration: 85ms;
+  }
+
+  &:hover::before,
+  &:active::before,
+  &:focus::before {
+    opacity: .06;
+  }
+
+  &:active::after {
+    opacity: .06;
+  }
+
+  &__native-control,
+  &__selected-text {
+    width: 100%;
+    height: 56px;
+    padding: 20px 52px 4px 16px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    color: inherit;
+    text-decoration: inherit;
+    text-transform: inherit;
+    letter-spacing: .009375em;
+    white-space: nowrap;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-app-dialog-scrim);
+    border-radius: 4px 4px 0 0;
+    outline: none;
+    @include material-animation-default(.2s);
+    transition-property: border-color;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .md-floating-label {
+    top: 21px;
+    right: auto;
+    left: 16px;
+    color: var(--color-app-text-secondary);
+    pointer-events: none;
+
+    &--float-above {
+      transform: translateY(-70%) scale(.75);
+    }
+  }
+
+  &:not(.md-select--focused):not(.md-select--invalid) .md-select__native-control:hover {
+    border-color: var(--color-app-text);
+
+    ~ .md-notched {
+      --notched-border-color: var(--color-app-text)
+    }
+  }
+
+  &__dropdown-icon {
+    position: absolute;
+    right: 8px;
+    bottom: 16px;
+    left: auto;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    transition: transform .15s cubic-bezier(.4, 0, .2, 1);
+  }
+
+  &--outlined {
+    overflow: visible;
+    background-color: transparent;
+    border: none;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+
+    .md-select__native-control,
+    .md-select__selected-text {
+      z-index: 1;
+      display: flex;
+      padding: 12px 52px 12px 16px;
+      background-color: transparent;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .md-select__selected-text {
+      padding-top: 14px;
+    }
+
+    .md-floating-label {
+      position: relative;
+      top: 17px;
+      right: auto;
+      bottom: auto;
+      left: 4px;
+      display: inline-block;
+      line-height: 1.15rem;
+      pointer-events: auto;
+    }
+
+    .md-floating-label--float-above {
+      max-width: 133.33333%;
+      text-overflow: clip;
+      transform: translateY(-130%) scale(.75);
+    }
+  }
+
+  &--dirty {
+
+  }
+
+  &--focused {
+    --notched-border-color: RGB(var(--color-primary));
+    --notched-border-width: 2px;
+
+    .md-floating-label {
+      color: RGB(var(--color-primary));
+    }
+
+    .md-select__dropdown-icon {
+      @include material-animation-default(.15s);
+      transition-property: transform;
+      transform: rotate(180deg) translateY(-5px);
+    }
+
+    .md-line-ripple {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  &--focused,
+  &--dirty {
+
+  }
+
+  &--invalid {
+    --line-ripple-background: RGB(var(--color-danger));
+
+    .md-floating-label {
+      color: RGB(var(--color-danger));
+    }
+
+    .md-select__native-control {
+      border-bottom-color: RGB(var(--color-danger));
+    }
+  }
+
+}

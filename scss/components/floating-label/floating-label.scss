@@ -1,0 +1,54 @@
+@import "variables";
+
+// ==========  Floating label  ========== //
+
+.md-floating-label {
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.15rem;
+  color: var(--floating-label-color);
+  text-align: left;
+  text-decoration: inherit;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-transform: inherit;
+  letter-spacing: .009375em;
+  white-space: nowrap;
+  cursor: text;
+  @include material-animation-default(.15s);
+  transition-property: transform, color;
+  transform-origin: left top;
+  will-change: transform;
+
+  &--float-above {
+    cursor: auto;
+    transform: translateY(-50%) scale(.75);
+  }
+
+  &--shake {
+    animation: mdc-floating-label-shake-float-above-standard 250ms 1;
+  }
+}
+
+@keyframes mdc-floating-label-shake-float-above-standard {
+  0% {
+    transform: translateX(calc(0 - 0%)) translateY(-50%) scale(.75);
+  }
+
+  33% {
+    transform: translateX(calc(4% - 0%)) translateY(-50%) scale(.75);
+    animation-timing-function: cubic-bezier(.5, 0, .701732, .495819);
+  }
+
+  66% {
+    transform: translateX(calc(-4% - 0%)) translateY(-50%) scale(.75);
+    animation-timing-function: cubic-bezier(.302435, .381352, .55, .956352);
+  }
+
+  100% {
+    transform: translateX(calc(0 - 0%)) translateY(-50%) scale(.75);
+  }
+}

@@ -1,0 +1,161 @@
+@import "mixin";
+@import "variables";
+// ==========  Button   ========== //
+
+.md-fab {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--fab-width);
+  height: var(--fab-height);
+  overflow: hidden;
+  padding: 0;
+  font-size: var(--fab-font-size);
+  font-weight: var(--fab-font-weight);
+  color: var(--fab-color);
+  text-align: center;
+  text-decoration: none;
+  text-transform: var(--fab-text-transform);
+  letter-spacing: 0;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background: var(--fab-background);
+  border: none;
+  border-radius: var(--fab-border-radius);
+  outline: 0;
+  box-shadow: var(--shadow-6dp);
+  transition: box-shadow .28s cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform .27s cubic-bezier(0, 0, .2, 1) 0ms;
+  fill: currentColor;
+  will-change: transform, opacity;
+
+  &:not(.md-fab--extended) {
+    --fab-border-radius: 50%;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: calc(50% - 100%);
+    left: calc(50% - 100%);
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    content: " ";
+    background-color: var(--fab-background-hover);
+    border-radius: 50%;
+    opacity: 0;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-property: opacity;
+    will-change: opacity;
+  }
+
+  &::before {
+    border-radius: 4px;
+    transition-duration: 300ms;
+    transition-property: transform, opacity;
+    transform: scale(0);
+    will-change: transform, opacity;
+  }
+
+  &::after {
+    transition-duration: 85ms;
+  }
+
+  &--active::before,
+  &:hover::before,
+  &:active::before,
+  &:focus::before {
+    opacity: .06;
+    transform: none;
+  }
+
+  &:active::after {
+    opacity: .06;
+  }
+
+  // Child
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--fab-icon-size);
+    height: var(--fab-icon-size);
+    font-size: var(--fab-icon-size);
+    will-change: transform;
+    pointer-events: none;
+    user-select: none;
+    transition: transform .18s cubic-bezier(0, 0, .2, 1) 90ms;
+    fill: currentColor;
+
+    &--on {
+      display: none;
+    }
+  }
+
+  &__lable {
+    justify-content: flex-start;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @each $variant in $button-variant {
+    &--#{$variant} {
+      @include fab-variant($variant);
+    }
+  }
+
+  &--dense {
+    --fab-width: 40px;
+    --fab-height: 40px;
+    --fab-icon-size: 18px;
+  }
+
+  &--extended {
+    --fab-width: auto;
+    --fab-height: 48px;
+    --fab-border-radius: 24px;
+
+    max-width: 100%;
+    padding: 0 20px;
+    line-height: 2.25rem;
+
+     .md-fab__icon--trailing {
+      margin-right: 12px;
+      margin-left: -8px;
+    }
+
+    .md-fab__icon--leading {
+      margin-right: -8px;
+      margin-left: 12px;
+    }
+  }
+
+  &--on {
+    .md-fab__icon {
+      display: none;
+    }
+
+    .md-fab__icon--on {
+      display: inline-block;
+    }
+  }
+
+  &[disabled] {
+    --fab-color: var(--color-app-button-disable);
+    --fab-background: var(--color-app-divider);
+
+    pointer-events: none;
+    cursor: default;
+    box-shadow: none;
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+// ==========  Fab  ========== //
+
+:root {
+  --fab-color: var(--color-app-text);
+  --fab-background: transparent;
+  --fab-background-hover: var(--color-theme-contrast);
+  --fab-min-width: 64px;
+  --fab-border-color: var(--fab-color);
+  --fab-padding-x: 16px;
+  --fab-padding-y: 0;
+  --fab-font-family: Roboto, sans-serif;
+  --fab-font-size: .875rem;
+  --fab-font-weight: 500;
+  --fab-text-transform: uppercase;
+  --fab-border-radius: initial;
+  --fab-padding-x-dense: 8px;
+  --fab-width: 56px;
+  --fab-height: 56px;
+  --fab-icon-size: 24px;
+}

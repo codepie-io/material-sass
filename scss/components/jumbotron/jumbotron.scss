@@ -1,0 +1,48 @@
+@import "variables";
+
+// ==========  Jumbotron  ========== //
+
+.md-jumbotron {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--jumbotron-padding-y) 0;
+  background-color: var(--color-app-card-background);
+
+  &__title {
+    margin-bottom: 8px;
+
+    @include md-typography-display-2;
+
+    @media (max-width: 959px) {
+      @include md-typography-display-1;
+    }
+  }
+
+  &__paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &--casting-shadow {
+    box-shadow: var(--shadow-4dp);
+  }
+
+  &--casting-border {
+    border-bottom: 1px solid var(--color-app-divider);
+  }
+
+  &--dense {
+    min-height: 136px;
+    --jumbotron-padding-y: 24px;
+
+    .md-jumbotron__title {
+      @include md-typography-display-1;
+
+      @media (max-width: 959px) {
+        @include md-typography-headline;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// ==========  Radio  ========== //
+
+$radio-label-height: 40px !default;
+$radio-button-size: 20px !default;
+$radio-inner-margin: $radio-button-size / 4;
+$radio-top-offset: ($radio-label-height - $radio-button-size) / 2;
+
+:root {
+  --radio-label-font-size: 16px;
+  --radio-label-height: 40px;
+  --radio-button-size: 20px;
+  --radio-inner-margin: 5px;
+  --radio-padding: 8px;
+  --radio-top-offset: 10px;
+  --radio-ripple-size: 42px;
+  --radio-theme: rgb(var(--color-dark));
+}

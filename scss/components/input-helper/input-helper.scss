@@ -1,0 +1,47 @@
+@import "variables";
+
+// ==========  Input helper  ========== //
+
+.md-input-helper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3px;
+  font-size: 12px;
+
+  &__text {
+    display: block;
+    margin: 0;
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: normal;
+    color: inherit;
+    text-decoration: inherit;
+    text-transform: inherit;
+    letter-spacing: .0333333333em;
+    opacity: 0;
+    transition: opacity .15s cubic-bezier(.4, 0, .2, 1);
+    will-change: opacity;
+
+    &--validation-msg {
+
+    }
+
+    &--counter {
+      white-space: nowrap;
+      opacity: 1;
+    }
+
+    &--persistent {
+      opacity: 1;
+      will-change: auto;
+      transition: none;
+    }
+  }
+
+  &--invalid {
+    .md-input-helper__text--validation-msg {
+      color: RGB(var(--color-danger));
+      opacity: 1;
+    }
+  }
+}

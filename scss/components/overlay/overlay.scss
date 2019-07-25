@@ -1,0 +1,35 @@
+@import "variables";
+
+// ==========  Overlay  ========== //
+
+.md-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: var(--overlay-z-index);
+  display: none;
+  width: 100%;
+  height: auto;
+
+  &--center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+  }
+
+  &--cover {
+    height: 100%;
+    cursor: wait;
+  }
+
+  &--visible {
+    display: flex;
+  }
+}
+

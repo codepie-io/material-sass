@@ -1,0 +1,21 @@
+// ==========  Drawer  ========== //
+
+:root {
+  --drawer-max-width: 320px;
+  --drawer-background-color: var(--color-app-card-background);
+  --drawer-surface-width: 280px;
+  --drawer-surface-translate: -280px; //
+}
+
+$layout-header-desktop-baseline: 80px !default;
+$layout-desktop-header-height: 64px !default;
+$layout-mobile-header-height: 56px !default;
+$layout-header-mobile-baseline: 72px !default;
+$layout-header-mobile-indent: 16px !default;
+$layout-header-desktop-indent: 40px !default;
+$layout-drawer-narrow: 280px !default;
+$layout-drawer-wide: 320px !default;
+$layout-drawer-width: $layout-drawer-wide !default;
+
+//layout
+$layout-screen-size-threshold: 959px !default;

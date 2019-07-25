@@ -1,0 +1,117 @@
+@import "mixin";
+@import "variables";
+// ==========  Button   ========== //
+
+.md-icon-button {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  width: var(--icon-button-width);
+  height: var(--icon-button-height);
+  overflow: hidden;
+  padding: var(--icon-button-padding-y) var(--icon-button-padding-x);
+  font-size: var(--icon-button-font-size);
+  color: var(--icon-button-color);
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background: var(--icon-button-background);
+  border: none;
+  border-radius: var(--icon-button-border-radius);
+  outline: none;
+  will-change: box-shadow, background;
+  transition: background .4s cubic-bezier(.25, .8, .25, 1), color .4s cubic-bezier(.25, .8, .25, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+  fill: currentColor;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: calc(50% - 100%);
+    left: calc(50% - 100%);
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    content: " ";
+    background-color: var(--icon-button-background-hover);
+    border-radius: 50%;
+    opacity: 0;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-property: opacity;
+    will-change: opacity;
+  }
+
+  &::before {
+    border-radius: var(--icon-button-border-radius);
+    transition-duration: 300ms;
+    transition-property: transform, opacity;
+    transform: scale(0);
+    will-change: transform, opacity;
+  }
+
+  &::after {
+    transition-duration: 85ms;
+  }
+
+  &--active::before,
+  &:hover::before,
+  &:active::before,
+  &:focus::before {
+    opacity: .06;
+    transform: none;
+  }
+
+  &:active::after {
+    opacity: .06;
+  }
+
+  // Child
+  &__icon {
+    display: inline-block;
+    margin: 0;
+    font-size: inherit;
+    color: inherit;
+
+    &--on {
+      display: none;
+    }
+  }
+
+  //Button Modifiers
+  &--dense {
+    --icon-button--width: 32px;
+    --icon-button-height: 32px;
+    --icon-button-font-size: 18px;
+    --icon-button-padding-x: 7px;
+    --icon-button-padding-y: 7px;
+  }
+
+  &--on {
+    .md-icon-button__icon {
+      display: none;
+    }
+    .md-icon-button__icon--on {
+      display: inline-block;
+    }
+  }
+
+  @each $variant in $button-variant {
+    &--#{$variant} {
+      @include icon-button-variant($variant);
+    }
+  }
+
+  &[disabled] {
+    --icon-button-color: var(--color-app-disable);
+    pointer-events: none;
+    cursor: default;
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+}

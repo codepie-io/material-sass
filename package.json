@@ -1,0 +1,78 @@
+{
+  "name": "@codepie/pie-material-sass",
+  "version": "1.0.2",
+  "description": "Material design framework built on latest css and follow BEM methodology. Give a native app look to your webapp instantly.",
+  "main": "scss/material.scss",
+  "style": "dist/css/material.css",
+  "keywords": [
+    "material design",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "material grid",
+    "framework"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codepie-io/pie-material-sass.git"
+  },
+  "scripts": {
+    "bundlesize": "bundlesize",
+    "css": "npm-run-all --parallel css:compile --sequential css:minify",
+    "css:main": "npm-run-all --parallel css:compile --sequential css:prefix css:minify",
+    "css:compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/material.scss dist/css/material.css",
+    "css:prefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.min.css\"",
+    "css:minify": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/css/material.min.css dist/css/material.css",
+    "watch": "nodemon --ignore js/ --ignore dist/ -e scss -x \"npm run css\""
+  },
+  "homepage": "https://material.codepie.io",
+  "author": "The pie-material authors (https://github.com/codepie-io/pie-material-sass/graphs/contributors)",
+  "bugs": {
+    "url": "https://github.com/codepie-io/pie-material-sass/issues"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "bundlesize": "^0.17.1",
+    "clean-css-cli": "^4.3.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-compat": "^3.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "fs-extra": "^7.0.1",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.11",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.16.4",
+    "sass-loader": "^7.1.0",
+    "scss-parser": "^1.0.3",
+    "style-loader": "^0.23.1",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.0.0",
+    "stylelint-scss": "^3.6.0",
+    "stylelint-selector-bem-pattern": "^2.1.0",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "dist/",
+    "scss/"
+  ],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "bundlesize": [
+    {
+      "path": "./dist/css/material.css",
+      "maxSize": "5 kB"
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+// ==========  Tabs   ========== //
+
+.md-tabs {
+  display: block;
+  width: 100%;
+
+  @include material-animation-default();
+  transition-property: all;
+
+  &.is-casting-shadow {
+    @include shadow-4dp();
+    z-index: 2;
+  }
+
+  /*Modifiers*/
+  &--primary {
+    background-color: unquote("rgb(#{$color-primary})");
+  }
+
+  &--primary-hue {
+    background-color: unquote("rgb(#{$color-primary-hue-1})");
+  }
+
+  &--stretch {
+    & .md-tabs__tab-bar {
+      flex-grow: 1;
+    }
+    & .md-tabs__tab {
+      flex: 1 1 0;
+      text-align: center;
+    }
+  }
+
+  &--color-dark {
+    /*&.is-active,
+    &:hover {
+      color: $tab-active-text-color;
+    }*/
+  }
+
+  &--color-light-light {
+    .md-tabs__tab {
+      color: $tab-light-text-color;
+
+      &.is-active,
+      &:hover {
+        color: $tab-light-active-text-color;
+      }
+    }
+  }
+
+  &--color-light-primary {
+    .md-tabs__tab {
+      color: $tab-light-text-color;
+
+      &.is-active,
+      &:hover {
+        color: $tab-active-primary-text-color;
+      }
+    }
+  }
+
+  &--color-dark-primary {
+    .md-tabs__tab {
+      color: $tab-dark-text-color;
+
+      &.is-active,
+      &:hover {
+        color: $tab-active-primary-text-color;
+      }
+    }
+  }
+
+  /*Elements*/
+  &__tab-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+    align-items: flex-start;
+    height: 48px;
+    position: relative;
+    padding: 0 0 0 0;
+    margin: 0;
+    font-family: Roboto, Arial, sans-serif;
+    &.has-border-top {
+      border-top: 1px solid $tab-border-color;
+    }
+    &.has-border-bottom {
+      border-bottom: 1px solid $tab-border-color;
+    }
+
+    &--align-left {
+      justify-content: flex-start; // <-
+    }
+
+    &--align-right {
+      justify-content: flex-end; // <-
+    }
+
+  }
+
+  &__ink-bar {
+    height: 2px;
+    width: 100px;
+    display: block;
+    content: " ";
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    will-change: transform, width;
+    background: $tab-highlight-color;
+
+    &--primary {
+      background: $tab-highlight-primary-color;
+    }
+
+    &--light {
+      background: $tab-highlight-light-color;
+    }
+
+    .md-tabs.is-animating & {
+      transition: all 0.2s cubic-bezier(0.4, 0.0, 1, 1);
+    }
+  }
+
+  &__tab {
+    margin: 0;
+    border: none;
+    padding: 0 24px 0 24px;
+
+    float: left;
+    position: relative;
+    display: block;
+
+    text-decoration: none;
+    height: 48px;
+    line-height: 48px;
+
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    color: $tab-text-color;
+    overflow: hidden;
+    transition: color 0.2s cubic-bezier(0.4, 0.0, 1, 1);
+
+    /*.md-tabs  &.is-active,
+    .md-tabs  &:hover {
+      color: $tab-active-text-color;
+    }*/
+
+    & .md-tabs__ripple-container {
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      overflow: hidden;
+
+      & .md-ripple {
+        background: $tab-highlight-color;
+      }
+    }
+    img {
+      width: 24px;
+      height: auto;
+    }
+  }
+
+  &__panel {
+    display: block;
+    width: 100%;
+  }
+
+  &__wrapper-outer {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  &__wrapper-inner {
+    display: flex;
+    flex-direction: row;
+    .md-tabs__wrapper-outer.is-animating & {
+      transition: transform 0.2s cubic-bezier(0.4, 0.0, 1, 1);
+    }
+  }
+
+}
+
+.md-tabs__tab-bar--has-title {
+  position: relative;
+}
+
+.md-tabs__tab--white {
+  background-color: #FFF;
+  color: rgba(0, 0, 0, .50);
+}
+
+.md-tabs__tab--diff {
+  &.is-active {
+    color: rgba(0, 0, 0, 1);
+  }
+  .md-tabs &.is-active,
+  .md-tabs &:focus,
+  .md-tabs &:hover {
+    color: unquote("rgb(#{$color-primary})");
+  }
+  .md-tabs &.is-active:after,
+  .md-tabs &:hover:after {
+    background: unquote("rgb(#{$color-primary})");
+  }
+}
+
+.md-tabs__tab--grey {
+  padding: 0 8px;
+  .md-tabs &:focus,
+  .md-tabs &:hover {
+    color: $button-primary-color;
+  }
+  .md-tabs &:hover:after {
+    background: $button-primary-color;
+  }
+}
+
+.md-tabs__tab--title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 700;
+}

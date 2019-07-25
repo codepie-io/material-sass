@@ -1,0 +1,7 @@
+// ==========  Display  ========== //
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    @include display($breakpoint);
+  }
+}

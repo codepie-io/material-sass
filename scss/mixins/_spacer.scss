@@ -1,0 +1,50 @@
+@mixin spacer($breakpoint) {
+  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+  @each $prop, $abbrev in (margin: m, padding: p) {
+    @each $size, $length in $spacers {
+      .md-#{$abbrev}-#{$size}#{$infix} { #{$prop}: $length !important; }
+
+      .md-#{$abbrev}t-#{$size}#{$infix},
+      .md-#{$abbrev}y-#{$size}#{$infix} {
+        #{$prop}-top: $length !important;
+      }
+
+      .md-#{$abbrev}r-#{$size}#{$infix},
+      .md-#{$abbrev}x-#{$size}#{$infix} {
+        #{$prop}-right: $length !important;
+      }
+
+      .md-#{$abbrev}b-#{$size}#{$infix},
+      .md-#{$abbrev}y-#{$size}#{$infix} {
+        #{$prop}-bottom: $length !important;
+      }
+
+      .md-#{$abbrev}l#{$infix}-#{$size},
+      .md-#{$abbrev}x#{$infix}-#{$size} {
+        #{$prop}-left: $length !important;
+      }
+    }
+  }
+
+  //Other margin utils
+  .md-mt-auto#{$infix},
+  .md-my-auto#{$infix} {
+    margin-top: auto !important;
+  }
+
+  .md-mr-auto#{$infix},
+  .md-mx-auto#{$infix} {
+    margin-right: auto !important;
+  }
+
+  .md-mb-auto#{$infix},
+  .md-my-auto#{$infix} {
+    margin-bottom: auto !important;
+  }
+
+  .md-ml-auto#{$infix},
+  .md-mx-auto#{$infix} {
+    margin-left: auto !important;
+  }
+}

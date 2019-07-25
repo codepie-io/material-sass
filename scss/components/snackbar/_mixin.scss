@@ -1,0 +1,4 @@
+@mixin snackbar-variant($color) {
+  --snackbar-text-color: RGB(var(--color-#{$color}-contrast));
+  --snackbar-bg-color: RGB(var(--color-#{$color}));
+}

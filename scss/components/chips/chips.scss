@@ -1,0 +1,161 @@
+@import "mixin";
+@import "variables";
+// ==========  Chips   ========== //
+// material-icons mdc-chip__icon mdc-chip__icon--leading
+.md-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  fill: currentColor;
+}
+
+.md-chip-set {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4px;
+  .md-chip {
+    margin: 4px;
+  }
+}
+
+.md-chip {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 100%;
+  height: 32px;
+  overflow: hidden;
+  padding: var(--chip-padding-y) var(--chip-padding-x);
+  font-size: .875rem;
+  line-height: 1.25rem;
+  color: var(--chip-color);
+  cursor: pointer;
+  background-color: var(--chip-background);
+  border-radius: 16px;
+  outline: none;
+
+  &::after {
+    position: absolute;
+    top: calc(50% - 100%);
+    left: calc(50% - 100%);
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    content: "";
+    background-color: var(--color-app-button-hover);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 250ms linear;
+  }
+
+  &:hover::after {
+    opacity: .12;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: var(--shadow-2dp);
+  }
+
+  &__text {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__avatar {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    margin-left: calc(var(--chip-padding-x) * -1);
+    overflow: hidden;
+    border-radius: 50%;
+
+    img {
+      width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__action-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin: 4px 4px 4px 0;
+  }
+
+  &__action {
+    width: 20px;
+    min-width: 0;
+    height: 20px;
+    margin-top: 2px;
+    margin-left: 2px;
+    background: rgba(0, 0, 0, .3);
+
+    .md-button__icon {
+      width: 24px;
+      height: 24px;
+      color: inherit;
+      transform: translate(-50%, -50%) scale(.7);
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, .54);
+    vertical-align: middle;
+    border-radius: 50%;
+    outline: none;
+
+    &--leading {
+      margin: -4px 4px -4px -4px;
+    }
+  }
+
+  &--actionable {
+    padding-right: 30px;
+  }
+
+  &--dense {
+    height: 24px;
+    margin: 4px 4px 0 0;
+    line-height: 24px;
+    border-radius: 12px;
+
+    .md-chip__content {
+      font-size: 12px;
+    }
+
+    .md-chip__avatar {
+      width: 24px;
+      height: 24px;
+      font-size: 13px;
+      font-weight: 300;
+    }
+  }
+
+  @each $variant in $theme-variant {
+    &--#{$variant} {
+      @include chip-variant($variant);
+    }
+  }
+}

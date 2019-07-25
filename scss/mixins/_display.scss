@@ -1,0 +1,10 @@
+$display-map: none, inline, inline-block, block, table, table-cell, table-row, flex, inline-flex;
+
+@mixin display($breakpoint) {
+  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+  @each $display in $display-map {
+    .md-d-#{$display}#{$infix} {
+      display: $display;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+//Flex Layout
+@mixin md-flex-layout($size, $max-columns) {
+  flex: 0 0 #{(($size / $max-columns) * 100) + "%"};
+  max-width: #{(($size / $max-columns) * 100) + "%"};
+}
+
+@mixin md-offset-size($size, $columns) {
+  margin-left: #{(($size / $columns) * 100)+ "%"};
+
+  .md-grid.md-grid--no-spacing > & {
+    margin-left: #{(($size / $columns) * 100)+ "%"};
+  }
+}
+
+@mixin md-flex-offset-size($size, $columns) {
+  margin-left: #{(($size / $columns) * 100) + "%"};
+}
+
+@mixin md-full-flex {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}

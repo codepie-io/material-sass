@@ -1,0 +1,216 @@
+@import "variables";
+
+// ==========  Drawer  ========== //
+
+.md-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow: hidden;
+
+  &__scrim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: none;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    content: "";
+    background: var(--color-app-disable);
+    will-change: opacity;
+  }
+
+  &__surface {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    width: var(--drawer-surface-width);
+    height: 100%;
+    overflow: hidden;
+    color: var(--color-app-text);
+    background-color: var(--drawer-background-color);
+    border-color: rgba(0, 0, 0, .12);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-radius: 0 0 0 0;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+
+  &__header {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    min-height: 64px;
+    padding: 0 16px 4px;
+  }
+
+  &__title {
+    @include md-typography-title();
+    display: block;
+    margin-top: 0;
+    margin-bottom: -20px;
+    line-height: normal;
+    color: var(--color-app-text);
+
+    &:before {
+      display: inline-block;
+      width: 0;
+      height: 36px;
+      vertical-align: 0;
+      content: "";
+    }
+
+    &:after {
+      display: inline-block;
+      width: 0;
+      height: 20px;
+      vertical-align: -20px;
+      content: "";
+    }
+  }
+
+  &__subtitle {
+    @include md-typography-body-1();
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: normal;
+    color: var(--color-app-text-secondary);
+  }
+
+  &__content {
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .md-list-item {
+    min-height: 40px;
+    margin: 8px;
+    padding: 0 8px;
+    border-radius: 4px;
+
+    &:first-child {
+      margin-top: 2px;
+    }
+
+    &:last-child {
+      margin-top: 2px;
+    }
+  }
+
+  .md-list-graphic {
+    height: 24px;
+  }
+
+  &--dismissible {
+    display: none;
+
+    .md-drawer__surface {
+      transform: translateX(var(--drawer-surface-translate));
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+  }
+
+  &--modal {
+    z-index: 20;
+    display: none;
+    width: 100vw;
+    overflow: hidden;
+
+    .md-drawer__scrim {
+      display: block;
+    }
+
+    .md-drawer__surface {
+      z-index: 6;
+      box-shadow: var(--shadow-24dp);
+      transform: translateX(var(--drawer-surface-translate));
+    }
+  }
+
+  &--opening {
+    .md-drawer__surface {
+      transition-duration: 250ms;
+      transform: translateX(0);
+    }
+
+    .md-drawer__scrim {
+      opacity: 1;
+      transition-duration: 250ms;
+    }
+  }
+
+  &--animate {
+    &.md-drawer--modal,
+    &.md-drawer--dismissible {
+      display: block;
+    }
+
+    .md-drawer__surface {
+      transition-timing-function: var(--animation-curve-default);
+      transition-property: transform;
+      transform: translateX(-100%);
+    }
+
+    .md-drawer__scrim {
+      opacity: 0;
+      transition-timing-function: var(--animation-curve-default);
+      transition-property: opacity;
+    }
+  }
+
+  &--open {
+    &.md-drawer--modal,
+    &.md-drawer--dismissible {
+      display: block;
+    }
+
+    .md-drawer__scrim {
+      pointer-events: auto;
+      opacity: 1;
+    }
+
+    .md-drawer__surface {
+      transform: none;
+    }
+  }
+
+  &--closing {
+    .md-drawer__surface {
+      transition-duration: 200ms;
+      transform: translateX(-100%);
+    }
+
+    .md-drawer__scrim {
+      opacity: 0;
+      transition-duration: 200ms;
+    }
+  }
+}
+
+.has-fixed-header .md-drawer:not(.md-drawer--modal) {
+  top: 65px;
+  max-height: calc(100vh - 65px);
+}
+
+// body classes for drawer
+
+.body-drawer-closing {
+  @include material-animation-default(.2s);
+  transition-property: padding;
+  will-change: padding;
+}
+.body-drawer-opening {
+  @include material-animation-default(.25s);
+  transition-property: padding;
+  will-change: padding;
+}

@@ -1,0 +1,35 @@
+@import "./variable";
+
+// ==========  Menu   ========== //
+
+.md-menu {
+  min-width: 112px;
+  overflow-y: auto;
+
+  .md-list-item {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  a.md-list-item .md-list-content,
+  a.md-list-item .md-list-graphic {
+    pointer-events: none;
+  }
+
+  .md-list-item--disabled {
+    cursor: auto;
+  }
+
+  .md-list-divider {
+    margin: 8px 0;
+  }
+
+  &--dense {
+    .md-list-item {
+      height: 32px;
+      min-height: 32px;
+      font-size: 13px;
+      line-height: 32px;
+    }
+  }
+}

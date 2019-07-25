@@ -1,0 +1,37 @@
+// ==========  Font  ========== //
+
+:root {
+  --screen-phone-breakpoint: 640px;
+  --screen-tablet-breakpoint: 960px;
+  --screen-desktop-breakpoint: 1280px;
+  --screen-large-desktop-breakpoint: 1440px;
+  --grid-tablet-breakpoint: 600px;
+  --grid-desktop-breakpoint: 960px;
+  --grid-columns: 12;
+  --grid-desktop-columns: 12;
+  --grid-desktop-gutter: 24px;
+  --grid-desktop-margin: 16px;
+  --grid-gutter: 16px;
+  --grid-margin: 16px;
+  --grid-has-tile-margin: 8px;
+  --grid-tablet-columns: 8;
+  --grid-tablet-gutter: 16px;
+  --grid-tablet-margin: 16px;
+  --grid-phone-columns: 4;
+  --grid-phone-gutter: 16px;
+  --grid-phone-margin: 16px;
+  --grid-cell-default-columns: 4;
+  --grid-max-columns: 12;
+  // Grid List
+  --grid-list-phone-margin: 4px;
+  --grid-list-phone-gutter: 4px;
+  --grid-list-margin: 4px;
+  --grid-list-gutter: 4px;
+  --grid-list-gutter-narrow: 1px;
+}
+// Grid breakpoints
+$grid-breakpoints: () !default;
+$grid-breakpoints: map-merge((xs: 0, sm: 640px, md: 960px, lg: 1280px, xl: 1440px), $grid-breakpoints);
+// Container max width
+$container-max-widths: () !default;
+$container-max-widths: map-merge((sm: 540px, md: 720px, lg: 960px, xl: 1140px), $container-max-widths);

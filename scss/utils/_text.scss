@@ -1,0 +1,22 @@
+.md-text {
+  &-white {
+    color: RGB(255, 255, 255);
+  }
+
+  &-black {
+    color: RGB(0, 0, 0);
+  }
+
+  @each $variant in $theme-variant {
+    &-#{$variant} {
+      color: RGB(var(--color-#{$variant}));
+    }
+  }
+
+  // color contrast variation
+  @each $variant in $theme-variant {
+    &-#{$variant}-contrast {
+      color: RGB(var(--color-#{$variant}-contrast));
+    }
+  }
+}
