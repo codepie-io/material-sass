@@ -91,6 +91,7 @@
   min-height: 48px;
   overflow: hidden;
   padding-left: 16px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &::before,
   &::after {
@@ -101,7 +102,7 @@
     height: 200%;
     pointer-events: none;
     content: " ";
-    background-color: #000;
+    background-color: var(--list-background-hover);
     border-radius: 50%;
     opacity: 0;
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
@@ -121,7 +122,6 @@
     transition-timing-function: linear;
     transition-duration: 85ms;
   }
-
 
   &:hover::before,
   &:active::before,
@@ -158,7 +158,7 @@
 
 .md-list-subhead {
   padding: 8px 16px;
-  @include md-typography-body-1;
+  @include md-typography-body1;
 }
 
 .md-list-divider {

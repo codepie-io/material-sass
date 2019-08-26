@@ -89,7 +89,7 @@
     flex: 1 1 100%;
     margin: 0;
 
-    @include md-typography-title();
+    @include md-typography-headline6();
 
     line-height: 24px;
   }

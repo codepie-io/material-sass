@@ -282,13 +282,13 @@
   }
 
   &__title {
-    @include md-typography-subhead-2();
+    @include md-typography-subtitle1-2();
     line-height: 1;
   }
 
   &__subtitle {
     position: relative;
-    @include md-typography-body-1();
+    @include md-typography-body1();
   }
 
   &__button {

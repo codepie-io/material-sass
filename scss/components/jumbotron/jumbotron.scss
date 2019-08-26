@@ -12,10 +12,10 @@
   &__title {
     margin-bottom: 8px;
 
-    @include md-typography-display-2;
+    @include md-typography-headline3;
 
     @media (max-width: 959px) {
-      @include md-typography-display-1;
+      @include md-typography-headline4;
     }
   }
 
@@ -38,10 +38,10 @@
     --jumbotron-padding-y: 24px;
 
     .md-jumbotron__title {
-      @include md-typography-display-1;
+      @include md-typography-headline4;
 
       @media (max-width: 959px) {
-        @include md-typography-headline;
+        @include md-typography-headline5;
       }
     }
   }

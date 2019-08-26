@@ -52,7 +52,7 @@
   }
 
   &__title {
-    @include md-typography-title();
+    @include md-typography-headline6();
     display: block;
     margin-top: 0;
     margin-bottom: -20px;
@@ -77,7 +77,7 @@
   }
 
   &__subtitle {
-    @include md-typography-body-1();
+    @include md-typography-body1();
     display: block;
     margin-top: 0;
     margin-bottom: 0;
@@ -95,6 +95,7 @@
     min-height: 40px;
     margin: 8px;
     padding: 0 8px;
+    color: var(--color-app-text);
     border-radius: 4px;
 
     &:first-child {
@@ -103,6 +104,11 @@
 
     &:last-child {
       margin-top: 2px;
+    }
+
+    &--activated {
+      color: RGBA(var(--color-primary));
+      --list-background-hover: rgba(var(--color-primary));
     }
   }
 
@@ -213,4 +219,8 @@
   @include material-animation-default(.25s);
   transition-property: padding;
   will-change: padding;
+}
+
+.md-drawer-scroll-lock {
+  overflow: hidden;
 }

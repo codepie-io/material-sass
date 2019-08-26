@@ -31,6 +31,7 @@
   transition: box-shadow .28s cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform .27s cubic-bezier(0, 0, .2, 1) 0ms;
   fill: currentColor;
   will-change: transform, opacity;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &:not(.md-fab--extended) {
     --fab-border-radius: 50%;

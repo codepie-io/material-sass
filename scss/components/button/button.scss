@@ -32,6 +32,7 @@
   box-shadow: var(--button-box-shadow);
   will-change: box-shadow, background;
   transition: background .4s cubic-bezier(.25, .8, .25, 1), color .4s cubic-bezier(.25, .8, .25, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &::before,
   &::after {
@@ -123,6 +124,10 @@
     line-height: 32px;
     border-style: solid;
     border-width: 2px;
+
+    &.md-button--dense {
+      line-height: 30px;
+    }
 
     &.md-button--large {
       line-height: 46px;
