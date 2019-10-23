@@ -11,7 +11,7 @@
   font-weight: 400;
   background: var(--color-app-card-background);
   border-radius: var(--panel-border-radius);
-  box-shadow: var(--shadow-1dp);
+  box-shadow: var(--elevation-z1);
 
   &__header {
     position: relative;
@@ -44,6 +44,7 @@
 
   &__footer {
     position: relative;
+    display: flex;
     align-items: center;
     height: var(--panel-header-height);
     padding: 0 var(--panel-horizontal-padding);

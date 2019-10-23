@@ -15,11 +15,28 @@
   }
 
   &__item {
-    // display: inline-flex;
+    display: inline-flex;
     flex: 1 1 auto;
-    // align-items: center;
-    min-width: 240px;
+    align-items: center;
     padding: var(--form-gap);
-    vertical-align: middle;
+
+    &--text-field {
+      display: block;
+      min-width: 240px;
+    }
+
+    &--toggle-input {
+      flex-wrap: wrap;
+
+      > .md-input-helper {
+        flex-basis: 100%;
+      }
+    }
+
+    > label {
+      order: 0;
+      margin-right: auto;
+      padding-left: 4px;
+    }
   }
 }

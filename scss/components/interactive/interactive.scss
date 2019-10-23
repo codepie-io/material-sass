@@ -2,6 +2,19 @@
 
 // ==========  Interactive Search  ========== //
 
+.md-interactive-wrapper {
+  position: static;
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: row;
+  align-items: inherit;
+  height: 100%;
+
+  &--edit {
+    display: none;
+  }
+}
+
 .md-interactive {
   position: relative;
   display: flex;
@@ -9,32 +22,36 @@
   flex-grow: 1;
   align-items: center;
   width: 100%;
-  height: 56px;
-  min-height: 56px;
-  max-height: 64px;
+  height: var(--interactive-height);
   margin: 0;
   overflow-y: hidden;
-  padding: 0 16px;
+  padding: var(--interactive-padding-y) var(--interactive-padding-x);
   font-size: var(--interactive-font-size);
   font-weight: 400;
-  line-height: 56px;
-  color: rgba(0, 0, 0, .38);
-  letter-spacing: .005em;
-  background-color: #f5f5f5;
+  color: var(--color-app-disable);
+  background-color: var(--color-app-bar);
   border-bottom: none;
 
   &__icon {
     margin-right: 12px;
     margin-left: 8px;
-    color: rgba(0, 0, 0, .54);
+    color: var(--color-app-text-secondary);
     cursor: pointer;
     outline: 0 none;
   }
 
   &__placeholder {
+    display: flex;
+    align-items: center;
+    height: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+
+    &--toggle {
+      cursor: pointer;
+      outline: 0;
+    }
   }
 
   &__input {
@@ -52,14 +69,14 @@
     color: var(--color-app-text);
     text-decoration: inherit;
     text-transform: inherit;
-    letter-spacing: .009375em;
+    letter-spacing: 0.009375em;
     cursor: pointer;
     background: none;
     background: transparent;
     border: none;
     border-radius: 0;
     outline: none;
-    @include material-animation-default(.15s);
+    @include material-animation-default(0.15s);
     transition-property: border-color;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -68,12 +85,15 @@
 
   &--focused {
     z-index: 5;
-    background-color: #fff;
-    box-shadow: var(--shadow-2dp);
+    background-color: var(--color-app-card-background);
+    box-shadow: var(--elevation-z2);
 
-    .md-interactive__hidden {
-      z-index: 0;
-      visibility: hidden;
+    .md-interactive-wrapper--show {
+      display: none;
+    }
+
+    .md-interactive-wrapper--edit {
+      display: flex;
     }
 
     .md-interactive__input {
@@ -88,12 +108,6 @@
   }
 
   &--dense {
-    height: 48px;
-    min-height: 48px;
-    line-height: 48px;
+    --interactive-height: 48px;
   }
-}
-
-.md-interactive-input__show {
-  height: 56px;
 }

@@ -1,7 +1,0 @@
-// ==========  Shadow  ========== //
-
-@each $variant in $shadow-variant {
-  .md-shadow-#{$variant} {
-    box-shadow: var(--shadow-#{$variant});
-  }
-}

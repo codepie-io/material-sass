@@ -107,7 +107,7 @@
   }
 
   &--has-shadow-persistent {
-    box-shadow: var(--shadow-1dp);
+    box-shadow: var(--elevation-z1);
     color: var(--color-dark);
     background-color: var(--color-light--card-background);
 
@@ -133,7 +133,7 @@
     }
 
     &.md-autocomplete--has-shadow {
-      box-shadow: var(--shadow-2dp);
+      box-shadow: var(--elevation-z2);
     }
     & .md-autocomplete__visible--on-open {
       pointer-events: auto;

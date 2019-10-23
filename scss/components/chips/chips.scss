@@ -60,7 +60,7 @@
 
   &:focus,
   &:active {
-    box-shadow: var(--shadow-2dp);
+    box-shadow: var(--elevation-z2);
   }
 
   &__text {
@@ -107,13 +107,14 @@
     height: 20px;
     margin-top: 2px;
     margin-left: 2px;
-    background: rgba(0, 0, 0, .3);
+    background: rgba(0, 0, 0, 0.3);
 
-    .md-button__icon {
+    .md-icon-button__icon {
       width: 24px;
       height: 24px;
+      margin-right: 0;
       color: inherit;
-      transform: translate(-50%, -50%) scale(.7);
+      transform: translate(0, -1px) scale(0.7);
     }
   }
 
@@ -121,7 +122,7 @@
     width: 20px;
     height: 20px;
     font-size: 20px;
-    color: rgba(0, 0, 0, .54);
+    color: rgba(0, 0, 0, 0.54);
     vertical-align: middle;
     border-radius: 50%;
     outline: none;

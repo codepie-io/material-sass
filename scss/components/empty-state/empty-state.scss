@@ -1,32 +1,42 @@
 @import "variables";
 
-// ==========  Drawer  ========== //
+// ==========  Empty State  ========== //
 
 .md-empty-state {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
   max-width: var(--empty-state-max-width);
   margin: 24px auto;
   text-align: center;
 
-  &__graphic-container {
+  &__graphic {
+    position: relative;
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
+    max-width: var(--empty-state-graphic-max-width);
+    font-size: 92px;
 
-    .material-icons {
-      position: relative;
-      z-index: 1;
-      font-size: inherit;
-      color: var(--color-primary);
+    &--circle {
+      width: 156px;
+      height: 156px;
+      font-size: 92px;
+      border-radius: 50%;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: var(--color-app-status-bar);
+        border-radius: 50%;
+      }
     }
-  }
-
-  &__graphic {
-    max-width: 100%;
 
     .material-icons {
       position: relative;
@@ -42,7 +52,7 @@
   }
 
   &__title {
-    margin: 24px 0 0;
+    margin: 24px 0 8px;
     font-size: 20px;
     font-weight: 400;
     line-height: 28px;
@@ -50,17 +60,6 @@
   }
 
   &__subtext {
-    min-width: 394px;
-    margin-top: 16px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    color: var(--color-app-text-secondary);
-  }
-
-  &__subtext {
-    min-width: 394px;
-    margin-top: 16px;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -71,7 +70,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    min-height: 52px;
     margin-right: -8px;
     margin-left: -8px;
     padding: 8px 0;
@@ -83,9 +81,10 @@
 
   @media (min-width: 720px) {
     &--horizontal {
-      flex-direction: row;
-      text-align: left;
       --empty-state-max-width: 644px;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      text-align: left;
 
       .md-empty-state__title {
         margin-top: 0;

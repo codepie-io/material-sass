@@ -43,6 +43,10 @@
     color: inherit !important;
     background: transparent;
     outline: none;
+
+    @media screen and (max-width: $screen-tablet-breakpoint) {
+      margin-left: -16px;
+    }
   }
 
   &__row {
@@ -56,18 +60,13 @@
   &__title {
     z-index: 1;
     overflow: hidden;
-    padding-right: 0;
-    padding-left: 20px;
-    font-size: 1.25rem;
-    font-weight: 500;
-    line-height: 2rem;
+    padding: 8px 0 8px 20px;
     text-overflow: ellipsis;
-    letter-spacing: .0125em;
     white-space: nowrap;
+    @include md-typography-headline6();
 
     &--large {
       font-size: 24px;
-     /* line-height: 44px; */
     }
   }
 
@@ -109,7 +108,7 @@
   }
 
   &--casting-shadow {
-    box-shadow: var(--shadow-4dp);
+    box-shadow: var(--elevation-z4);
   }
 
   &--casting-border {
@@ -230,7 +229,6 @@
 
   &--prominent {
     .md-top-app-bar__row {
-
     }
 
     .md-top-app-bar__navigation-icon,
@@ -240,8 +238,7 @@
     }
 
     .md-top-app-bar__title {
-      margin-top: 80px;
-      /*padding-bottom: 2px;*/
+      margin-top: 60px;
     }
 
     @media (max-width: 599px) {

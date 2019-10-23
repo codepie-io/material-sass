@@ -27,7 +27,7 @@
   border: none;
   border-radius: var(--fab-border-radius);
   outline: 0;
-  box-shadow: var(--shadow-6dp);
+  box-shadow: var(--elevation-z6);
   transition: box-shadow .28s cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform .27s cubic-bezier(0, 0, .2, 1) 0ms;
   fill: currentColor;
   will-change: transform, opacity;

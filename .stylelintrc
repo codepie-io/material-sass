@@ -253,7 +253,6 @@
         ]
       }
     ],
-    "function-name-case": [],
-    "number-leading-zero": "never"
+    "function-name-case": []
   }
 }

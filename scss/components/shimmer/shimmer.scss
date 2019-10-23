@@ -1,0 +1,57 @@
+@import "variables";
+// ==========  Slider   ========== //
+
+.md-shimmer {
+  pointer-events: none !important;
+  transition-timing-function: ease;
+  transition-duration: 500ms;
+  transition-property: all;
+
+  &__item {
+    color: transparent !important;
+    cursor: progress !important;
+    background: #f6f7f8;
+    background: linear-gradient(90deg, #eee 40%, #ddd 50%, #eee 0);
+    background-image: none !important;
+    background-repeat: no-repeat;
+    background-size: 1200px 160px;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    animation-name: loading-pulse;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+    > * {
+      visibility: hidden;
+    }
+  }
+
+  &__item--headline {
+    width: 50%;
+    max-width: 200px;
+    height: 20px;
+  }
+
+  &__item--paragraph {
+    width: 80%;
+    max-width: 400px;
+    height: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+@keyframes loading-pulse {
+  0% {
+    background-color: #e3e3e3;
+  }
+
+  50% {
+    background-color: #f3f3f3;
+  }
+
+  100% {
+    background-color: #e3e3e3;
+  }
+}

@@ -1,0 +1,4 @@
+@mixin switch-variant($color) {
+  --switch-theme: RGB(var(--color-#{$color}));
+  --switch-theme-contrast: RGBA(var(--color-#{$color}-contrast), 1);
+}

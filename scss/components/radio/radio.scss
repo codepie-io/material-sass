@@ -94,12 +94,6 @@
     transform: scale(0);
   }
 
-  &__label {
-    font-size: var(--radio-label-font-size);
-    cursor: pointer;
-    user-select: none;
-  }
-
   &__native-control {
     position: absolute;
     top: 0;
@@ -143,7 +137,7 @@
       cursor: auto;
     }
 
-    + .md-radio__label {
+    + label {
       color: var(--color-app-disable);
       cursor: default;
     }
