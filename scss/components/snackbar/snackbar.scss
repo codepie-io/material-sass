@@ -26,7 +26,7 @@
     color: var(--snackbar-text-color);
     background-color: var(--snackbar-bg-color);
     border-radius: 4px;
-    box-shadow: var(--shadow-6dp);
+    box-shadow: var(--elevation-z6);
     will-change: transform, opacity;
     opacity: 0;
     transition: opacity .15s cubic-bezier(0, 0, .2, 1) 0ms, transform .15s cubic-bezier(0, 0, .2, 1) 0ms, -webkit-transform .15s cubic-bezier(0, 0, .2, 1) 0ms;

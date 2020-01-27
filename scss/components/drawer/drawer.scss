@@ -52,7 +52,6 @@
   }
 
   &__title {
-    @include md-typography-headline6();
     display: block;
     margin-top: 0;
     margin-bottom: -20px;
@@ -77,12 +76,19 @@
   }
 
   &__subtitle {
-    @include md-typography-body1();
     display: block;
     margin-top: 0;
     margin-bottom: 0;
     line-height: normal;
     color: var(--color-app-text-secondary);
+
+    &:after {
+      display: inline-block;
+      width: 0;
+      height: 20px;
+      vertical-align: 0;
+      content: "";
+    }
   }
 
   &__content {
@@ -109,6 +115,10 @@
     &--activated {
       color: RGBA(var(--color-primary));
       --list-background-hover: rgba(var(--color-primary));
+
+      .md-list-graphic {
+        color: RGBA(var(--color-primary));
+      }
     }
   }
 
@@ -138,7 +148,7 @@
 
     .md-drawer__surface {
       z-index: 6;
-      box-shadow: var(--shadow-24dp);
+      box-shadow: var(--elevation-z24);
       transform: translateX(var(--drawer-surface-translate));
     }
   }

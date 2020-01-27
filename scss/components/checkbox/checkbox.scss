@@ -36,16 +36,16 @@
   }
 
   &:hover::before {
-    opacity: .04;
+    opacity: 0.04;
   }
 
   &:active::after {
-    opacity: .12;
+    opacity: 0.12;
     transform: none;
   }
 
   &--focused::after {
-    opacity: .12;
+    opacity: 0.12;
     transform: none;
   }
 
@@ -66,7 +66,8 @@
     border-style: solid;
     border-width: 2px;
     border-radius: 2px;
-    transition: border-color 90ms 0s cubic-bezier(0, 0, .2, 1), background-color 90ms 0s cubic-bezier(0, 0, .2, 1);
+    transition: border-color 90ms 0s cubic-bezier(0, 0, 0.2, 1),
+      background-color 90ms 0s cubic-bezier(0, 0, 0.2, 1);
     will-change: background-color, border-color;
   }
 
@@ -78,7 +79,7 @@
     left: 0;
     width: 100%;
     opacity: 0;
-    transition: opacity 180ms 0ms cubic-bezier(.4, 0, .6, 1);
+    transition: opacity 180ms 0ms cubic-bezier(0.4, 0, 0.6, 1);
     fill: var(--checkbox-theme-contrast);
   }
 
@@ -87,22 +88,16 @@
     height: 2px;
     background-color: var(--checkbox-theme-contrast);
     opacity: 0;
-    transition: opacity 90ms 0ms cubic-bezier(.4, 0, .6, 1);
+    transition: opacity 90ms 0ms cubic-bezier(0.4, 0, 0.6, 1);
     transform: scaleX(0) rotate(0deg);
   }
 
   &__checkmark__path {
-    transition: stroke-dashoffset 180ms 0ms cubic-bezier(.4, 0, .6, 1);
+    transition: stroke-dashoffset 180ms 0ms cubic-bezier(0.4, 0, 0.6, 1);
     stroke: var(--checkbox-theme-contrast);
     stroke-width: 3.12px;
     stroke-dashoffset: 29.78334;
     stroke-dasharray: 29.78334;
-  }
-
-  &__label {
-    font-size: var(--checkbox-font-size);
-    cursor: pointer;
-    user-select: none;
   }
 
   &__native-control {
@@ -120,7 +115,8 @@
     &:checked + .md-checkbox__background {
       background-color: var(--checkbox-theme);
       border-color: var(--checkbox-theme);
-      transition: border-color 90ms 0ms cubic-bezier(0, 0, .2, 1), background-color 90ms 0ms cubic-bezier(0, 0, .2, 1);
+      transition: border-color 90ms 0ms cubic-bezier(0, 0, 0.2, 1),
+        background-color 90ms 0ms cubic-bezier(0, 0, 0.2, 1);
 
       .md-checkbox__checkmark {
         opacity: 1;
@@ -163,7 +159,7 @@
       border-color: var(--color-app-disable);
     }
 
-    + .md-checkbox__label {
+    + label {
       color: var(--color-app-disable);
       cursor: default;
     }

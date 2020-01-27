@@ -40,7 +40,7 @@
     overflow-y: auto;
     color: var(--color-app-text);
     background-color: var(--drawer-background-color);
-    box-shadow: var(--shadow-24dp);
+    box-shadow: var(--elevation-z24);
     // Transform offscreen.
     transform: translateX(-$layout-drawer-width - 10px);
     transform-style: preserve-3d;

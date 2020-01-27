@@ -31,5 +31,8 @@
   &--visible {
     display: flex;
   }
-}
 
+  &--backdrop {
+    background: var(--color-app-divider);
+  }
+}

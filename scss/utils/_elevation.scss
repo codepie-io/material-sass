@@ -1,0 +1,7 @@
+// ==========  Shadow  ========== //
+
+@for $z-value from 0 through 24 {
+  .md-elevation-z#{$z-value} {
+    box-shadow: var(--elevation-z#{$z-value});
+  }
+}

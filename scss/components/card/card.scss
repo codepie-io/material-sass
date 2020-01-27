@@ -13,11 +13,13 @@
   font-weight: 400;
   background: var(--color-app-card-background);
   border-radius: var(--card-border-radius);
-  box-shadow: var(--shadow-1dp);
+  box-shadow: var(--elevation-z1);
 
   //Card Elements
-  &--no-shadow {
-    box-shadow: none;
+  &--outlined {
+    border: 1px solid var(--color-app-divider);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.14),
+      0 0 0 0 rgba(0, 0, 0, 0.12);
   }
 
   &--full-width {
@@ -138,10 +140,6 @@
     background: #fafafa;
   }
 
-  &--border-bottom {
-    border-bottom: 1px solid $card-border-color;
-  }
-
   &--collection {
     min-height: 0;
     margin-bottom: 8px;
@@ -250,8 +248,10 @@
     padding: $card-vertical-padding $card-horizontal-padding;
     line-height: normal;
     color: var(--color-app-text);
-    perspective-origin: $card-title-perspective-origin-x $card-title-perspective-origin-y;
-    transform-origin: $card-title-transform-origin-x $card-title-transform-origin-y;
+    perspective-origin: $card-title-perspective-origin-x
+      $card-title-perspective-origin-y;
+    transform-origin: $card-title-transform-origin-x
+      $card-title-transform-origin-y;
 
     &.md-card--border {
       border-bottom: 1px solid $card-border-color;
@@ -277,7 +277,8 @@
     font-weight: var(--card-title-text-font-weight);
     line-height: normal;
     color: inherit;
-    transform-origin: $card-title-text-transform-origin-x $card-title-text-transform-origin-y;
+    transform-origin: $card-title-text-transform-origin-x
+      $card-title-text-transform-origin-y;
   }
 
   &__subtitle-text {
@@ -329,7 +330,7 @@
       content: " ";
       background-color: var(--color-app-button-hover);
       opacity: 0;
-      transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       transition-property: opacity;
       will-change: opacity;
     }
@@ -348,16 +349,16 @@
 
     &:hover::before,
     &:focus::before {
-      opacity: .04;
+      opacity: 0.04;
       transform: none;
     }
 
     &:hover:not(:active)::before {
-      opacity: .08;
+      opacity: 0.08;
     }
 
     &:active::after {
-      opacity: .12;
+      opacity: 0.12;
     }
   }
 
@@ -478,11 +479,10 @@
     flex-direction: row;
     padding: var(--card-header-padding);
   }
-
 }
 
 .md-animation-collapse {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   will-change: tranform;
 }
 
@@ -511,8 +511,16 @@
   bottom: 0;
   content: "";
   z-index: 0;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 33%);
-  background-image: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 33%);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0) 33%
+  );
+  background-image: -webkit-linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0) 33%
+  );
 }
 
 //wrap the content

@@ -221,6 +221,10 @@
     padding: 4px 0;
 
     .md-list-item {
+      min-height: 40px;
+    }
+
+    .md-list-content__title {
       font-size: 15px;
     }
 

@@ -5,7 +5,9 @@
 .md-icon-button {
   position: relative;
   box-sizing: border-box;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: var(--icon-button-width);
   height: var(--icon-button-height);
   overflow: hidden;
@@ -72,9 +74,14 @@
   // Child
   &__icon {
     display: inline-block;
+    width: var(--icon-button-font-size);
+    height: var(--icon-button-font-size);
     margin: 0;
-    font-size: inherit;
+    font-size: var(--icon-button-font-size);
     color: inherit;
+    vertical-align: top;
+    pointer-events: none;
+    user-select: none;
 
     &--on {
       display: none;
@@ -83,11 +90,9 @@
 
   //Button Modifiers
   &--dense {
-    --icon-button--width: 32px;
+    --icon-button-width: 32px;
     --icon-button-height: 32px;
     --icon-button-font-size: 18px;
-    --icon-button-padding-x: 7px;
-    --icon-button-padding-y: 7px;
   }
 
   &--on {

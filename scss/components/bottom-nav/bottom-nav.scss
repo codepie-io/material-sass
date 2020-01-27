@@ -14,7 +14,7 @@
   height: var(--bottom-tab-height);
   color: var(--color-app-text-secondary);
   background: var(--color-app-card-background);
-  box-shadow: var(--shadow-8dp);
+  box-shadow: var(--elevation-z8);
 
   &__item {
     position: relative;
@@ -27,7 +27,7 @@
     min-width: 80px;
     max-width: 168px;
     height: var(--bottom-tab-height);
-    padding: 0 12px;
+    padding: 0;
     font-size: 12px;
     font-weight: 400;
     line-height: 1;
