@@ -1,0 +1,31 @@
+// ==========  Overflow  ========== //
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $name, $value in $overflow-map {
+      .overflow-#{$name}#{$infix} {
+        overflow: $value;
+      }
+    }
+
+    @each $name, $value in $overflow-x-map {
+      .overflow-#{$name}#{$infix} {
+        overflow-x: $value;
+      }
+    }
+
+    @each $name, $value in $overflow-y-map {
+      .overflow-#{$name}#{$infix} {
+        overflow-y: $value;
+      }
+    }
+
+    @each $name, $value in $overflow-scrolling-map {
+      .overflow-#{$name}#{$infix} {
+        -webkit-overflow-scrolling: $value;
+      }
+    }
+  }
+}

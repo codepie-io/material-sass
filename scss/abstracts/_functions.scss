@@ -1,0 +1,43 @@
+// ==========  Functions  ========== //
+
+// Animation
+@function material-animation-enter($name, $duration, $delay: 0ms) {
+  @return $name $duration $delay var(--animation-curve-linear-out-slow-in);
+}
+
+@function material-animation-exit-permanent($name, $duration, $delay: 0ms) {
+  @return $name $duration $delay var(--animation-curve-fast-out-linear-in);
+}
+
+@function material-animation-exit-temporary($name, $duration, $delay: 0ms) {
+  @return $name $duration $delay var(--animation-curve-sharp);
+}
+
+@function material-animation-standard($name, $duration, $delay: 0ms) {
+  @return $name $duration $delay var(--animation-curve-fast-out-slow-in);
+}
+
+// Typography
+@function material-typography-get-letter-spacing($tracking, $font-size) {
+  @return $tracking / ($font-size * 16) * 1em;
+}
+
+// Container
+@function get-negative($value) {
+  @if $value == 0 {
+    @return $value;
+  }
+
+  @if $value == "0px" {
+    @return $value;
+  }
+
+  @return -$value;
+}
+
+//
+@function get-font-family($value) {
+  $font: map-get($font-family-map, $value);
+
+  @return if($font, $font, "Roboto, Arial, sans-serif");
+}

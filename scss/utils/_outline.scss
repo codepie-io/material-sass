@@ -1,0 +1,11 @@
+// ==========  Outline  ========== //
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .outline-none#{$infix} {
+      outline: 0;
+    }
+  }
+}

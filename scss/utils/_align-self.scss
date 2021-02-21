@@ -1,0 +1,7 @@
+// ==========  Align Self  ========== //
+
+$config : map-get($utility-config, "align-self");
+
+@if $config {
+  @include utility($config, $align-items-map, "align-self");
+}

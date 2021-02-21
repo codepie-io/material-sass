@@ -1,0 +1,7 @@
+// ==========  Border Radius  ========== //
+
+$config: map-get($utility-config, "border-radius");
+
+@if $config {
+  @include utility($config, $border-radius-map, "border-radius");
+}

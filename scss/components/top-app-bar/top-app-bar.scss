@@ -1,6 +1,6 @@
-@import "variables";
-
 // ==========  Header   ========== //
+
+@import "variables";
 
 .md-top-app-bar {
   position: relative;
@@ -17,24 +17,7 @@
   border: none;
 
   // @include md-animation-default(); TODO
-
   transition-property: all;
-
-  > .md-container {
-    position: relative;
-  }
-
-  .md-top-app-bar__row {
-    .md-nav__link {
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-
-    &.md-nav--dense .md-nav__link {
-      padding-top: 16px;
-      padding-bottom: 16px;
-    }
-  }
 
   &__navigation-icon {
     width: 48px;
@@ -162,42 +145,6 @@
     }
   }
 
-  &--light {
-    color: RGBA(var(--color-dark-text));
-    background-color: RGB(var(--color-light-app-bar));
-  }
-
-  &--dark {
-    color: RGBA(var(--color-light-text));
-    background-color: RGB(var(--color-dark-app-bar));
-  }
-
-  &--primary {
-    color: RGBA(var(--color-primary-contrast));
-    background-color: RGB(var(--color-primary));
-
-    .md-top-app-bar__title {
-      color: RGBA(var(--color-primary-contrast));
-    }
-
-    .md-top-app-bar__action {
-      color: RGBA(var(--color-primary-contrast));
-    }
-  }
-
-  &--accent {
-    color: RGBA(var(--color-accent-contrast));
-    background-color: RGB(var(--color-accent));
-
-    .md-top-app-bar__title {
-      color: RGBA(var(--color-accent-contrast));
-    }
-
-    .md-top-app-bar__action {
-      color: RGBA(var(--color-accent-contrast));
-    }
-  }
-
   &--dense-lt-md {
     @media screen and (max-width: $screen-tablet-breakpoint) {
       min-height: var(--top-app-bar-height-phone);
@@ -251,22 +198,8 @@
   .md-nav {
     min-height: 48px;
 
-    & > .md-nav__link {
-      font-weight: 400;
+    & > .md-nav-item {
       text-transform: none;
     }
-  }
-}
-
-/* stylelint-disable selector-no-qualifying-type */
-body.has-fixed-header {
-  padding-top: var(--top-app-bar-height-desktop);
-
-  &[data-top="56"] {
-    padding-top: var(--top-app-bar-height-phone);
-  }
-
-  @media screen and (max-width: $screen-tablet-breakpoint) {
-    padding-top: var(--top-app-bar-height-phone);
   }
 }

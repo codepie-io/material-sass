@@ -12,7 +12,7 @@
   justify-content: center;
   width: 100%;
   height: var(--bottom-tab-height);
-  color: var(--color-app-text-secondary);
+  color: var(--color-app-text);
   background: var(--color-app-card-background);
   box-shadow: var(--elevation-z8);
 
@@ -35,6 +35,11 @@
     text-align: center;
     text-decoration: none;
     text-transform: none;
+    opacity: 0.7;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 85ms;
+    transition-property: opacity;
+    will-change: opacity;
 
     &--icon-only {
       justify-content: center;
@@ -49,7 +54,8 @@
     }
 
     &--active {
-      color: var(--color-primary);
+      color: RGB(var(--color-primary));
+      opacity: 1;
     }
 
     &:hover {

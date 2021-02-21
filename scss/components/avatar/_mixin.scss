@@ -1,4 +1,0 @@
-@mixin avatar-variant($color) {
-  --avatar-color: RGB(var(--color-#{$color}-contrast));
-  --avatar-background: RGB(var(--color-#{$color}));
-}

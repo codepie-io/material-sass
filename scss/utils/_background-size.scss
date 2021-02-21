@@ -1,0 +1,7 @@
+// ==========  Background Size  ========== //
+
+$config: map-get($utility-config, "background-size");
+
+@if $config {
+  @include utility($config, $background-size-map, "background-size");
+}

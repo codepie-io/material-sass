@@ -1,5 +1,9 @@
 // ==========  Nav  ========== //
 
 :root {
-
+  --nav-color: var(--color-app-text-secondary);
+  --nav-active-color: var(--color-app-text);
+  --nav-bg: transparent;
+  --nav-active-opacity: 1;
+  --nav-default-opacity: .8;
 }

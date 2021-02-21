@@ -1,27 +1,13 @@
-// ==========  Flex   ========== //
+// ==========  Flex  ========== //
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .md-flex-row#{$infix}            { flex-direction: row; }
-    .md-flex-column#{$infix}         { flex-direction: column; }
-    .md-flex-row-reverse#{$infix}    { flex-direction: row-reverse; }
-    .md-flex-column-reverse#{$infix} { flex-direction: column-reverse; }
-
-    .md-flex-wrap#{$infix}         { flex-wrap: wrap; }
-    .md-flex-nowrap#{$infix}       { flex-wrap: nowrap; }
-    .md-flex-wrap-reverse#{$infix} { flex-wrap: wrap-reverse; }
-    .md-flex-fill#{$infix}         { flex: 1 1 auto; }
-    .md-flex-grow-0#{$infix}       { flex-grow: 0; }
-    .md-flex-grow-1#{$infix}       { flex-grow: 1; }
-    .md-flex-shrink-0#{$infix}     { flex-shrink: 0; }
-    .md-flex-shrink-1#{$infix}     { flex-shrink: 1; }
-
-    .md-justify-content-start#{$infix}   { justify-content: flex-start; }
-    .md-justify-content-end#{$infix}     { justify-content: flex-end; }
-    .md-justify-content-center#{$infix}  { justify-content: center; }
-    .md-justify-content-between#{$infix} { justify-content: space-between; }
-    .md-justify-content-around#{$infix}  { justify-content: space-around; }
+    @each $name, $value in $flex-map {
+      .flex-#{$name}#{$infix} {
+        flex: $value;
+      }
+    }
   }
 }

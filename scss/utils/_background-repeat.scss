@@ -1,0 +1,7 @@
+// ==========  Background Repeat  ========== //
+
+$config: map-get($utility-config, "background-repeat");
+
+@if $config {
+  @include utility($config, $background-repeat-map, "background-repeat");
+}

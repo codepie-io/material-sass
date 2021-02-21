@@ -1,0 +1,24 @@
+// ==========  Root  ========== //
+
+:root {
+  // elevation
+  @for $z-value from 0 through 24 {
+    @include elevation-value($z-value);
+  }
+
+  // color
+  @each $name, $value in $theme-colors {
+    @include generate-color($name, $value);
+  }
+
+  @each $name, $value in $theme-colors-contrast {
+    @include generate-color($name, $value);
+  }
+
+  @each $name, $value in $theme-app {
+    @include generate-color($name, $value);
+  }
+
+  --link-color: rgb(var(--color-accent));
+  --link-decoration: none;
+}

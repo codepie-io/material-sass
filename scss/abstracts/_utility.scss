@@ -1,0 +1,63 @@
+@use "sass:list";
+
+// ==========  Utility  ========== //
+
+@function responsive-flag($config, $name, $breakpoints) {
+  $flag: "";
+
+  @if breakpoint-min($name, $breakpoints) != null {
+    $flag: $name;
+  }
+
+  @if $flag == "" {
+    @return true;
+  }
+
+  @if $config {
+    @return false;
+  }
+
+  @return if(
+    map-get($config, $flag) == null,
+    false,
+    map-get($config, $flag) == true
+  );
+}
+
+@mixin default-test-1($infix, $property-map, $property, $property-name) {
+  @each $name, $value in $property-map {
+    @if $property-name {
+      .#{$property}-#{$name}#{$infix} {
+        #{$property-name}: $value;
+      }
+    } @else {
+      .#{$property}-#{$name}#{$infix} {
+        #{$property}: $value;
+      }
+    }
+  }
+}
+
+@mixin utility($config, $property-map, $property, $property-name: null) {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      $responsive: map-get($config, "responsive");
+      $responsive-flag: responsive-flag(
+        $responsive,
+        $breakpoint,
+        $grid-breakpoints
+      );
+
+      @if $responsive-flag {
+        @include default-test-1(
+          $infix,
+          $property-map,
+          $property,
+          $property-name
+        );
+      }
+    }
+  }
+}

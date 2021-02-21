@@ -1,6 +1,6 @@
-@import "mixin";
-@import "variables";
 // ==========  Avatar   ========== //
+
+@import "variables";
 
 .md-avatar {
   position: relative;
@@ -49,12 +49,6 @@
 
     .md-avatar__icon {
       font-size: 32px;
-    }
-  }
-
-  @each $variant in $theme-variant {
-    &--#{$variant} {
-      @include avatar-variant($variant);
     }
   }
 }

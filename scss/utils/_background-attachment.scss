@@ -1,0 +1,11 @@
+// ==========  Background Attachment  ========== //
+
+$config: map-get($utility-config, "background-attachment");
+
+@if $config {
+  @include utility(
+    $config,
+    $background-attachment-map,
+    "background-attachment"
+  );
+}

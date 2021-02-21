@@ -1,0 +1,874 @@
+// ==========  Colors  ========== //
+
+$theme-colors: (
+  "primary": "19, 90, 247",
+  "accent": "0, 210, 128",
+  "success": "76, 175, 80",
+  "warning": "249, 168, 37",
+  "danger": "211, 47, 47",
+  "light": "245, 245, 245",
+  "dark": "33, 33, 33"
+) !default;
+
+$theme-colors-contrast: (
+  "primary-contrast": "255, 255, 255",
+  "accent-contrast": "0, 0, 0",
+  "success-contrast": "255, 255, 255",
+  "warning-contrast": "0, 0, 0",
+  "danger-contrast": "255, 255, 255",
+  "light-contrast": "0, 0, 0",
+  "dark-contrast": "255, 255, 255"
+) !default;
+
+$theme-app: (
+  "app-text": "255, 255, 255",
+  "app-text-secondary": "0, 0, 0",
+  "app-bar": "255, 255, 255",
+  "app-status-bar": "0, 0, 0",
+  "app-background": "255, 255, 255",
+  "app-card-background": "0, 0, 0",
+  "app-disable": "255, 255, 255",
+  "app-divider": "255, 255, 255",
+  "app-button-disable": "255, 255, 255"
+) !default;
+
+// ==========  Base  ========== //
+
+$font-base-size: 1rem !default;
+$font-base-weight: 400 !default;
+$line-base-height: 1.15 !default;
+
+// ==========  Grid  ========== //
+
+$screen-phone-breakpoint: 640px !default;
+$screen-tablet-breakpoint: 960px !default;
+$screen-desktop-breakpoint: 1280px !default;
+$screen-large-desktop-breakpoint: 1440px !default;
+$screen-large-desktop-breakpoint: 1920px !default;
+
+$grid-tablet-breakpoint: 600px !default;
+$grid-desktop-breakpoint: 960px !default;
+$grid-large-desktop-breakpoint: $screen-desktop-breakpoint !default;
+
+$grid-columns: 12 !default;
+
+$grid-desktop-columns: 12 !default;
+$grid-desktop-gutter: 24px !default;
+$grid-desktop-margin: 16px !default;
+$grid-gutter: 16px !default;
+$grid-margin: $grid-gutter;
+$grid-has-tile-margin: 8px !default;
+
+$grid-tablet-columns: 8 !default;
+$grid-tablet-gutter: 16px !default;
+$grid-tablet-margin: 16px !default;
+
+$grid-phone-columns: 4 !default;
+$grid-phone-gutter: 16px !default;
+$grid-phone-margin: 16px !default;
+
+$grid-cell-default-columns: $grid-phone-columns !default;
+$grid-max-columns: $grid-desktop-columns !default;
+
+// ==========  Grid List  ========== //
+
+$grid-list-phone-margin: 4px;
+$grid-list-phone-gutter: 4px;
+
+$grid-list-margin: 4px;
+$grid-list-gutter: 4px;
+$grid-list-gutter-narrow: 1px;
+
+// ==========  Typography  ========== //
+
+$grid-list-phone-margin: 4px;
+$grid-list-phone-gutter: 4px;
+
+// ==========  Flex Container  ========== //
+
+$gutters: (
+  1: 16,
+  2: 24,
+  3: 32
+) !default;
+$gutter-default: 0 !default;
+
+// ==========  Shadow  ========== //
+
+$elevation-baseline-color: black !default;
+$elevation-umbra-opacity: 0.2 !default;
+$elevation-penumbra-opacity: 0.14 !default;
+$elevation-ambient-opacity: 0.12 !default;
+
+$elevation-umbra-map: (
+  0: "0px 0px 0px 0px",
+  1: "0px 2px 1px -1px",
+  2: "0px 3px 1px -2px",
+  3: "0px 3px 3px -2px",
+  4: "0px 2px 4px -1px",
+  5: "0px 3px 5px -1px",
+  6: "0px 3px 5px -1px",
+  7: "0px 4px 5px -2px",
+  8: "0px 5px 5px -3px",
+  9: "0px 5px 6px -3px",
+  10: "0px 6px 6px -3px",
+  11: "0px 6px 7px -4px",
+  12: "0px 7px 8px -4px",
+  13: "0px 7px 8px -4px",
+  14: "0px 7px 9px -4px",
+  15: "0px 8px 9px -5px",
+  16: "0px 8px 10px -5px",
+  17: "0px 8px 11px -5px",
+  18: "0px 9px 11px -5px",
+  19: "0px 9px 12px -6px",
+  20: "0px 10px 13px -6px",
+  21: "0px 10px 13px -6px",
+  22: "0px 10px 14px -6px",
+  23: "0px 11px 14px -7px",
+  24: "0px 11px 15px -7px"
+) !default;
+
+$elevation-penumbra-map: (
+  0: "0px 0px 0px 0px",
+  1: "0px 1px 1px 0px",
+  2: "0px 2px 2px 0px",
+  3: "0px 3px 4px 0px",
+  4: "0px 4px 5px 0px",
+  5: "0px 5px 8px 0px",
+  6: "0px 6px 10px 0px",
+  7: "0px 7px 10px 1px",
+  8: "0px 8px 10px 1px",
+  9: "0px 9px 12px 1px",
+  10: "0px 10px 14px 1px",
+  11: "0px 11px 15px 1px",
+  12: "0px 12px 17px 2px",
+  13: "0px 13px 19px 2px",
+  14: "0px 14px 21px 2px",
+  15: "0px 15px 22px 2px",
+  16: "0px 16px 24px 2px",
+  17: "0px 17px 26px 2px",
+  18: "0px 18px 28px 2px",
+  19: "0px 19px 29px 2px",
+  20: "0px 20px 31px 3px",
+  21: "0px 21px 33px 3px",
+  22: "0px 22px 35px 3px",
+  23: "0px 23px 36px 3px",
+  24: "0px 24px 38px 3px"
+) !default;
+
+$elevation-ambient-map: (
+  0: "0px 0px 0px 0px",
+  1: "0px 1px 3px 0px",
+  2: "0px 1px 5px 0px",
+  3: "0px 1px 8px 0px",
+  4: "0px 1px 10px 0px",
+  5: "0px 1px 14px 0px",
+  6: "0px 1px 18px 0px",
+  7: "0px 2px 16px 1px",
+  8: "0px 3px 14px 2px",
+  9: "0px 3px 16px 2px",
+  10: "0px 4px 18px 3px",
+  11: "0px 4px 20px 3px",
+  12: "0px 5px 22px 4px",
+  13: "0px 5px 24px 4px",
+  14: "0px 5px 26px 4px",
+  15: "0px 6px 28px 5px",
+  16: "0px 6px 30px 5px",
+  17: "0px 6px 32px 5px",
+  18: "0px 7px 34px 6px",
+  19: "0px 7px 36px 6px",
+  20: "0px 8px 38px 7px",
+  21: "0px 8px 40px 7px",
+  22: "0px 8px 42px 7px",
+  23: "0px 9px 44px 8px",
+  24: "0px 9px 46px 8px"
+) !default;
+
+$elevation-property: box-shadow !default;
+
+// ==========  Utilities Variables  ========== //
+
+// Align Content
+$align-content-map: (
+  "center": center,
+  "start": flex-start,
+  "end": flex-end,
+  "between": space-between,
+  "around": space-around
+) !default;
+
+// Align Items
+$align-items-map: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "baseline": baseline,
+  "stretch": stretch
+) !default;
+
+// Align Self
+$align-self-map: (
+  "auto": auto,
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "stretch": stretch
+) !default;
+
+// Appearance
+$appearance-map: (
+  "none": none
+) !default;
+
+// Background Attachment
+$background-attachment-map: (
+  "fixed": fixed,
+  "local": local,
+  "scroll": scroll
+) !default;
+
+// Background Color
+$background-color-map: (
+  "primary": RGB(var(--color-primary)),
+  "accent": RGB(var(--color-accent)),
+  "success": RGB(var(--color-success)),
+  "warning": RGB(var(--color-warning)),
+  "danger": RGB(var(--color-danger)),
+  "light": RGB(var(--color-light)),
+  "dark": RGB(var(--color-dark))
+) !default;
+
+// Background Position
+$background-position-map: (
+  "bottom": bottom,
+  "center": center,
+  "left": left,
+  "left-bottom": left bottom,
+  "left-top": left top,
+  "right": right,
+  "right-bottom": right bottom,
+  "right-top": right top,
+  "top": top
+) !default;
+
+// Background Repeat  ========== //
+$background-repeat-map: (
+  "repeat": repeat,
+  "no-repeat": no-repeat,
+  "repeat-x": repeat-x,
+  "repeat-y": repeat-y,
+  "repeat-round": round,
+  "repeat-space": space
+) !default;
+
+// Background Size  ========== //
+$background-size-map: (
+  "auto": auto,
+  "cover": cover,
+  "contain": contain
+) !default;
+
+// Border Collapse  ========== //
+$border-collapse-map: (
+  "collapse": collapse,
+  "separate": separate
+);
+
+// Border Color
+$border-color-map: (
+  "primary": RGB(var(--color-primary)),
+  "accent": RGB(var(--color-accent)),
+  "success": RGB(var(--color-success)),
+  "warning": RGB(var(--color-warning)),
+  "danger": RGB(var(--color-danger)),
+  "light": RGB(var(--color-light)),
+  "dark": RGB(var(--color-dark))
+) !default;
+
+// Border Radius
+
+$base-border-radius: 4px;
+$border-radius-map: (
+  "none": 0,
+  "circle": 50%,
+  "1": $base-border-radius,
+  "2": 2 * $base-border-radius,
+  "3": 3 * $base-border-radius,
+  "4": 4 * $base-border-radius
+) !default;
+
+// Border Style
+
+$border-style-map: (
+  "solid": solid,
+  "dashed": dashed,
+  "dotted": dotted,
+  "none": none
+) !default;
+
+// Border Width
+.l {
+  border-width: 0;
+}
+$border-width-map: (
+  "none": 0,
+  "1": 1px,
+) !default;
+
+// Border Colors
+
+$border-colors-map: (
+  "primary": "--color-primary",
+  "accent": "--color-accent",
+  "success": "--color-success",
+  "warning": "--color-warning",
+  "danger": "--color-danger",
+  "light": "--color-light",
+  "dark": "--color-dark"
+) !default;
+
+// Cursor
+
+$cursor: (
+  "auto": auto,
+  "default": default,
+  "pointer": pointer,
+  "wait": wait,
+  "text": text,
+  "move": move,
+  "not-allowed": not-allowed
+) !default;
+
+// Display
+
+$display-map: (
+  "none": none,
+  "inline": inline,
+  "inline-block": inline-block,
+  "block": block,
+  "table": table,
+  "table-cell": table-cell,
+  "flex": flex,
+  "inline-flex": inline-flex
+) !default;
+
+// Flex
+
+$flex-map: (
+  "initial": 0 1 auto,
+  "auto": 1 1 auto,
+  "1": 1 1 0%,
+  "none": none
+) !default;
+
+// Flex Direction
+
+$flex-direction-map: (
+  "row": row,
+  "row-reverse": row-reverse,
+  "col": column,
+  "col-reverse": column-reverse
+) !default;
+
+// Flex Grow
+
+$flex-grow-map: (
+  "grow": 1,
+  "grow-0": 0
+) !default;
+
+// Flex Shrink
+
+$flex-shrink-map: (
+  "shrink": 1,
+  "shrink-0": 0
+) !default;
+
+// Flex Wrap
+
+$flex-wrap-map: (
+  "wrap": wrap,
+  "wrap-reverse": wrap-reverse,
+  "no-wrap": nowrap
+) !default;
+
+//  Float
+$float-map: (
+  "right": right,
+  "left": left,
+  "none": none
+) !default;
+
+//  Font Family
+$font-family-body: "sans-serif";
+$font-family-map: (
+  "sans-serif": '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+  "monospace": 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+) !default;
+
+// Font Size
+$font-size-base: 1rem !default;
+$font-size-map: (
+  "headline1": $font-size-base * 6,
+  "headline2": $font-size-base * 3.75,
+  "headline3": $font-size-base * 3.75,
+  "headline4": $font-size-base * 2.125,
+  "headline5": $font-size-base * 1.5,
+  "headline6": $font-size-base * 1.25,
+  "body1": $font-size-base * 1,
+  "subtitle1": $font-size-base * 1,
+  "body2": $font-size-base * 0.875,
+  "subtitle2": $font-size-base * 0.875,
+  "caption": $font-size-base * 0.75,
+  "overline": $font-size-base * 0.625
+) !default;
+
+// Font Style
+$font-style-map: (
+  "italic": italic,
+  "normal": normal
+) !default;
+
+// Font Weight
+$font-weight-map: (
+  "thin": 200,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "black": 900
+) !default;
+
+//  Height
+$height-map: (
+  "auto": auto,
+  "full": 100%,
+  "screen": 100vh,
+  "0": 0
+) !default;
+
+//  Justify Content
+$justify-content-map: (
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "between": space-between,
+  "around": space-around
+) !default;
+
+// Letter Spacing
+$letter-spacing-map: (
+  "tighter": -0.05em,
+  "tight": -0.025em,
+  "normal": 0,
+  "wide": 0.025em,
+  "wider": 0.05em,
+  "widest": 0.1em
+) !default;
+
+// Line Height
+$line-height-map: (
+  "1": 1.25,
+  "normal": normal,
+  "2": 1.5,
+  "3": 1.75,
+  "4": 2
+) !default;
+
+// Margin
+$base-margin: 1rem !default;
+$margin-map: (
+  0: 0,
+  1: (
+    $base-margin * 0.5
+  ),
+  2: (
+    $base-margin * 1
+  ),
+  3: (
+    $base-margin * 1.5
+  ),
+  4: (
+    $base-margin * 2
+  )
+) !default;
+
+// Object Fit
+$object-fit-map: (
+  "contain": contain,
+  "cover": cover,
+  "fill": fill,
+  "none": none,
+  "scale-down": scale-down
+) !default;
+
+// Object Position
+$object-position-map: (
+  "bottom": bottom,
+  "center": center,
+  "left": left,
+  "left-bottom": left bottom,
+  "left-top": left top,
+  "right": right,
+  "right-bottom": right bottom,
+  "right-top": right top,
+  "top": top
+) !default;
+
+// Opacity
+$opacity-map: (
+  0: 0,
+  "25": 0.25,
+  "50": 0.5,
+  "75": 0.75,
+  "100": 1
+) !default;
+
+// ==========  Flex Order  ========== //
+
+$flex-order-map: (
+  "first": -9999,
+  "last": 9999,
+  "none": 0,
+  "1": 1,
+  "2": 2,
+  "3": 3,
+  "4": 4,
+  "5": 5,
+  "6": 6,
+  "7": 7,
+  "8": 8,
+  "9": 9,
+  "10": 10,
+  "11": 11,
+  "12": 12
+) !default;
+
+// ==========  Overflow  ========== //
+
+$overflow-map: (
+  "auto": auto,
+  "hidden": hidden,
+  "visible": visible,
+  "scroll": scroll
+) !default;
+
+$overflow-x-map: (
+  x-auto: auto,
+  x-hidden: hidden,
+  x-visible: visible
+) !default;
+
+$overflow-y-map: (
+  y-auto: auto,
+  y-hidden: hidden,
+  y-visible: visible
+) !default;
+
+$overflow-scrolling-map: (
+  x-scroll: scroll,
+  y-scroll: scroll
+) !default;
+
+// ==========  Padding  ========== //
+
+$base-padding: 1rem !default;
+$padding-map: (
+  0: 0,
+  1: (
+    $base-padding * 0.5
+  ),
+  2: (
+    $base-padding * 1
+  ),
+  3: (
+    $base-padding * 1.5
+  ),
+  4: (
+    $base-padding * 2
+  )
+) !default;
+
+// ==========  Point Events  ========== //
+
+$pointer-events-map: (
+  "none": none,
+  "auto": auto
+) !default;
+
+// ==========  Position  ========== //
+
+$position-map: (
+  "static": static,
+  "fixed": fixed,
+  "absolute": absolute,
+  "relative": relative,
+  "sticky": sticky
+) !default;
+
+// ==========  Svg Fill  ========== //
+
+$svg-fill-map: (
+  "fill": currentColor
+) !default;
+
+// ==========  Svg Stroke  ========== //
+
+$svg-stroke-map: (
+  "stroke": currentColor
+) !default;
+
+// ==========  Text Align  ========== //
+
+$text-align-map: (
+  "left": left,
+  "center": center,
+  "right": right,
+  "justify": justify
+) !default;
+
+// ==========  Text Color  ========== //
+
+$text-color-map: (
+  "primary": "--color-primary",
+  "accent": "--color-accent",
+  "success": "--color-success",
+  "warning": "--color-warning",
+  "danger": "--color-danger",
+  "light": "--color-light",
+  "dark": "--color-dark"
+) !default;
+
+// ==========  Text Decoration  ========== //
+
+$text-decoration-map: (
+  "underline": underline,
+  "line-through": line-through,
+  "no-underline": none
+) !default;
+
+// ==========  Text Transform  ========== //
+
+$text-transform-map: (
+  "uppercase": uppercase,
+  "lowercase": lowercase,
+  "capitalize": capitalize,
+  "normal-case": none
+) !default;
+
+// ==========  User Select  ========== //
+
+$user-select-map: (
+  "none": none,
+  "text": text,
+  "all": all,
+  "auto": auto
+) !default;
+
+// ==========  Vertical Align  ========== //
+
+$vertical-align-map: (
+  "baseline": baseline,
+  "top": top,
+  "middle": middle,
+  "bottom": bottom,
+  "text-top": text-top,
+  "text-bottom": text-bottom
+) !default;
+
+// ==========  Visibility  ========== //
+
+$visibility-map: (
+  "visible": visible,
+  "invisible": hidden
+) !default;
+
+// ==========  Whitespace  ========== //
+
+$white-space-map: (
+  "normal": normal,
+  "no-wrap": nowrap,
+  "pre": pre,
+  "pre-line": pre-line,
+  "pre-wrap": pre-wrap
+) !default;
+
+// ==========  Width  ========== //
+
+$width-map: (
+  "auto": auto,
+  "full": 100%,
+  "screen": 100vw,
+  "0": 0
+) !default;
+
+// ==========  Config  ========== //
+
+$utility-config: () !default;
+
+$utility-config: map-merge(
+  (
+    "align-content": (
+      "responsive": ()
+    ),
+    "align-items": (
+      "responsive": ()
+    ),
+    "align-self": (
+      "responsive": ()
+    ),
+    "appearance": (
+      "responsive": ()
+    ),
+    "background-attachment": (
+      "responsive": ()
+    ),
+    "background-color": (
+      "responsive": ()
+    ),
+    "background-position": (
+      "responsive": ()
+    ),
+    "background-repeat": (
+      "responsive": ()
+    ),
+    "background-size": (
+      "responsive": ()
+    ),
+    "border-collapse": (
+      "responsive": ()
+    ),
+    "border-color": (
+      "responsive": ()
+    ),
+    "border-radius": (
+      "responsive": ()
+    ),
+    "border-style": (
+      "responsive": ()
+    ),
+    "border-width": (
+      "responsive": ()
+    ),
+    "box-shadow": (
+      "responsive": ()
+    ),
+    "cursor": (
+      "responsive": ()
+    ),
+    "display": (
+      "responsive": (
+        "md": true
+      )
+    ),
+    "flex": (
+      "responsive": ()
+    ),
+    "flex-direction": (
+      "responsive": ()
+    ),
+    "flex-grow": (
+      "responsive": ()
+    ),
+    "flex-shrink": (
+      "responsive": ()
+    ),
+    "flex-wrap": (
+      "responsive": ()
+    ),
+    "float": (
+      "responsive": ()
+    ),
+    "font-family": (
+      "responsive": ()
+    ),
+    "font-size": (
+      "responsive": ()
+    ),
+    "font-style": (
+      "responsive": ()
+    ),
+    "font-weight": (
+      "responsive": ()
+    ),
+    "height": (
+      "responsive": ()
+    ),
+    "justify-content": (
+      "responsive": ()
+    ),
+    "letter-spacing": (
+      "responsive": ()
+    ),
+    "line-height": (
+      "responsive": ()
+    ),
+    "margin": (
+      "responsive": ()
+    ),
+    "object-fit": (
+      "responsive": ()
+    ),
+    "object-position": (
+      "responsive": ()
+    ),
+    "opacity": (
+      "responsive": ()
+    ),
+    "order": (
+      "responsive": ()
+    ),
+    "outline": (
+      "responsive": ()
+    ),
+    "overflow": (
+      "responsive": ()
+    ),
+    "padding": (
+      "responsive": ()
+    ),
+    "pointer-events": (
+      "responsive": ()
+    ),
+    "position": (
+      "responsive": ()
+    ),
+    "svg-fill": (
+      "responsive": ()
+    ),
+    "svg-stroke": (
+      "responsive": ()
+    ),
+    "text-align": (
+      "responsive": ()
+    ),
+    "text-color": (
+      "responsive": ()
+    ),
+    "text-decoration": (
+      "responsive": ()
+    ),
+    "text-transform": (
+      "responsive": ()
+    ),
+    "user-select": (
+      "responsive": ()
+    ),
+    "vertical-align": (
+      "responsive": ()
+    ),
+    "visibility": (
+      "responsive": ()
+    ),
+    "white-space": (
+      "responsive": ()
+    ),
+    "width": (
+      "responsive": ()
+    ),
+    "word-break": (
+      "responsive": ()
+    )
+  ),
+  $utility-config
+);

@@ -1,3 +1,0 @@
-@function material-typography-get-letter-spacing($tracking, $font-size) {
-  @return $tracking / ($font-size * 16) * 1em;
-}

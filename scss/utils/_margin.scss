@@ -1,0 +1,52 @@
+// ==========  Margin  ========== //
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $name, $value in $margin-map {
+      .m-#{$name}#{$infix} { margin: $value; }
+
+      .mt-#{$name}#{$infix},
+      .my-#{$name}#{$infix} {
+        margin-top: $value;
+      }
+
+      .mr-#{$name}#{$infix},
+      .mx-#{$name}#{$infix} {
+        margin-right: $value;
+      }
+
+      .mb-#{$name}#{$infix},
+      .my-#{$name}#{$infix} {
+        margin-bottom: $value;
+      }
+
+      .ml-#{$name}#{$infix},
+      .mx-#{$name}#{$infix} {
+        margin-left: $value;
+      }
+    }
+
+    //Other margin utils
+    .mt-auto#{$infix},
+    .my-auto#{$infix} {
+      margin-top: auto;
+    }
+
+    .mr-auto#{$infix},
+    .mx-auto#{$infix} {
+      margin-right: auto;
+    }
+
+    .mb-auto#{$infix},
+    .my-auto#{$infix} {
+      margin-bottom: auto;
+    }
+
+    .ml-auto#{$infix},
+    .mx-auto#{$infix} {
+      margin-left: auto;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+// ==========  Float  ========== //
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .clearfix#{$infix} {
+      &:after {
+        display: table;
+        clear: both;
+        content: '""';
+      }
+    }
+
+    @each $name, $value in $float-map {
+      .float-#{$name}#{$infix} {
+        float: $value;
+      }
+    }
+  }
+}

@@ -1,7 +1,5 @@
 // ==========  Display  ========== //
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    @include display($breakpoint);
-  }
-}
+$config : map-get($utility-config, "display");
+
+@include utility($config, $display-map, "display");

@@ -1,0 +1,13 @@
+// ==========  Text Transform  ========== //
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $name, $value in $text-transform-map {
+      .text-#{$name}#{$infix} {
+        text-transform: $value;
+      }
+    }
+  }
+}

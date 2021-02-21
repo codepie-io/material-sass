@@ -1,0 +1,7 @@
+// ==========  Background Color  ========== //
+
+$config: map-get($utility-config, "background-color");
+
+@if $config {
+  @include utility($config, $background-color-map, "background-color");
+}

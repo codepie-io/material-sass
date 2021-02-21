@@ -1,0 +1,7 @@
+// ==========  Appearance  ========== //
+
+$config : map-get($utility-config, "appearance");
+
+@if $config {
+  @include utility($config, $appearance-map, "appearance");
+}

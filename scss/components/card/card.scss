@@ -213,6 +213,10 @@
     &--16-9::before {
       margin-top: 56.25%;
     }
+
+    &--4-3::before {
+      margin-top: 75%;
+    }
   }
 
   &__meta {

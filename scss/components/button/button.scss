@@ -131,6 +131,11 @@
   &--raised {
     --button-box-shadow: var(--elevation-z2);
 
+    &:hover,
+    &:focus {
+      --button-box-shadow: var(--elevation-z4);
+    }
+
     &::before {
       // background-color: transparent;
     }
