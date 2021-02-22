@@ -4,12 +4,6 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    @each $name, $value in $overflow-map {
-      .overflow-#{$name}#{$infix} {
-        overflow: $value;
-      }
-    }
-
     @each $name, $value in $overflow-x-map {
       .overflow-#{$name}#{$infix} {
         overflow-x: $value;

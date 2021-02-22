@@ -188,371 +188,14 @@ $elevation-property: box-shadow !default;
 
 // ==========  Utilities Variables  ========== //
 
-// Align Content
-$align-content-map: (
-  "center": center,
-  "start": flex-start,
-  "end": flex-end,
-  "between": space-between,
-  "around": space-around
-) !default;
-
-// Align Items
-$align-items-map: (
-  "start": flex-start,
-  "end": flex-end,
-  "center": center,
-  "baseline": baseline,
-  "stretch": stretch
-) !default;
-
-// Align Self
-$align-self-map: (
-  "auto": auto,
-  "start": flex-start,
-  "end": flex-end,
-  "center": center,
-  "stretch": stretch
-) !default;
-
-// Appearance
-$appearance-map: (
-  "none": none
-) !default;
-
-// Background Attachment
-$background-attachment-map: (
-  "fixed": fixed,
-  "local": local,
-  "scroll": scroll
-) !default;
-
-// Background Color
-$background-color-map: (
-  "primary": RGB(var(--color-primary)),
-  "accent": RGB(var(--color-accent)),
-  "success": RGB(var(--color-success)),
-  "warning": RGB(var(--color-warning)),
-  "danger": RGB(var(--color-danger)),
-  "light": RGB(var(--color-light)),
-  "dark": RGB(var(--color-dark))
-) !default;
-
-// Background Position
-$background-position-map: (
-  "bottom": bottom,
-  "center": center,
-  "left": left,
-  "left-bottom": left bottom,
-  "left-top": left top,
+//  Clearfix
+$clearfix-map: (
   "right": right,
-  "right-bottom": right bottom,
-  "right-top": right top,
-  "top": top
-) !default;
-
-// Background Repeat  ========== //
-$background-repeat-map: (
-  "repeat": repeat,
-  "no-repeat": no-repeat,
-  "repeat-x": repeat-x,
-  "repeat-y": repeat-y,
-  "repeat-round": round,
-  "repeat-space": space
-) !default;
-
-// Background Size  ========== //
-$background-size-map: (
-  "auto": auto,
-  "cover": cover,
-  "contain": contain
-) !default;
-
-// Border Collapse  ========== //
-$border-collapse-map: (
-  "collapse": collapse,
-  "separate": separate
-);
-
-// Border Color
-$border-color-map: (
-  "primary": RGB(var(--color-primary)),
-  "accent": RGB(var(--color-accent)),
-  "success": RGB(var(--color-success)),
-  "warning": RGB(var(--color-warning)),
-  "danger": RGB(var(--color-danger)),
-  "light": RGB(var(--color-light)),
-  "dark": RGB(var(--color-dark))
-) !default;
-
-// Border Radius
-
-$base-border-radius: 4px;
-$border-radius-map: (
-  "none": 0,
-  "circle": 50%,
-  "1": $base-border-radius,
-  "2": 2 * $base-border-radius,
-  "3": 3 * $base-border-radius,
-  "4": 4 * $base-border-radius
-) !default;
-
-// Border Style
-
-$border-style-map: (
-  "solid": solid,
-  "dashed": dashed,
-  "dotted": dotted,
+  "left": left,
   "none": none
-) !default;
-
-// Border Width
-.l {
-  border-width: 0;
-}
-$border-width-map: (
-  "none": 0,
-  "1": 1px,
-) !default;
-
-// Border Colors
-
-$border-colors-map: (
-  "primary": "--color-primary",
-  "accent": "--color-accent",
-  "success": "--color-success",
-  "warning": "--color-warning",
-  "danger": "--color-danger",
-  "light": "--color-light",
-  "dark": "--color-dark"
-) !default;
-
-// Cursor
-
-$cursor: (
-  "auto": auto,
-  "default": default,
-  "pointer": pointer,
-  "wait": wait,
-  "text": text,
-  "move": move,
-  "not-allowed": not-allowed
-) !default;
-
-// Display
-
-$display-map: (
-  "none": none,
-  "inline": inline,
-  "inline-block": inline-block,
-  "block": block,
-  "table": table,
-  "table-cell": table-cell,
-  "flex": flex,
-  "inline-flex": inline-flex
-) !default;
-
-// Flex
-
-$flex-map: (
-  "initial": 0 1 auto,
-  "auto": 1 1 auto,
-  "1": 1 1 0%,
-  "none": none
-) !default;
-
-// Flex Direction
-
-$flex-direction-map: (
-  "row": row,
-  "row-reverse": row-reverse,
-  "col": column,
-  "col-reverse": column-reverse
-) !default;
-
-// Flex Grow
-
-$flex-grow-map: (
-  "grow": 1,
-  "grow-0": 0
 ) !default;
 
 // Flex Shrink
-
-$flex-shrink-map: (
-  "shrink": 1,
-  "shrink-0": 0
-) !default;
-
-// Flex Wrap
-
-$flex-wrap-map: (
-  "wrap": wrap,
-  "wrap-reverse": wrap-reverse,
-  "no-wrap": nowrap
-) !default;
-
-//  Float
-$float-map: (
-  "right": right,
-  "left": left,
-  "none": none
-) !default;
-
-//  Font Family
-$font-family-body: "sans-serif";
-$font-family-map: (
-  "sans-serif": '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-  "monospace": 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
-) !default;
-
-// Font Size
-$font-size-base: 1rem !default;
-$font-size-map: (
-  "headline1": $font-size-base * 6,
-  "headline2": $font-size-base * 3.75,
-  "headline3": $font-size-base * 3.75,
-  "headline4": $font-size-base * 2.125,
-  "headline5": $font-size-base * 1.5,
-  "headline6": $font-size-base * 1.25,
-  "body1": $font-size-base * 1,
-  "subtitle1": $font-size-base * 1,
-  "body2": $font-size-base * 0.875,
-  "subtitle2": $font-size-base * 0.875,
-  "caption": $font-size-base * 0.75,
-  "overline": $font-size-base * 0.625
-) !default;
-
-// Font Style
-$font-style-map: (
-  "italic": italic,
-  "normal": normal
-) !default;
-
-// Font Weight
-$font-weight-map: (
-  "thin": 200,
-  "light": 300,
-  "regular": 400,
-  "medium": 500,
-  "bold": 700,
-  "black": 900
-) !default;
-
-//  Height
-$height-map: (
-  "auto": auto,
-  "full": 100%,
-  "screen": 100vh,
-  "0": 0
-) !default;
-
-//  Justify Content
-$justify-content-map: (
-  "start": flex-start,
-  "end": flex-end,
-  "center": center,
-  "between": space-between,
-  "around": space-around
-) !default;
-
-// Letter Spacing
-$letter-spacing-map: (
-  "tighter": -0.05em,
-  "tight": -0.025em,
-  "normal": 0,
-  "wide": 0.025em,
-  "wider": 0.05em,
-  "widest": 0.1em
-) !default;
-
-// Line Height
-$line-height-map: (
-  "1": 1.25,
-  "normal": normal,
-  "2": 1.5,
-  "3": 1.75,
-  "4": 2
-) !default;
-
-// Margin
-$base-margin: 1rem !default;
-$margin-map: (
-  0: 0,
-  1: (
-    $base-margin * 0.5
-  ),
-  2: (
-    $base-margin * 1
-  ),
-  3: (
-    $base-margin * 1.5
-  ),
-  4: (
-    $base-margin * 2
-  )
-) !default;
-
-// Object Fit
-$object-fit-map: (
-  "contain": contain,
-  "cover": cover,
-  "fill": fill,
-  "none": none,
-  "scale-down": scale-down
-) !default;
-
-// Object Position
-$object-position-map: (
-  "bottom": bottom,
-  "center": center,
-  "left": left,
-  "left-bottom": left bottom,
-  "left-top": left top,
-  "right": right,
-  "right-bottom": right bottom,
-  "right-top": right top,
-  "top": top
-) !default;
-
-// Opacity
-$opacity-map: (
-  0: 0,
-  "25": 0.25,
-  "50": 0.5,
-  "75": 0.75,
-  "100": 1
-) !default;
-
-// ==========  Flex Order  ========== //
-
-$flex-order-map: (
-  "first": -9999,
-  "last": 9999,
-  "none": 0,
-  "1": 1,
-  "2": 2,
-  "3": 3,
-  "4": 4,
-  "5": 5,
-  "6": 6,
-  "7": 7,
-  "8": 8,
-  "9": 9,
-  "10": 10,
-  "11": 11,
-  "12": 12
-) !default;
-
-// ==========  Overflow  ========== //
-
-$overflow-map: (
-  "auto": auto,
-  "hidden": hidden,
-  "visible": visible,
-  "scroll": scroll
-) !default;
-
 $overflow-x-map: (
   x-auto: auto,
   x-hidden: hidden,
@@ -570,305 +213,577 @@ $overflow-scrolling-map: (
   y-scroll: scroll
 ) !default;
 
-// ==========  Padding  ========== //
-
-$base-padding: 1rem !default;
-$padding-map: (
-  0: 0,
-  1: (
-    $base-padding * 0.5
-  ),
-  2: (
-    $base-padding * 1
-  ),
-  3: (
-    $base-padding * 1.5
-  ),
-  4: (
-    $base-padding * 2
-  )
-) !default;
-
-// ==========  Point Events  ========== //
-
-$pointer-events-map: (
-  "none": none,
-  "auto": auto
-) !default;
-
-// ==========  Position  ========== //
-
-$position-map: (
-  "static": static,
-  "fixed": fixed,
-  "absolute": absolute,
-  "relative": relative,
-  "sticky": sticky
-) !default;
-
-// ==========  Svg Fill  ========== //
-
-$svg-fill-map: (
-  "fill": currentColor
-) !default;
-
-// ==========  Svg Stroke  ========== //
-
-$svg-stroke-map: (
-  "stroke": currentColor
-) !default;
-
-// ==========  Text Align  ========== //
-
-$text-align-map: (
-  "left": left,
-  "center": center,
-  "right": right,
-  "justify": justify
-) !default;
-
-// ==========  Text Color  ========== //
-
-$text-color-map: (
-  "primary": "--color-primary",
-  "accent": "--color-accent",
-  "success": "--color-success",
-  "warning": "--color-warning",
-  "danger": "--color-danger",
-  "light": "--color-light",
-  "dark": "--color-dark"
-) !default;
-
-// ==========  Text Decoration  ========== //
-
-$text-decoration-map: (
-  "underline": underline,
-  "line-through": line-through,
-  "no-underline": none
-) !default;
-
-// ==========  Text Transform  ========== //
-
-$text-transform-map: (
-  "uppercase": uppercase,
-  "lowercase": lowercase,
-  "capitalize": capitalize,
-  "normal-case": none
-) !default;
-
-// ==========  User Select  ========== //
-
-$user-select-map: (
-  "none": none,
-  "text": text,
-  "all": all,
-  "auto": auto
-) !default;
-
-// ==========  Vertical Align  ========== //
-
-$vertical-align-map: (
-  "baseline": baseline,
-  "top": top,
-  "middle": middle,
-  "bottom": bottom,
-  "text-top": text-top,
-  "text-bottom": text-bottom
-) !default;
-
-// ==========  Visibility  ========== //
-
-$visibility-map: (
-  "visible": visible,
-  "invisible": hidden
-) !default;
-
-// ==========  Whitespace  ========== //
-
-$white-space-map: (
-  "normal": normal,
-  "no-wrap": nowrap,
-  "pre": pre,
-  "pre-line": pre-line,
-  "pre-wrap": pre-wrap
-) !default;
-
-// ==========  Width  ========== //
-
-$width-map: (
-  "auto": auto,
-  "full": 100%,
-  "screen": 100vw,
-  "0": 0
-) !default;
-
 // ==========  Config  ========== //
 
-$utility-config: () !default;
+$utilities: () !default;
 
-$utility-config: map-merge(
+$utilities: map-merge(
   (
     "align-content": (
-      "responsive": ()
+      responsive: false,
+      class: align-content,
+      values: (
+        "center": center,
+        "start": flex-start,
+        "end": flex-end,
+        "between": space-between,
+        "around": space-around
+      )
     ),
     "align-items": (
-      "responsive": ()
+      responsive: false,
+      class: align-items,
+      values: (
+        "start": flex-start,
+        "end": flex-end,
+        "center": center,
+        "baseline": baseline,
+        "stretch": stretch
+      )
     ),
     "align-self": (
-      "responsive": ()
+      responsive: false,
+      class: align-self,
+      values: (
+        "start": flex-start,
+        "end": flex-end,
+        "center": center,
+        "baseline": baseline,
+        "stretch": stretch
+      )
     ),
     "appearance": (
-      "responsive": ()
+      responsive: false,
+      class: appearance,
+      values: (
+        "none": none
+      )
     ),
     "background-attachment": (
-      "responsive": ()
+      responsive: false,
+      class: bg-attachment,
+      values: (
+        "fixed": fixed,
+        "local": local,
+        "scroll": scroll
+      )
     ),
     "background-color": (
-      "responsive": ()
+      responsive: false,
+      class: bg-color,
+      values: (
+        "primary": RGB(var(--color-primary)),
+        "accent": RGB(var(--color-accent)),
+        "success": RGB(var(--color-success)),
+        "warning": RGB(var(--color-warning)),
+        "danger": RGB(var(--color-danger)),
+        "light": RGB(var(--color-light)),
+        "dark": RGB(var(--color-dark))
+      )
     ),
     "background-position": (
-      "responsive": ()
+      responsive: false,
+      class: bg-position,
+      values: (
+        "bottom": bottom,
+        "center": center,
+        "left": left,
+        "left-bottom": left bottom,
+        "left-top": left top,
+        "right": right,
+        "right-bottom": right bottom,
+        "right-top": right top,
+        "top": top
+      )
     ),
     "background-repeat": (
-      "responsive": ()
+      responsive: false,
+      class: bg-repeat,
+      values: (
+        "repeat": repeat,
+        "no-repeat": no-repeat,
+        "repeat-x": repeat-x,
+        "repeat-y": repeat-y,
+        "repeat-round": round,
+        "repeat-space": space
+      )
     ),
     "background-size": (
-      "responsive": ()
+      responsive: false,
+      class: bg-size,
+      values: (
+        "auto": auto,
+        "cover": cover,
+        "contain": contain
+      )
     ),
     "border-collapse": (
-      "responsive": ()
+      responsive: false,
+      class: b-collapse,
+      values: (
+        "collapse": collapse,
+        "separate": separate
+      )
     ),
     "border-color": (
-      "responsive": ()
+      responsive: false,
+      class: b-color,
+      values: (
+        "primary": RGB(var(--color-primary)),
+        "accent": RGB(var(--color-accent)),
+        "success": RGB(var(--color-success)),
+        "warning": RGB(var(--color-warning)),
+        "danger": RGB(var(--color-danger)),
+        "light": RGB(var(--color-light)),
+        "dark": RGB(var(--color-dark))
+      )
     ),
     "border-radius": (
-      "responsive": ()
+      responsive: false,
+      class: b-radius,
+      values: (
+        "none": 0,
+        "circle": 50%,
+        "1": 1rem,
+        "2": 2rem,
+        "3": 3rem,
+        "4": 4rem
+      )
     ),
     "border-style": (
-      "responsive": ()
+      responsive: false,
+      class: b-style,
+      values: (
+        "solid": solid,
+        "dashed": dashed,
+        "dotted": dotted,
+        "none": none
+      )
     ),
     "border-width": (
-      "responsive": ()
+      responsive: false,
+      class: b-width,
+      values: (
+        "none": 0,
+        "1": 1px
+      )
     ),
     "box-shadow": (
-      "responsive": ()
+      responsive: false,
+      class: shadow,
+      values: ()
     ),
     "cursor": (
-      "responsive": ()
+      responsive: false,
+      class: cursor,
+      values: (
+        "auto": auto,
+        "default": default,
+        "pointer": pointer,
+        "wait": wait,
+        "text": text,
+        "move": move,
+        "not-allowed": not-allowed
+      )
     ),
     "display": (
-      "responsive": (
-        "md": true
+      responsive: false,
+      class: d,
+      values: (
+        "none": none,
+        "inline": inline,
+        "inline-block": inline-block,
+        "block": block,
+        "table": table,
+        "table-cell": table-cell,
+        "flex": flex,
+        "inline-flex": inline-flex
       )
     ),
     "flex": (
-      "responsive": ()
+      responsive: false,
+      class: flex,
+      values: (
+        "initial": 0 1 auto,
+        "auto": 1 1 auto,
+        "1": 1 1 100%,
+        "none": none
+      )
     ),
     "flex-direction": (
-      "responsive": ()
+      responsive: false,
+      class: flex-direction,
+      values: (
+        "row": row,
+        "row-reverse": row-reverse,
+        "col": column,
+        "col-reverse": column-reverse
+      )
     ),
     "flex-grow": (
-      "responsive": ()
+      responsive: false,
+      class: flex-grow,
+      values: (
+        "1": 1,
+        "0": 0
+      )
     ),
     "flex-shrink": (
-      "responsive": ()
+      responsive: false,
+      class: flex-shrink,
+      values: (
+        "1": 1,
+        "0": 0
+      )
     ),
     "flex-wrap": (
-      "responsive": ()
+      responsive: false,
+      class: flex-wrap,
+      values: (
+        "wrap": wrap,
+        "reverse": wrap-reverse,
+        "none": nowrap
+      )
     ),
     "float": (
-      "responsive": ()
+      responsive: false,
+      class: float,
+      values: (
+        "right": right,
+        "left": left,
+        "none": none
+      )
     ),
     "font-family": (
-      "responsive": ()
+      responsive: false,
+      class: bg-position,
+      values: (
+        "sans-serif":
+          '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+        "monospace":
+          'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+      )
     ),
     "font-size": (
-      "responsive": ()
+      responsive: false,
+      class: font-size,
+      values: (
+        "headline1": 6rem,
+        "headline2": 3.75rem,
+        "headline3": 3.75rem,
+        "headline4": 2.125rem,
+        "headline5": 1.5rem,
+        "headline6": 1.25rem,
+        "body1": 1rem,
+        "subtitle1": 1rem,
+        "body2": 0.875rem,
+        "subtitle2": 0.875rem,
+        "caption": 0.75rem,
+        "overline": 0.625rem
+      )
     ),
     "font-style": (
-      "responsive": ()
+      responsive: false,
+      class: font-style,
+      values: (
+        "italic": italic,
+        "normal": normal
+      )
     ),
     "font-weight": (
-      "responsive": ()
+      responsive: false,
+      class: font-weight,
+      values: (
+        "thin": 200,
+        "light": 300,
+        "regular": 400,
+        "medium": 500,
+        "bold": 700,
+        "black": 900
+      )
     ),
     "height": (
-      "responsive": ()
+      responsive: false,
+      class: h,
+      values: (
+        "auto": auto,
+        "full": 100%,
+        "screen": 100vh,
+        "0": 0
+      )
     ),
     "justify-content": (
-      "responsive": ()
+      responsive: false,
+      class: justify-content,
+      values: (
+        "start": flex-start,
+        "end": flex-end,
+        "center": center,
+        "between": space-between,
+        "around": space-around
+      )
     ),
     "letter-spacing": (
-      "responsive": ()
+      responsive: false,
+      class: letter-spacing,
+      values: (
+        "tighter": -0.05em,
+        "tight": -0.025em,
+        "normal": 0,
+        "wide": 0.025em,
+        "wider": 0.05em,
+        "widest": 0.1em
+      )
     ),
     "line-height": (
-      "responsive": ()
+      responsive: false,
+      class: line-height,
+      values: (
+        "1": 1.25,
+        "normal": normal,
+        "2": 1.5,
+        "3": 1.75,
+        "4": 2
+      )
     ),
     "margin": (
-      "responsive": ()
+      responsive: false,
+      class: m,
+      values: (
+        0: 0,
+        1: 0.5rem,
+        2: 1rem,
+        3: 1.5rem,
+        4: 2rem
+      )
     ),
     "object-fit": (
-      "responsive": ()
+      responsive: false,
+      class: object-fit,
+      values: (
+        "contain": contain,
+        "cover": cover,
+        "fill": fill,
+        "none": none,
+        "scale-down": scale-down
+      )
     ),
     "object-position": (
-      "responsive": ()
+      responsive: false,
+      class: object-position,
+      values: (
+        "bottom": bottom,
+        "center": center,
+        "left": left,
+        "left-bottom": left bottom,
+        "left-top": left top,
+        "right": right,
+        "right-bottom": right bottom,
+        "right-top": right top,
+        "top": top
+      )
     ),
     "opacity": (
-      "responsive": ()
+      responsive: false,
+      class: opacity,
+      values: (
+        "0": 0,
+        "25": 0.25,
+        "50": 0.5,
+        "75": 0.75,
+        "100": 1
+      )
     ),
     "order": (
-      "responsive": ()
+      responsive: false,
+      class: order,
+      values: (
+        "first": -9999,
+        "last": 9999,
+        "none": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12
+      )
     ),
     "outline": (
-      "responsive": ()
+      responsive: false,
+      class: outline,
+      values: (
+        "none": 0
+      )
     ),
     "overflow": (
-      "responsive": ()
+      responsive: false,
+      class: overflow,
+      values: (
+        "auto": auto,
+        "hidden": hidden,
+        "visible": visible,
+        "scroll": scroll
+      )
     ),
     "padding": (
-      "responsive": ()
+      responsive: false,
+      class: p,
+      values: (
+        0: 0,
+        1: 0.5rem,
+        2: 1rem,
+        3: 1.5rem,
+        4: 2rem
+      )
     ),
     "pointer-events": (
-      "responsive": ()
+      responsive: false,
+      class: pointer-events,
+      values: (
+        "none": none,
+        "auto": auto
+      )
     ),
     "position": (
-      "responsive": ()
+      responsive: false,
+      class: position,
+      values: (
+        "static": static,
+        "fixed": fixed,
+        "absolute": absolute,
+        "relative": relative,
+        "sticky": sticky
+      )
     ),
     "svg-fill": (
-      "responsive": ()
+      responsive: false,
+      class: svg-fill,
+      values: (
+        "fill": currentColor
+      )
     ),
     "svg-stroke": (
-      "responsive": ()
+      responsive: false,
+      class: svg-stroke,
+      values: (
+        "stroke": currentColor
+      )
     ),
     "text-align": (
-      "responsive": ()
+      responsive: false,
+      class: text,
+      values: (
+        "left": left,
+        "center": center,
+        "right": right,
+        "justify": justify
+      )
     ),
     "text-color": (
-      "responsive": ()
+      responsive: false,
+      class: text,
+      values: (
+        "primary": RGB(var(--color-primary)),
+        "accent": RGB(var(--color-accent)),
+        "success": RGB(var(--color-success)),
+        "warning": RGB(var(--color-warning)),
+        "danger": RGB(var(--color-danger)),
+        "light": RGB(var(--color-light)),
+        "dark": RGB(var(--color-dark))
+      )
     ),
     "text-decoration": (
-      "responsive": ()
+      responsive: false,
+      class: text,
+      values: (
+        "underline": underline,
+        "line-through": line-through,
+        "no-underline": none
+      )
     ),
     "text-transform": (
-      "responsive": ()
+      responsive: false,
+      class: text,
+      values: (
+        "uppercase": uppercase,
+        "lowercase": lowercase,
+        "capitalize": capitalize,
+        "normal-case": none
+      )
     ),
     "user-select": (
-      "responsive": ()
+      responsive: false,
+      class: user-select,
+      values: (
+        "none": none,
+        "text": text,
+        "all": all,
+        "auto": auto
+      )
     ),
     "vertical-align": (
-      "responsive": ()
+      responsive: false,
+      class: vertical-align,
+      values: (
+        "baseline": baseline,
+        "top": top,
+        "middle": middle,
+        "bottom": bottom,
+        "text-top": text-top,
+        "text-bottom": text-bottom
+      )
     ),
     "visibility": (
-      "responsive": ()
+      responsive: false,
+      class: visibility,
+      values: (
+        "visible": visible,
+        "invisible": hidden
+      )
     ),
     "white-space": (
-      "responsive": ()
+      responsive: false,
+      class: white-space,
+      values: (
+        "normal": normal,
+        "no-wrap": nowrap,
+        "pre": pre,
+        "pre-line": pre-line,
+        "pre-wrap": pre-wrap
+      )
     ),
     "width": (
-      "responsive": ()
+      responsive: false,
+      class: w,
+      values: (
+        "auto": auto,
+        "full": 100%,
+        "screen": 100vw,
+        "0": 0
+      )
     ),
     "word-break": (
-      "responsive": ()
+      responsive: false,
+      class: word-break,
+      values: (
+        "bottom": bottom,
+        "center": center,
+        "left": left,
+        "left-bottom": left bottom,
+        "left-top": left top,
+        "right": right,
+        "right-bottom": right bottom,
+        "right-top": right top,
+        "top": top
+      )
     )
   ),
-  $utility-config
+  $utilities
 );

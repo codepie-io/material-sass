@@ -1,7 +1,0 @@
-// ==========  Border Color  ========== //
-
-$config: map-get($utility-config, "border-color");
-
-@if $config {
-  @include utility($config, $border-color-map, "border-color");
-}

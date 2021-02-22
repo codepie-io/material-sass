@@ -1,7 +1,0 @@
-// ==========  Flex Direction  ========== //
-
-$config: map-get($utility-config, "flex-direction");
-
-@if $config {
-  @include utility($config, $flex-direction-map, "flex-direction");
-}

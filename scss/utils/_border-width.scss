@@ -1,7 +1,0 @@
-// ==========  Border Width  ========== //
-
-$config: map-get($utility-config, "border-width");
-
-@if $config {
-  @include utility($config, $border-width-map, "border-width");
-}

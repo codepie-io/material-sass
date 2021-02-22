@@ -1,7 +1,0 @@
-// ==========  Border Collapse  ========== //
-
-$config: map-get($utility-config, "border-collapse");
-
-@if $config {
-  @include utility($config, $border-collapse-map, "border-collapse");
-}

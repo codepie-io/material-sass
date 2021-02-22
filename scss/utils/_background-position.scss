@@ -1,7 +1,0 @@
-// ==========  Background Position  ========== //
-
-$config: map-get($utility-config, "background-position");
-
-@if $config {
-  @include utility($config, $background-position-map, "background-position");
-}

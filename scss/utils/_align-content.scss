@@ -1,7 +1,0 @@
-// ==========  Align Content  ========== //
-
-$config : map-get($utility-config, "align-content");
-
-@if $config {
-  @include utility($config, $align-content-map, "align-content");
-}

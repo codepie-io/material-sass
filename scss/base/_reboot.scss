@@ -48,7 +48,7 @@ canvas {
 
 body {
   margin: 0;
-  font-family: #{get-font-family($font-family-body)};
+  // font-family: #{get-font-family($font-family-body)};
   font-size: $font-base-size;
   font-weight: $font-base-weight;
   line-height: $line-base-height;
@@ -189,7 +189,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: #{get-font-family("monospace")};
+  // font-family: #{get-font-family("monospace")};
   font-size: 1em;
 }
 

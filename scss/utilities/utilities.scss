@@ -1,0 +1,65 @@
+// ==========  Utilities  ========== //
+
+@function responsive-flag($config, $name, $breakpoints) {
+  $flag: "";
+
+  @if $config == true {
+    @return true;
+  }
+
+  @if breakpoint-min($name, $breakpoints) != null {
+    $flag: $name;
+  }
+
+  @if $flag == "" {
+    @return true;
+  } @else if($config == false) {
+    @return false;
+  }
+
+  @return if(
+    map-get($config, $flag) == null,
+    false,
+    map-get($config, $flag) == true
+  );
+}
+
+@mixin default-test-1($infix, $property, $values, $class) {
+  @each $name, $value in $values {
+    .#{$class}-#{$name}#{$infix} {
+      #{$property}: $value;
+    }
+  }
+}
+
+@mixin utility($values, $property, $class, $responsive: false) {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      $responsive-flag: responsive-flag(
+        $responsive,
+        $breakpoint,
+        $grid-breakpoints
+      );
+
+      @if $responsive-flag {
+        @include default-test-1($infix, $property, $values, $class);
+      }
+    }
+  }
+}
+
+// Layout
+// @import "container";
+
+@each $key in map-keys($utilities) {
+  $utility: map-get($utilities, $key);
+
+  @if $utility {
+    $responsive: map-get($utility, "responsive");
+    $values: map-get($utility, "values");
+    $class: map-get($utility, "class");
+
+    @include utility($values, $key, $class, $responsive);
+  }
+}
