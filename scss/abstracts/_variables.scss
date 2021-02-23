@@ -195,24 +195,6 @@ $clearfix-map: (
   "none": none
 ) !default;
 
-// Flex Shrink
-$overflow-x-map: (
-  x-auto: auto,
-  x-hidden: hidden,
-  x-visible: visible
-) !default;
-
-$overflow-y-map: (
-  y-auto: auto,
-  y-hidden: hidden,
-  y-visible: visible
-) !default;
-
-$overflow-scrolling-map: (
-  x-scroll: scroll,
-  y-scroll: scroll
-) !default;
-
 // ==========  Config  ========== //
 
 $utilities: () !default;
@@ -220,7 +202,7 @@ $utilities: () !default;
 $utilities: map-merge(
   (
     "align-content": (
-      responsive: false,
+      responsive: true,
       class: align-content,
       values: (
         "center": center,
@@ -231,7 +213,7 @@ $utilities: map-merge(
       )
     ),
     "align-items": (
-      responsive: false,
+      responsive: true,
       class: align-items,
       values: (
         "start": flex-start,
@@ -242,7 +224,7 @@ $utilities: map-merge(
       )
     ),
     "align-self": (
-      responsive: false,
+      responsive: true,
       class: align-self,
       values: (
         "start": flex-start,
@@ -253,14 +235,14 @@ $utilities: map-merge(
       )
     ),
     "appearance": (
-      responsive: false,
+      responsive: true,
       class: appearance,
       values: (
         "none": none
       )
     ),
     "background-attachment": (
-      responsive: false,
+      responsive: true,
       class: bg-attachment,
       values: (
         "fixed": fixed,
@@ -269,8 +251,9 @@ $utilities: map-merge(
       )
     ),
     "background-color": (
-      responsive: false,
+      responsive: true,
       class: bg-color,
+      states: ("hover", "focus"),
       values: (
         "primary": RGB(var(--color-primary)),
         "accent": RGB(var(--color-accent)),
@@ -282,7 +265,7 @@ $utilities: map-merge(
       )
     ),
     "background-position": (
-      responsive: false,
+      responsive: true,
       class: bg-position,
       values: (
         "bottom": bottom,
@@ -297,7 +280,7 @@ $utilities: map-merge(
       )
     ),
     "background-repeat": (
-      responsive: false,
+      responsive: true,
       class: bg-repeat,
       values: (
         "repeat": repeat,
@@ -309,7 +292,7 @@ $utilities: map-merge(
       )
     ),
     "background-size": (
-      responsive: false,
+      responsive: true,
       class: bg-size,
       values: (
         "auto": auto,
@@ -318,7 +301,7 @@ $utilities: map-merge(
       )
     ),
     "border-collapse": (
-      responsive: false,
+      responsive: true,
       class: b-collapse,
       values: (
         "collapse": collapse,
@@ -326,7 +309,7 @@ $utilities: map-merge(
       )
     ),
     "border-color": (
-      responsive: false,
+      responsive: true,
       class: b-color,
       values: (
         "primary": RGB(var(--color-primary)),
@@ -339,7 +322,7 @@ $utilities: map-merge(
       )
     ),
     "border-radius": (
-      responsive: false,
+      responsive: true,
       class: b-radius,
       values: (
         "none": 0,
@@ -351,7 +334,7 @@ $utilities: map-merge(
       )
     ),
     "border-style": (
-      responsive: false,
+      responsive: true,
       class: b-style,
       values: (
         "solid": solid,
@@ -361,7 +344,7 @@ $utilities: map-merge(
       )
     ),
     "border-width": (
-      responsive: false,
+      responsive: true,
       class: b-width,
       values: (
         "none": 0,
@@ -369,12 +352,51 @@ $utilities: map-merge(
       )
     ),
     "box-shadow": (
-      responsive: false,
-      class: shadow,
-      values: ()
+      responsive: true,
+      class: elevation,
+      values: (
+        "z1": var(--elevation-z1),
+        "z2": var(--elevation-z2),
+        "z3": var(--elevation-z3),
+        "z4": var(--elevation-z4),
+        "z5": var(--elevation-z5),
+        "z6": var(--elevation-z6),
+        "z7": var(--elevation-z7),
+        "z8": var(--elevation-z8),
+        "z9": var(--elevation-z9),
+        "z10": var(--elevation-z10),
+        "z11": var(--elevation-z11),
+        "z12": var(--elevation-z12),
+        "z13": var(--elevation-z13),
+        "z14": var(--elevation-z14),
+        "z15": var(--elevation-z15),
+        "z16": var(--elevation-z16),
+        "z17": var(--elevation-z17),
+        "z18": var(--elevation-z18),
+        "z19": var(--elevation-z19),
+        "z20": var(--elevation-z20),
+        "z21": var(--elevation-z21),
+        "z22": var(--elevation-z22),
+        "z23": var(--elevation-z23),
+        "z24": var(--elevation-z24)
+      )
+    ),
+    "color": (
+      responsive: true,
+      class: text-color,
+      states: ("hover", "focus"),
+      values: (
+        "primary": RGB(var(--color-primary)),
+        "accent": RGB(var(--color-accent)),
+        "success": RGB(var(--color-success)),
+        "warning": RGB(var(--color-warning)),
+        "danger": RGB(var(--color-danger)),
+        "light": RGB(var(--color-light)),
+        "dark": RGB(var(--color-dark))
+      )
     ),
     "cursor": (
-      responsive: false,
+      responsive: true,
       class: cursor,
       values: (
         "auto": auto,
@@ -387,8 +409,8 @@ $utilities: map-merge(
       )
     ),
     "display": (
-      responsive: false,
-      class: d,
+      responsive: true,
+      class: display,
       values: (
         "none": none,
         "inline": inline,
@@ -401,7 +423,7 @@ $utilities: map-merge(
       )
     ),
     "flex": (
-      responsive: false,
+      responsive: true,
       class: flex,
       values: (
         "initial": 0 1 auto,
@@ -411,7 +433,7 @@ $utilities: map-merge(
       )
     ),
     "flex-direction": (
-      responsive: false,
+      responsive: true,
       class: flex-direction,
       values: (
         "row": row,
@@ -421,7 +443,7 @@ $utilities: map-merge(
       )
     ),
     "flex-grow": (
-      responsive: false,
+      responsive: true,
       class: flex-grow,
       values: (
         "1": 1,
@@ -429,7 +451,7 @@ $utilities: map-merge(
       )
     ),
     "flex-shrink": (
-      responsive: false,
+      responsive: true,
       class: flex-shrink,
       values: (
         "1": 1,
@@ -437,7 +459,7 @@ $utilities: map-merge(
       )
     ),
     "flex-wrap": (
-      responsive: false,
+      responsive: true,
       class: flex-wrap,
       values: (
         "wrap": wrap,
@@ -446,7 +468,7 @@ $utilities: map-merge(
       )
     ),
     "float": (
-      responsive: false,
+      responsive: true,
       class: float,
       values: (
         "right": right,
@@ -455,8 +477,8 @@ $utilities: map-merge(
       )
     ),
     "font-family": (
-      responsive: false,
-      class: bg-position,
+      responsive: true,
+      class: font-family,
       values: (
         "sans-serif":
           '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
@@ -465,7 +487,7 @@ $utilities: map-merge(
       )
     ),
     "font-size": (
-      responsive: false,
+      responsive: true,
       class: font-size,
       values: (
         "headline1": 6rem,
@@ -483,7 +505,7 @@ $utilities: map-merge(
       )
     ),
     "font-style": (
-      responsive: false,
+      responsive: true,
       class: font-style,
       values: (
         "italic": italic,
@@ -491,7 +513,7 @@ $utilities: map-merge(
       )
     ),
     "font-weight": (
-      responsive: false,
+      responsive: true,
       class: font-weight,
       values: (
         "thin": 200,
@@ -503,7 +525,7 @@ $utilities: map-merge(
       )
     ),
     "height": (
-      responsive: false,
+      responsive: true,
       class: h,
       values: (
         "auto": auto,
@@ -513,7 +535,7 @@ $utilities: map-merge(
       )
     ),
     "justify-content": (
-      responsive: false,
+      responsive: true,
       class: justify-content,
       values: (
         "start": flex-start,
@@ -524,7 +546,7 @@ $utilities: map-merge(
       )
     ),
     "letter-spacing": (
-      responsive: false,
+      responsive: true,
       class: letter-spacing,
       values: (
         "tighter": -0.05em,
@@ -536,7 +558,7 @@ $utilities: map-merge(
       )
     ),
     "line-height": (
-      responsive: false,
+      responsive: true,
       class: line-height,
       values: (
         "1": 1.25,
@@ -547,9 +569,58 @@ $utilities: map-merge(
       )
     ),
     "margin": (
-      responsive: false,
+      responsive: true,
       class: m,
       values: (
+        "auto": auto,
+        0: 0,
+        1: 0.5rem,
+        2: 1rem,
+        3: 1.5rem,
+        4: 2rem
+      )
+    ),
+    "margin-left": (
+      responsive: true,
+      class: ml,
+      values: (
+        "auto": auto,
+        0: 0,
+        1: 0.5rem,
+        2: 1rem,
+        3: 1.5rem,
+        4: 2rem
+      )
+    ),
+    "margin-top": (
+      responsive: true,
+      class: mt,
+      values: (
+        "auto": auto,
+        0: 0,
+        1: 0.5rem,
+        2: 1rem,
+        3: 1.5rem,
+        4: 2rem
+      )
+    ),
+    "margin-right": (
+      responsive: true,
+      class: mr,
+      values: (
+        "auto": auto,
+        0: 0,
+        1: 0.5rem,
+        2: 1rem,
+        3: 1.5rem,
+        4: 2rem
+      )
+    ),
+    "margin-bottom": (
+      responsive: true,
+      class: mb,
+      values: (
+        "auto": auto,
         0: 0,
         1: 0.5rem,
         2: 1rem,
@@ -558,7 +629,7 @@ $utilities: map-merge(
       )
     ),
     "object-fit": (
-      responsive: false,
+      responsive: true,
       class: object-fit,
       values: (
         "contain": contain,
@@ -569,7 +640,7 @@ $utilities: map-merge(
       )
     ),
     "object-position": (
-      responsive: false,
+      responsive: true,
       class: object-position,
       values: (
         "bottom": bottom,
@@ -584,7 +655,7 @@ $utilities: map-merge(
       )
     ),
     "opacity": (
-      responsive: false,
+      responsive: true,
       class: opacity,
       values: (
         "0": 0,
@@ -595,7 +666,7 @@ $utilities: map-merge(
       )
     ),
     "order": (
-      responsive: false,
+      responsive: true,
       class: order,
       values: (
         "first": -9999,
@@ -616,14 +687,14 @@ $utilities: map-merge(
       )
     ),
     "outline": (
-      responsive: false,
+      responsive: true,
       class: outline,
       values: (
         "none": 0
       )
     ),
     "overflow": (
-      responsive: false,
+      responsive: true,
       class: overflow,
       values: (
         "auto": auto,
@@ -632,8 +703,37 @@ $utilities: map-merge(
         "scroll": scroll
       )
     ),
+    "overflow-x": (
+      responsive: true,
+      class: overflow-x,
+      values: (
+        "auto": auto,
+        "hidden": hidden,
+        "visible": visible,
+        "scroll": scroll
+      )
+    ),
+    "overflow-y": (
+      responsive: true,
+      class: overflow-y,
+      values: (
+        "auto": auto,
+        "hidden": hidden,
+        "visible": visible,
+        "scroll": scroll
+      )
+    ),
+    "overflow-wrap": (
+      responsive: true,
+      class: overflow-wrap,
+      values: (
+        "anywhere": anywhere,
+        "break-word": break-word,
+        "normal": normal
+      )
+    ),
     "padding": (
-      responsive: false,
+      responsive: true,
       class: p,
       values: (
         0: 0,
@@ -643,8 +743,41 @@ $utilities: map-merge(
         4: 2rem
       )
     ),
+    "padding-top": (
+      responsive: true,
+      class: pt,
+      values: (
+        0: 0,
+        1: 0.5rem,
+        2: 1rem,
+        3: 1.5rem,
+        4: 2rem
+      )
+    ),
+    "padding-right": (
+      responsive: true,
+      class: pr,
+      values: (
+        0: 0,
+        1: 0.5rem,
+        2: 1rem,
+        3: 1.5rem,
+        4: 2rem
+      )
+    ),
+    "padding-bottom": (
+      responsive: true,
+      class: pb,
+      values: (
+        0: 0,
+        1: 0.5rem,
+        2: 1rem,
+        3: 1.5rem,
+        4: 2rem
+      )
+    ),
     "pointer-events": (
-      responsive: false,
+      responsive: true,
       class: pointer-events,
       values: (
         "none": none,
@@ -652,7 +785,7 @@ $utilities: map-merge(
       )
     ),
     "position": (
-      responsive: false,
+      responsive: true,
       class: position,
       values: (
         "static": static,
@@ -662,23 +795,23 @@ $utilities: map-merge(
         "sticky": sticky
       )
     ),
-    "svg-fill": (
-      responsive: false,
+    "fill": (
+      responsive: true,
       class: svg-fill,
       values: (
         "fill": currentColor
       )
     ),
-    "svg-stroke": (
-      responsive: false,
+    "stroke": (
+      responsive: true,
       class: svg-stroke,
       values: (
         "stroke": currentColor
       )
     ),
     "text-align": (
-      responsive: false,
-      class: text,
+      responsive: true,
+      class: text-align,
       values: (
         "left": left,
         "center": center,
@@ -686,22 +819,9 @@ $utilities: map-merge(
         "justify": justify
       )
     ),
-    "text-color": (
-      responsive: false,
-      class: text,
-      values: (
-        "primary": RGB(var(--color-primary)),
-        "accent": RGB(var(--color-accent)),
-        "success": RGB(var(--color-success)),
-        "warning": RGB(var(--color-warning)),
-        "danger": RGB(var(--color-danger)),
-        "light": RGB(var(--color-light)),
-        "dark": RGB(var(--color-dark))
-      )
-    ),
     "text-decoration": (
-      responsive: false,
-      class: text,
+      responsive: true,
+      class: text-decoration,
       values: (
         "underline": underline,
         "line-through": line-through,
@@ -709,8 +829,8 @@ $utilities: map-merge(
       )
     ),
     "text-transform": (
-      responsive: false,
-      class: text,
+      responsive: true,
+      class: text-transform,
       values: (
         "uppercase": uppercase,
         "lowercase": lowercase,
@@ -718,8 +838,17 @@ $utilities: map-merge(
         "normal-case": none
       )
     ),
+    "text-overflow": (
+      responsive: true,
+      class: text-overflow,
+      values: (
+        "clip": clip,
+        "ellipsis": ellipsis,
+        "fade": fade
+      )
+    ),
     "user-select": (
-      responsive: false,
+      responsive: true,
       class: user-select,
       values: (
         "none": none,
@@ -729,7 +858,7 @@ $utilities: map-merge(
       )
     ),
     "vertical-align": (
-      responsive: false,
+      responsive: true,
       class: vertical-align,
       values: (
         "baseline": baseline,
@@ -741,7 +870,7 @@ $utilities: map-merge(
       )
     ),
     "visibility": (
-      responsive: false,
+      responsive: true,
       class: visibility,
       values: (
         "visible": visible,
@@ -749,7 +878,7 @@ $utilities: map-merge(
       )
     ),
     "white-space": (
-      responsive: false,
+      responsive: true,
       class: white-space,
       values: (
         "normal": normal,
@@ -760,7 +889,7 @@ $utilities: map-merge(
       )
     ),
     "width": (
-      responsive: false,
+      responsive: true,
       class: w,
       values: (
         "auto": auto,
@@ -770,18 +899,13 @@ $utilities: map-merge(
       )
     ),
     "word-break": (
-      responsive: false,
+      responsive: true,
       class: word-break,
       values: (
-        "bottom": bottom,
-        "center": center,
-        "left": left,
-        "left-bottom": left bottom,
-        "left-top": left top,
-        "right": right,
-        "right-bottom": right bottom,
-        "right-top": right top,
-        "top": top
+        "all": break-all,
+        "word": break-word,
+        "normal": normal,
+        "keep": keep-all
       )
     )
   ),
