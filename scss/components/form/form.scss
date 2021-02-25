@@ -2,7 +2,7 @@
 
 // ==========  Form  ========== //
 
-.md-form {
+.form {
   display: flex;
   flex-direction: column;
 
@@ -28,7 +28,7 @@
     &--toggle-input {
       flex-wrap: wrap;
 
-      > .md-input-helper {
+      > .input-helper {
         flex-basis: 100%;
       }
     }

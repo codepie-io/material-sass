@@ -2,7 +2,7 @@
 
 // ==========  Linear Progress   ========== //
 
-.md-linear-progress {
+.linear-progress {
   position: relative;
   width: 100%;
   height: 4px;
@@ -71,23 +71,23 @@
   }
 
   &--reversed {
-    .md-linear-progress__bar,
-    .md-linear-progress__buffer {
+    .linear-progress__bar,
+    .linear-progress__buffer {
       right: 0;
       transform-origin: center right;
     }
 
-    .md-linear-progress__aux {
+    .linear-progress__aux {
       animation-name: buffering-reverse;
     }
   }
 
   &--indeterminate {
-    .md-linear-progress__bar {
+    .linear-progress__bar {
       transition: none;
     }
 
-    .md-linear-progress__primary-bar {
+    .linear-progress__primary-bar {
       left: -145.166611%;
       display: block;
       animation-name: primary-indeterminate-translate;
@@ -95,18 +95,18 @@
       animation-timing-function: linear;
       animation-iteration-count: infinite;
 
-      & > .md-linear-progress__bar-inner {
+      & > .linear-progress__bar-inner {
         backface-visibility: hidden;
         animation: primary-indeterminate-scale 2s infinite linear;
       }
     }
 
-    .md-linear-progress__secondary-bar {
+    .linear-progress__secondary-bar {
       left: -54.888891%;
       visibility: visible;
       animation: secondary-indeterminate-translate 2s infinite linear;
 
-      & > .md-linear-progress__bar-inner {
+      & > .linear-progress__bar-inner {
         backface-visibility: hidden;
         visibility: visible;
         animation: secondary-indeterminate-scale 2s infinite linear;
@@ -115,12 +115,12 @@
   }
 
   &--buffer {
-    .md-progress__auxbar {
+    .progress__auxbar {
       display: block;
       width: 100%;
     }
 
-    .md-progress__bufferbar {
+    .progress__bufferbar {
       display: inline-block;
       width: auto;
     }

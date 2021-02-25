@@ -2,7 +2,7 @@
 
 // ==========  Interactive Search  ========== //
 
-.md-interactive-wrapper {
+.interactive-wrapper {
   position: static;
   display: flex;
   flex: 1 1 100%;
@@ -15,7 +15,7 @@
   }
 }
 
-.md-interactive {
+.interactive {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -88,21 +88,21 @@
     background-color: var(--color-app-card-background);
     box-shadow: var(--elevation-z2);
 
-    .md-interactive-wrapper--show {
+    .interactive-wrapper--show {
       display: none;
     }
 
-    .md-interactive-wrapper--edit {
+    .interactive-wrapper--edit {
       display: flex;
     }
 
-    .md-interactive__input {
+    .interactive__input {
       cursor: auto;
     }
   }
 
   &--dirty {
-    .md-interactive__placeholder {
+    .interactive__placeholder {
       visibility: hidden;
     }
   }

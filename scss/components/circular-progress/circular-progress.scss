@@ -2,7 +2,7 @@
 
 // ==========  Circular Progress   ========== //
 
-.md-circular-progress {
+.circular-progress {
   position: relative;
   width: 48px;
   height: 48px;
@@ -19,7 +19,7 @@
   }
 
   &--primary {
-    .md-circular-progress__path {
+    .circular-progress__path {
       --circular-stroke-color: RGB(var(--color-primary));
     }
   }
@@ -33,21 +33,21 @@
   }
 
   &--indeterminate {
-    animation: md-circular-progress-rotate 1.4s linear infinite;
+    animation: circular-progress-rotate 1.4s linear infinite;
 
-    .md-circular-progress__path {
-      animation: md-circular-progress-dash 1.4s ease-in-out infinite;
+    .circular-progress__path {
+      animation: circular-progress-dash 1.4s ease-in-out infinite;
     }
   }
 }
 
-@keyframes md-circular-progress-rotate {
+@keyframes circular-progress-rotate {
   to {
     transform: rotate(360deg);
   }
 }
 
-@keyframes md-circular-progress-dash {
+@keyframes circular-progress-dash {
   0% {
     stroke-dasharray: 1px, 200px;
     stroke-dashoffset: 0;

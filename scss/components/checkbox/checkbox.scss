@@ -3,7 +3,7 @@
 
 // ==========  Checkbox   ========== //
 
-.md-checkbox {
+.checkbox {
   position: relative;
   box-sizing: border-box;
   display: inline-flex;
@@ -112,28 +112,28 @@
     cursor: inherit;
     opacity: 0;
 
-    &:checked + .md-checkbox__background {
+    &:checked + .checkbox__background {
       background-color: var(--checkbox-theme);
       border-color: var(--checkbox-theme);
       transition: border-color 90ms 0ms cubic-bezier(0, 0, 0.2, 1),
         background-color 90ms 0ms cubic-bezier(0, 0, 0.2, 1);
 
-      .md-checkbox__checkmark {
+      .checkbox__checkmark {
         opacity: 1;
       }
 
-      .md-checkbox__mixedmark {
+      .checkbox__mixedmark {
         transform: scaleX(1) rotate(-45deg);
       }
 
-      .md-checkbox__checkmark__path {
+      .checkbox__checkmark__path {
         stroke-dashoffset: 0;
       }
     }
   }
 
   &--checked {
-    &.md-checkbox--focused::after {
+    &.checkbox--focused::after {
       background-color: var(--checkbox-theme-contrast);
     }
   }
@@ -151,11 +151,11 @@
       display: none;
     }
 
-    .md-checkbox__input {
+    .checkbox__input {
       cursor: auto;
     }
 
-    .md-checkbox__background {
+    .checkbox__background {
       border-color: var(--color-app-disable);
     }
 

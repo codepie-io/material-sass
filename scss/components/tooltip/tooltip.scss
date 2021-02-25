@@ -2,7 +2,7 @@
 
 // ==========  ToolTip   ========== //
 
-.md-tooltip {
+.tooltip {
   position: fixed;
   z-index: 1000;
   box-sizing: border-box;
@@ -64,21 +64,21 @@
   &--visible {
     visibility: visible;
 
-    .md-tooltip__surface {
+    .tooltip__surface {
       opacity: 1;
       transform: none;
     }
   }
 
   &--animating {
-    .md-tooltip__surface {
+    .tooltip__surface {
       will-change: opacity, transform;
       @include material-animation-default(.15s);
     }
   }
 
   &--hiding {
-    .md-tooltip__surface {
+    .tooltip__surface {
       transition-duration: 75ms;
     }
   }

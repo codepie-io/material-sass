@@ -2,7 +2,7 @@
 @import "variables";
 // ==========  Button   ========== //
 
-.md-icon-button {
+.icon-button {
   position: relative;
   box-sizing: border-box;
   display: inline-flex;
@@ -96,10 +96,10 @@
   }
 
   &--on {
-    .md-icon-button__icon {
+    .icon-button__icon {
       display: none;
     }
-    .md-icon-button__icon--on {
+    .icon-button__icon--on {
       display: inline-block;
     }
   }

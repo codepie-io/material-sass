@@ -2,7 +2,7 @@
 
 // ==========  Input helper  ========== //
 
-.md-input-helper {
+.input-helper {
   display: flex;
   justify-content: space-between;
   margin-top: 3px;
@@ -39,7 +39,7 @@
   }
 
   &--invalid {
-    .md-input-helper__text--validation-msg {
+    .input-helper__text--validation-msg {
       color: RGB(var(--color-danger));
       opacity: 1;
     }

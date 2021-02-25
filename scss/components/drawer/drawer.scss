@@ -2,7 +2,7 @@
 
 // ==========  Drawer  ========== //
 
-.md-drawer {
+.drawer {
   position: fixed;
   top: 0;
   left: 0;
@@ -97,7 +97,7 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  .md-list-item {
+  .list-item {
     min-height: 40px;
     margin: 8px;
     padding: 0 8px;
@@ -116,20 +116,20 @@
       color: RGBA(var(--color-primary));
       --list-background-hover: rgba(var(--color-primary));
 
-      .md-list-graphic {
+      .list-graphic {
         color: RGBA(var(--color-primary));
       }
     }
   }
 
-  .md-list-graphic {
+  .list-graphic {
     height: 24px;
   }
 
   &--dismissible {
     display: none;
 
-    .md-drawer__surface {
+    .drawer__surface {
       transform: translateX(var(--drawer-surface-translate));
       transform-style: preserve-3d;
       will-change: transform;
@@ -142,11 +142,11 @@
     width: 100vw;
     overflow: hidden;
 
-    .md-drawer__scrim {
+    .drawer__scrim {
       display: block;
     }
 
-    .md-drawer__surface {
+    .drawer__surface {
       z-index: 6;
       box-shadow: var(--elevation-z24);
       transform: translateX(var(--drawer-surface-translate));
@@ -154,30 +154,30 @@
   }
 
   &--opening {
-    .md-drawer__surface {
+    .drawer__surface {
       transition-duration: 250ms;
       transform: translateX(0);
     }
 
-    .md-drawer__scrim {
+    .drawer__scrim {
       opacity: 1;
       transition-duration: 250ms;
     }
   }
 
   &--animate {
-    &.md-drawer--modal,
-    &.md-drawer--dismissible {
+    &.drawer--modal,
+    &.drawer--dismissible {
       display: block;
     }
 
-    .md-drawer__surface {
+    .drawer__surface {
       transition-timing-function: var(--animation-curve-default);
       transition-property: transform;
       transform: translateX(-100%);
     }
 
-    .md-drawer__scrim {
+    .drawer__scrim {
       opacity: 0;
       transition-timing-function: var(--animation-curve-default);
       transition-property: opacity;
@@ -185,35 +185,35 @@
   }
 
   &--open {
-    &.md-drawer--modal,
-    &.md-drawer--dismissible {
+    &.drawer--modal,
+    &.drawer--dismissible {
       display: block;
     }
 
-    .md-drawer__scrim {
+    .drawer__scrim {
       pointer-events: auto;
       opacity: 1;
     }
 
-    .md-drawer__surface {
+    .drawer__surface {
       transform: none;
     }
   }
 
   &--closing {
-    .md-drawer__surface {
+    .drawer__surface {
       transition-duration: 200ms;
       transform: translateX(-100%);
     }
 
-    .md-drawer__scrim {
+    .drawer__scrim {
       opacity: 0;
       transition-duration: 200ms;
     }
   }
 }
 
-.has-fixed-header .md-drawer:not(.md-drawer--modal) {
+.has-fixed-header .drawer:not(.drawer--modal) {
   top: 65px;
   max-height: calc(100vh - 65px);
 }
@@ -231,6 +231,6 @@
   will-change: padding;
 }
 
-.md-drawer-scroll-lock {
+.drawer-scroll-lock {
   overflow: hidden;
 }

@@ -2,7 +2,7 @@
 
 // ==========  Banner   ========== //
 
-.md-banner {
+.banner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,7 +61,7 @@
     margin-right: -8px;
     padding-left: 36px;
 
-    .md-button {
+    .button {
       margin-right: 8px;
 
       &:last-child {
@@ -83,7 +83,7 @@
     align-items: flex-start;
     justify-content: center;
 
-    .md-banner__actions {
+    .banner__actions {
       align-self: flex-end;
       margin-top: 12px;
     }

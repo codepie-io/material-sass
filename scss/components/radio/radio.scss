@@ -3,7 +3,7 @@
 
 // ==========  Radio   ========== //
 
-.md-radio {
+.radio {
   position: relative;
   box-sizing: border-box;
   display: inline-flex;
@@ -49,7 +49,7 @@
     transform: none;
   }
 
-  .md-radio__background {
+  .radio__background {
     position: absolute;
     left: 10px;
     display: inline-block;
@@ -106,12 +106,12 @@
     cursor: inherit;
     opacity: 0;
 
-    &:checked + .md-radio__background {
-      .md-radio__inner-circle {
+    &:checked + .radio__background {
+      .radio__inner-circle {
         transform: scale(.5);
       }
 
-      .md-radio__outer-circle {
+      .radio__outer-circle {
         border-color: var(--radio-theme);
       }
     }
@@ -129,11 +129,11 @@
       display: none;
     }
 
-    .md-radio__outer-circle {
+    .radio__outer-circle {
       border-color: var(--color-app-disable);
     }
 
-    .md-radio__input {
+    .radio__input {
       cursor: auto;
     }
 

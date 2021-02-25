@@ -2,7 +2,7 @@
 
 // ==========  Footer   ========== //
 
-.md-footer {
+.footer {
   color: var(--color-app-text);
   background: var(--color-app-bar);
 
@@ -14,7 +14,7 @@
       flex-direction: row;
       flex-wrap: wrap;
 
-      .md-footer__link {
+      .footer__link {
         margin-right: 24px;
 
         &:last-child {

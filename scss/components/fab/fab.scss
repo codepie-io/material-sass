@@ -2,7 +2,7 @@
 @import "variables";
 // ==========  Button   ========== //
 
-.md-fab {
+.fab {
   position: relative;
   box-sizing: border-box;
   display: inline-flex;
@@ -33,7 +33,7 @@
   will-change: transform, opacity;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-  &:not(.md-fab--extended) {
+  &:not(.fab--extended) {
     --fab-border-radius: 50%;
   }
 
@@ -125,23 +125,23 @@
     padding: 0 20px;
     line-height: 2.25rem;
 
-     .md-fab__icon--trailing {
+     .fab__icon--trailing {
       margin-right: 12px;
       margin-left: -8px;
     }
 
-    .md-fab__icon--leading {
+    .fab__icon--leading {
       margin-right: -8px;
       margin-left: 12px;
     }
   }
 
   &--on {
-    .md-fab__icon {
+    .fab__icon {
       display: none;
     }
 
-    .md-fab__icon--on {
+    .fab__icon--on {
       display: inline-block;
     }
   }

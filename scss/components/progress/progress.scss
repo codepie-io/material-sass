@@ -2,7 +2,7 @@
 
 // ==========  Progress n activity   ========== //
 
-.md-progress {
+.progress {
   position: relative;
   display: none;
   width: 100%;
@@ -61,35 +61,35 @@
   }
 
   &--indeterminate {
-    .md-progress__progressbar {
+    .progress__progressbar {
       animation-name: indeterminate1;
       animation-duration: 2s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
     }
 
-    .md-progress-circle__path {
+    .progress-circle__path {
       animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
     }
 
-    .md-progress-circle {
+    .progress-circle {
       animation: rotator 1.4s linear infinite;
     }
 
-    .md-progress-circle--primary {
-      .md-progress-circle__path {
+    .progress-circle--primary {
+      .progress-circle__path {
         animation: dash 1.4s ease-in-out infinite;
       }
     }
   }
 
   &--buffer {
-    .md-progress__auxbar {
+    .progress__auxbar {
       display: block;
       width: 100%;
     }
 
-    .md-progress__bufferbar {
+    .progress__bufferbar {
       display: inline-block;
       width: auto;
     }
@@ -104,7 +104,7 @@
   }
 }
 
-.md-progress-circle {
+.progress-circle {
   width: auto;
   height: auto;
   transform: scale(1, 1);
@@ -117,18 +117,18 @@
   }
 
   &--primary {
-    .md-progress-circle__path {
+    .progress-circle__path {
       stroke: RGB(var(--color-primary));
     }
   }
 }
 
-.md-progress:not(.md-progress--indeterminate) {
-  .md-progress-circle__path {
+.progress:not(.progress--indeterminate) {
+  .progress-circle__path {
     transition: stroke-dashoffset .2s linear;
   }
 
-  .md-progress-circle {
+  .progress-circle {
     transition: transform 0.2s linear;
   }
 }
