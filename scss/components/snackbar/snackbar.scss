@@ -3,7 +3,7 @@
 
 // ==========  Snackbar  ========== //
 
-.md-snackbar {
+.snackbar {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -44,7 +44,7 @@
   }
 
   &__label {
-    @include md-typography-body1();
+    @include typography-body1();
     flex-grow: 1;
     margin: 0;
     padding: 14px 16px;
@@ -77,17 +77,17 @@
   }
 
   &--stacked {
-    .md-snackbar__surface {
+    .snackbar__surface {
       flex-direction: column;
       align-items: flex-start;
     }
 
-    .md-snackbar__actions {
+    .snackbar__actions {
       align-self: flex-end;
       margin-bottom: 8px;
     }
 
-    .md-snackbar__actions {
+    .snackbar__actions {
       align-self: flex-end;
       margin-bottom: 8px;
     }
@@ -96,7 +96,7 @@
   &--open {
     display: flex;
 
-    .md-snackbar__surface {
+    .snackbar__surface {
       pointer-events: auto;
       opacity: 1;
       transform: none;
@@ -108,7 +108,7 @@
     @include material-animation-default(.3s);
     transition-property: transform, margin;
 
-    .md-snackbar__surface {
+    .snackbar__surface {
       @include material-animation-default(.3s);
       transition-property: opacity;
     }
@@ -117,16 +117,16 @@
 
 @media screen and (max-width: 599px) {
   body.is-snackbar-open {
-    & .md-button--fab.md-button--fixed {
+    & .button--fab.button--fixed {
       transform: translateY(-48px);
     }
 
     &.has-bottom-nav {
-      .md-bottom-nav {
+      .bottom-nav {
         transform: translateY(-48px);
       }
 
-      .md-button--fab.md-button--fixed {
+      .button--fab.button--fixed {
         transform: translateY(-96px);
       }
     }

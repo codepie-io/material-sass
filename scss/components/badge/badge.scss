@@ -2,7 +2,7 @@
 @import "mixin";
 // ==========  Badges  ========== //
 
-.md-badge {
+.badge {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -17,7 +17,7 @@
   user-select: none;
   border-radius: var(--badge-border-radius);
 
-  .md-button & {
+  .button & {
     position: relative;
     top: -1px;
   }

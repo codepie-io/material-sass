@@ -2,7 +2,7 @@
 
 // ==========  Card   ========== //
 
-.md-card {
+.card {
   position: relative;
   z-index: 1;
   box-sizing: border-box;
@@ -33,7 +33,7 @@
     margin-bottom: 0;
     border-radius: 0;
 
-    & .md-card--img-expand {
+    & .card--img-expand {
       min-height: 0;
     }
   }
@@ -41,22 +41,22 @@
   &--image-with-action {
     height: var(--card-width);
 
-    .md-card__actions {
+    .card__actions {
       color: #fff;
       background-color: var(--color-dark-disable);
 
-      & .md-card__action {
+      & .card__action {
         color: #fff;
       }
     }
 
-    .md-card__primary {
+    .card__primary {
       width: 100%;
       color: RGB(var(--color-primary-contrast));
       background-color: var(--color-dark-disable);
 
-      & .md-card__title-text,
-      & .md-card__subtitle-text {
+      & .card__title-text,
+      & .card__subtitle-text {
         color: RGB(var(--color-primary-contrast));
       }
     }
@@ -65,13 +65,13 @@
   &--small {
     width: var(--card-width-sm);
 
-    .md-card--img-expand {
+    .card--img-expand {
       min-height: var(--card-width-sm);
     }
   }
 
   &--wide {
-    .md-card-image__wrapper {
+    .card-image__wrapper {
       padding-right: 24px;
 
       img {
@@ -80,12 +80,12 @@
       }
     }
 
-    .md-card__supporting-text {
+    .card__supporting-text {
       width: 100%;
       padding: 0;
     }
 
-    .md-card__supporting-text {
+    .card__supporting-text {
       text-align: justify;
     }
   }
@@ -123,10 +123,10 @@
       background-position: center left;
     }
 
-    &.md-card--img-expand-lg {
+    &.card--img-expand-lg {
       min-height: 320px;
 
-      & .md-card__title-text--large {
+      & .card__title-text--large {
         font-size: 30px;
       }
     }
@@ -144,18 +144,18 @@
     min-height: 0;
     margin-bottom: 8px;
 
-    .md-card__title {
+    .card__title {
       align-items: flex-start;
       font-size: 15px;
       text-overflow: ellipsis;
       white-space: normal;
     }
 
-    & .md-card__media--xs {
+    & .card__media--xs {
       flex-shrink: 0;
     }
 
-    & .md-card__supporting-text {
+    & .card__supporting-text {
       padding-top: 8px;
       padding-bottom: 8px;
     }
@@ -171,7 +171,7 @@
     min-height: 172px !important;
     margin-bottom: 0;
 
-    .md-card--expand {
+    .card--expand {
       position: relative;
       width: 200px;
       min-height: 172px;
@@ -239,7 +239,7 @@
     display: flex;
     flex-direction: column;
 
-    & .md-card__title-text {
+    & .card__title-text {
       align-self: flex-start;
     }
   }
@@ -257,11 +257,11 @@
     transform-origin: $card-title-transform-origin-x
       $card-title-transform-origin-y;
 
-    &.md-card--border {
+    &.card--border {
       border-bottom: 1px solid $card-border-color;
     }
 
-    & > .md-card__title-text--large {
+    & > .card__title-text--large {
       z-index: 1;
       font-weight: 300;
     }
@@ -300,7 +300,7 @@
     line-height: var(--card-supporting-text-line-height);
     color: var(--color-app-text-secondary);
 
-    .md-card__primary + & {
+    .card__primary + & {
       margin-top: -8px;
       padding-top: 0;
     }
@@ -368,7 +368,7 @@
 
   &__primary {
     padding: $card-vertical-padding $card-horizontal-padding;
-    & > .md-card__title-text--large {
+    & > .card__title-text--large {
       padding-top: 8px;
     }
   }
@@ -394,14 +394,14 @@
   }
 
   &__action-buttons {
-    & + .md-card__action-icons {
+    & + .card__action-icons {
       justify-content: flex-end;
       margin-left: 16px;
     }
   }
 
   &__action-icons {
-    & + .md-card__action-buttons {
+    & + .card__action-buttons {
       justify-content: flex-end;
       margin-left: 16px;
     }
@@ -485,16 +485,16 @@
   }
 }
 
-.md-animation-collapse {
+.animation-collapse {
   transition: all 0.3s ease;
   will-change: tranform;
 }
 
-[aria-expanded="true"].md-animation-collapse {
+[aria-expanded="true"].animation-collapse {
   transform: rotate(180deg);
 }
 
-.md-card--expand.has-overlay::before {
+.card--expand.has-overlay::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -506,8 +506,8 @@
   background: #000;
 }
 
-.md-card--expand.has-gradient-black::before,
-.md-card--img-expand.has-gradient-black::before {
+.card--expand.has-gradient-black::before,
+.card--img-expand.has-gradient-black::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -528,6 +528,6 @@
 }
 
 //wrap the content
-.md-card__content-wrapper {
+.card__content-wrapper {
   height: 0;
 }

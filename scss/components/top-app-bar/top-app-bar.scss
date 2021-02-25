@@ -2,7 +2,7 @@
 
 @import "variables";
 
-.md-top-app-bar {
+.top-app-bar {
   position: relative;
   z-index: 10;
   box-sizing: border-box;
@@ -16,7 +16,7 @@
   background-color: var(--color-app-bar);
   border: none;
 
-  // @include md-animation-default(); TODO
+  // @include animation-default(); TODO
   transition-property: all;
 
   &__navigation-icon {
@@ -46,7 +46,7 @@
     padding: 8px 0 8px 20px;
     text-overflow: ellipsis;
     white-space: nowrap;
-    @include md-typography-headline6();
+    @include typography-headline6();
 
     &--large {
       font-size: 24px;
@@ -111,16 +111,16 @@
   &--dense {
     min-height: var(--top-app-bar-height-phone);
 
-    .md-top-app-bar__row {
+    .top-app-bar__row {
       height: var(--top-app-bar-height-phone);
     }
 
-    .md-top-app-bar__title {
+    .top-app-bar__title {
       padding-top: 10px;
       padding-bottom: 10px;
     }
 
-    .md-top-app-bar__menu-button {
+    .top-app-bar__menu-button {
       top: 4px;
       left: 4px;
     }
@@ -129,17 +129,17 @@
   &--mini {
     min-height: var(--top-app-bar-height-default);
 
-    .md-top-app-bar__row {
+    .top-app-bar__row {
       height: var(--top-app-bar-height-default);
     }
 
-    .md-top-app-bar__title {
+    .top-app-bar__title {
       padding-top: 6px;
       padding-bottom: 6px;
       font-size: 16px;
     }
 
-    .md-top-app-bar__menu-button {
+    .top-app-bar__menu-button {
       top: 2px;
       left: 4px;
     }
@@ -149,16 +149,16 @@
     @media screen and (max-width: $screen-tablet-breakpoint) {
       min-height: var(--top-app-bar-height-phone);
 
-      .md-top-app-bar__row {
+      .top-app-bar__row {
         height: var(--top-app-bar-height-phone);
       }
 
-      .md-top-app-bar__title {
+      .top-app-bar__title {
         padding-top: 10px;
         padding-bottom: 10px;
       }
 
-      .md-top-app-bar__menu-button {
+      .top-app-bar__menu-button {
         top: 4px;
         left: 4px;
       }
@@ -166,7 +166,7 @@
   }
 
   &--navigation-icon-tablet-only {
-    .md-top-app-bar__navigation-icon {
+    .top-app-bar__navigation-icon {
       display: none;
       @media screen and (max-width: $screen-tablet-breakpoint) {
         display: block;
@@ -175,30 +175,30 @@
   }
 
   &--prominent {
-    .md-top-app-bar__row {
+    .top-app-bar__row {
     }
 
-    .md-top-app-bar__navigation-icon,
-    .md-top-app-bar__brand,
-    .md-top-app-bar__action-item {
+    .top-app-bar__navigation-icon,
+    .top-app-bar__brand,
+    .top-app-bar__action-item {
       align-self: flex-start;
     }
 
-    .md-top-app-bar__title {
+    .top-app-bar__title {
       margin-top: 60px;
     }
 
     @media (max-width: 599px) {
-      .md-top-app-bar--prominent .md-top-app-bar__title {
+      .top-app-bar--prominent .top-app-bar__title {
         padding-bottom: 6px;
       }
     }
   }
 
-  .md-nav {
+  .nav {
     min-height: 48px;
 
-    & > .md-nav-item {
+    & > .nav-item {
       text-transform: none;
     }
   }

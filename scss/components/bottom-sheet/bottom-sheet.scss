@@ -2,7 +2,7 @@
 
 // ==========  Bottom Sheets  ========== //
 
-.md-bottom-sheet {
+.bottom-sheet {
   position: fixed;
   top: 0;
   left: 0;
@@ -73,13 +73,13 @@
     display: flex;
     pointer-events: auto;
 
-    & .md-bottom-sheet__scrim {
+    & .bottom-sheet__scrim {
       z-index: 4;
       pointer-events: auto;
       opacity: 1;
     }
 
-    & .md-bottom-sheet__surface {
+    & .bottom-sheet__surface {
       transform: none;
     }
   }
@@ -87,24 +87,24 @@
   &--animating {
     display: flex;
 
-    .md-bottom-sheet__scrim {
+    .bottom-sheet__scrim {
       z-index: 4;
     }
 
-    .md-bottom-sheet__surface {
+    .bottom-sheet__surface {
       @include material-animation-default(.3s);
 
       transition-property: transform;
     }
 
-    /* &--open .md-bottom-sheet__surface {
+    /* &--open .bottom-sheet__surface {
       @include material-animation-default(.3s);
       transition-property: transform;
       will-change: transform;
     }
     */
 
-    .md-bottom-sheet__scrim {
+    .bottom-sheet__scrim {
       @include material-animation-default(.3s);
 
       transition-property: opacity;
@@ -119,14 +119,14 @@
     height: auto;
     max-height: 100%;
 
-    & .md-bottom-sheet__scrim {
+    & .bottom-sheet__scrim {
       display: none;
       pointer-events: none;
     }
   }
 
   &--full-width {
-    .md-bottom-sheet__surface {
+    .bottom-sheet__surface {
       width: 100%;
       max-width: 100%;
 
@@ -138,12 +138,12 @@
   }
 
   &--full-height {
-    .md-bottom-sheet__surface {
+    .bottom-sheet__surface {
       max-height: 100vh;
     }
   }
 }
 
-.md-bottom-sheet-scroll-lock {
+.bottom-sheet-scroll-lock {
   overflow: hidden;
 }

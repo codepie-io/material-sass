@@ -2,7 +2,7 @@
 
 // ==========  Jumbotron  ========== //
 
-.md-jumbotron {
+.jumbotron {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,10 +12,10 @@
   &__title {
     margin-bottom: 8px;
 
-    @include md-typography-headline3;
+    @include typography-headline3;
 
     @media (max-width: 959px) {
-      @include md-typography-headline4;
+      @include typography-headline4;
     }
   }
 
@@ -37,11 +37,11 @@
     min-height: 136px;
     --jumbotron-padding-y: 24px;
 
-    .md-jumbotron__title {
-      @include md-typography-headline4;
+    .jumbotron__title {
+      @include typography-headline4;
 
       @media (max-width: 959px) {
-        @include md-typography-headline5;
+        @include typography-headline5;
       }
     }
   }

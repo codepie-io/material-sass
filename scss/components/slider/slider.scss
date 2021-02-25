@@ -1,7 +1,7 @@
 @import "variables";
 // ==========  Slider   ========== //
 
-.md-slider {
+.slider {
   position: relative;
   width: 100%;
   height: 48px;
@@ -13,7 +13,7 @@
   &:focus {
     outline: none;
 
-    &:not(.md-slider--active) .md-slider__track {
+    &:not(.slider--active) .slider__track {
       transition: transform 80ms ease;
     }
   }
@@ -138,69 +138,69 @@
   }
 
   &--active {
-    .md-slider__thumb {
+    .slider__thumb {
       -webkit-transform: scale3d(1, 1, 1);
       transform: scale3d(1, 1, 1);
     }
   }
 
   &--discrete {
-    &.md-slider--active {
-      .md-slider__pin {
+    &.slider--active {
+      .slider__pin {
         transform: rotate(-45deg) scale(1) translate(19px, -20px);
       }
     }
 
-    &.md-slider--focus {
-      .md-slider__thumb {
+    &.slider--focus {
+      .slider__thumb {
         animation: none;
       }
     }
   }
 
   &--focus {
-    .md-slider__thumb {
-      animation: md-slider-emphasize 266.67ms linear;
+    .slider__thumb {
+      animation: slider-emphasize 266.67ms linear;
     }
 
-    .md-slider__focus-ring {
+    .slider__focus-ring {
       opacity: 0.25;
       transform: scale3d(1.55, 1.55, 1.55);
     }
   }
 
   &--in-transit {
-    .md-slider__thumb {
+    .slider__thumb {
       transition-delay: 140ms;
     }
   }
 
   &--disabled {
-    .md-slider__track {
+    .slider__track {
       background-color: #9a9a9a;
     }
 
-    .md-slider__track-container {
+    .slider__track-container {
       background-color: rgba(154, 154, 154, 0.26);
     }
 
-    .md-slider__track-marker::after,
-    .md-slider__track-marker-container::after {
+    .slider__track-marker::after,
+    .slider__track-marker-container::after {
       background-color: #9a9a9a;
     }
 
-    .md-slider__thumb {
+    .slider__thumb {
       fill: #9a9a9a;
       stroke: #9a9a9a;
     }
 
-    .md-slider__thumb {
+    .slider__thumb {
       stroke: white;
     }
   }
 }
 
-@keyframes md-slider-emphasize {
+@keyframes slider-emphasize {
   0% {
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;

@@ -2,7 +2,7 @@
 @import "variables";
 // ==========  Chips   ========== //
 // material-icons mdc-chip__icon mdc-chip__icon--leading
-.md-icon {
+.icon {
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -12,17 +12,17 @@
   fill: currentColor;
 }
 
-.md-chip-set {
+.chip-set {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   padding: 4px;
-  .md-chip {
+  .chip {
     margin: 4px;
   }
 }
 
-.md-chip {
+.chip {
   position: relative;
   box-sizing: border-box;
   display: inline-flex;
@@ -109,7 +109,7 @@
     margin-left: 2px;
     background: rgba(0, 0, 0, 0.3);
 
-    .md-icon-button__icon {
+    .icon-button__icon {
       width: 24px;
       height: 24px;
       margin-right: 0;
@@ -142,11 +142,11 @@
     line-height: 24px;
     border-radius: 12px;
 
-    .md-chip__content {
+    .chip__content {
       font-size: 12px;
     }
 
-    .md-chip__avatar {
+    .chip__avatar {
       width: 24px;
       height: 24px;
       font-size: 13px;

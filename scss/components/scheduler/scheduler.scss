@@ -1,10 +1,10 @@
 @import "variables";
 // ==========  Date Picker   ========== //
 
-.md-scheduler {
+.scheduler {
 }
 
-.md-scheduler-table {
+.scheduler-table {
   margin: 0;
   overflow: hidden;
   flex: 1 1 0;
@@ -18,7 +18,7 @@
     flex-shrink: 0;
     flex-basis: 48px;
     background-color: var(--color-app-bar);
-    .md-scheduler-day__text {
+    .scheduler-day__text {
       font-weight: 600;
     }
   }
@@ -44,7 +44,7 @@
 
 }
 
-.md-scheduler-data {
+.scheduler-data {
   position: absolute;
   top: 0;
   right: 0;
@@ -61,7 +61,7 @@
   }
 }
 
-.md-scheduler-day {
+.scheduler-day {
   width: 100%;
   text-align: right;
   &__text {
@@ -80,7 +80,7 @@
   }
 }
 
-.md-appointment-wrapper {
+.appointment-wrapper {
   margin-top: 30px;
   flex: 1 1 0;
   &--time {
@@ -88,7 +88,7 @@
   }
 }
 
-.md-appointment {
+.appointment {
   display: flex;
   position: relative;
   overflow: hidden;
@@ -104,7 +104,7 @@
   }
 }
 
-.md-scheduler-event {
+.scheduler-event {
   position: absolute;
   height: 24px;
   padding-left: 8px;
@@ -151,7 +151,7 @@
   }
 }
 
-.md-time-scheduler {
+.time-scheduler {
   background-color: #fff;
   height: 100%;
   overflow: hidden;
@@ -215,7 +215,7 @@
   }
 }
 
-.md-time-scheduler-data {
+.time-scheduler-data {
   position: relative;
   width: 100%;
   height: 100%;
@@ -223,7 +223,7 @@
   border-top: #dadce0 1px solid;
 }
 
-.md-time-scheduler-time {
+.time-scheduler-time {
   position: relative;
   height: 40px;
   padding-right: 8px;
@@ -239,13 +239,13 @@
   }
 
   &:first-child {
-    .md-time-scheduler-time__text {
+    .time-scheduler-time__text {
       display: none;
     }
   }
 }
 
-.md-time-scheduler-table {
+.time-scheduler-table {
   overflow-x: auto;
   display: flex;
   align-items: flex-start;

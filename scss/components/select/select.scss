@@ -2,7 +2,7 @@
 
 // ==========  Select  ========== //
 
-.md-select {
+.select {
   position: relative;
   display: inline-flex;
   width: 100%;
@@ -77,7 +77,7 @@
     appearance: none;
   }
 
-  .md-floating-label {
+  .floating-label {
     top: 21px;
     right: auto;
     left: 16px;
@@ -89,10 +89,10 @@
     }
   }
 
-  &:not(.md-select--focused):not(.md-select--invalid) .md-select__native-control:hover {
+  &:not(.select--focused):not(.select--invalid) .select__native-control:hover {
     border-color: var(--color-app-text);
 
-    ~ .md-notched {
+    ~ .notched {
       --notched-border-color: var(--color-app-text)
     }
   }
@@ -118,8 +118,8 @@
       content: none;
     }
 
-    .md-select__native-control,
-    .md-select__selected-text {
+    .select__native-control,
+    .select__selected-text {
       z-index: 1;
       display: flex;
       padding: 12px 52px 12px 16px;
@@ -128,11 +128,11 @@
       border-radius: 4px;
     }
 
-    .md-select__selected-text {
+    .select__selected-text {
       padding-top: 14px;
     }
 
-    .md-floating-label {
+    .floating-label {
       position: relative;
       top: 17px;
       right: auto;
@@ -143,7 +143,7 @@
       pointer-events: auto;
     }
 
-    .md-floating-label--float-above {
+    .floating-label--float-above {
       max-width: 133.33333%;
       text-overflow: clip;
       transform: translateY(-130%) scale(.75);
@@ -158,17 +158,17 @@
     --notched-border-color: RGB(var(--color-primary));
     --notched-border-width: 2px;
 
-    .md-floating-label {
+    .floating-label {
       color: RGB(var(--color-primary));
     }
 
-    .md-select__dropdown-icon {
+    .select__dropdown-icon {
       @include material-animation-default(.15s);
       transition-property: transform;
       transform: rotate(180deg) translateY(-5px);
     }
 
-    .md-line-ripple {
+    .line-ripple {
       opacity: 1;
       transform: none;
     }
@@ -182,11 +182,11 @@
   &--invalid {
     --line-ripple-background: RGB(var(--color-danger));
 
-    .md-floating-label {
+    .floating-label {
       color: RGB(var(--color-danger));
     }
 
-    .md-select__native-control {
+    .select__native-control {
       border-bottom-color: RGB(var(--color-danger));
     }
   }

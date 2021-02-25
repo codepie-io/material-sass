@@ -2,7 +2,7 @@
 
 // ==========  Table   ========== //
 
-.md-table {
+.table {
   position: relative;
   width: 100%;
   font-size: var(--table-font-size);
@@ -39,7 +39,7 @@
   }
 
   &--gray {
-    .md-table-row__cell {
+    .table-row__cell {
       color: var(--color-app-text);
     }
   }
@@ -47,7 +47,7 @@
   &--accent {
     background-color: RGB(var(--color-accent));
 
-    .md-table-row__cell--header {
+    .table-row__cell--header {
       color: RGB(var(--color-accent-contrast));
     }
   }
@@ -55,19 +55,19 @@
   &--primary {
     background-color: RGB(var(--color-primary));
 
-    .md-table-row__cell--header {
+    .table-row__cell--header {
       color: RGB(var(--color-primary-contrast));
     }
   }
 
   &--strip {
-    .md-table-row:nth-of-type(2n) {
+    .table-row:nth-of-type(2n) {
       background-color: var(--table-selection-color);
     }
   }
 }
 
-.md-table-row {
+.table-row {
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -95,7 +95,7 @@
     padding: 4px 16px;
     color: var(--color-app-text);
     word-wrap: break-word;
-    @include md-typography-body2();
+    @include typography-body2();
 
     &--numeric {
       text-align: right;
@@ -105,13 +105,13 @@
   &--header {
     height: 56px;
 
-    .md-table-row__cell {
+    .table-row__cell {
       font-weight: 500;
       color: var(--color-app-text);
     }
 
-    &.md-table-row,
-    &.md-table-row:hover {
+    &.table-row,
+    &.table-row:hover {
       background-color: transparent;
     }
   }

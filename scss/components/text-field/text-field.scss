@@ -2,7 +2,7 @@
 
 // ==========  Text fields   ========== //
 
-.md-text-field {
+.text-field {
   --floating-label-color: var(--color-app-text-secondary);
 
   position: relative;
@@ -17,14 +17,14 @@
   will-change: opacity, transform;
   -webkit-tap-highlight-color: transparent;
 
-  &:not(.md-text-field--outlined) .md-floating-label {
+  &:not(.text-field--outlined) .floating-label {
     top: 18px;
     right: auto;
     left: 16px;
     pointer-events: none;
   }
 
-  .md-text-field__icon {
+  .text-field__icon {
     color: var(--color-app-text-secondary);
   }
 
@@ -86,14 +86,14 @@
     -moz-appearance: none;
     appearance: none;
 
-    &:required ~ .md-floating-label::after,
-    &:required ~ .md-notched .md-floating-label::after {
+    &:required ~ .floating-label::after,
+    &:required ~ .notched .floating-label::after {
       margin-left: 1px;
       content: "*";
     }
   }
 
-  + .md-input-helper {
+  + .input-helper {
     padding-right: 16px;
     padding-left: 16px;
   }
@@ -119,38 +119,38 @@
 
   &--with-leading-icon,
   &--with-trailing-icon {
-    .md-text-field__icon {
+    .text-field__icon {
       position: absolute;
       bottom: 16px;
       cursor: pointer;
     }
   }
 
-  &.md-text-field--with-leading-icon {
-    .md-text-field__input {
+  &.text-field--with-leading-icon {
+    .text-field__input {
       padding-left: 48px;
     }
 
-    .md-floating-label {
+    .floating-label {
       left: 48px;
     }
 
-    .md-text-field__icon {
+    .text-field__icon {
       right: auto;
       left: 16px;
     }
 
-    + .md-input-helper {
+    + .input-helper {
       padding-left: 48px;
     }
   }
 
-  &.md-text-field--with-trailing-icon {
-    .md-text-field__input {
+  &.text-field--with-trailing-icon {
+    .text-field__input {
       padding-right: 48px;
     }
 
-    .md-text-field__icon {
+    .text-field__icon {
       right: 16px;
       left: auto;
     }
@@ -159,11 +159,11 @@
   /* Psuedo state */
 
   &:hover {
-    .md-text-field__input {
+    .text-field__input {
       border-color: var(--color-app-text);
     }
 
-    .md-notched__outline {
+    .notched__outline {
       border-color: var(--color-app-text);
     }
   }
@@ -180,7 +180,7 @@
       content: none;
     }
 
-    .md-text-field__input {
+    .text-field__input {
       z-index: 1;
       display: flex;
       width: 100%;
@@ -189,17 +189,17 @@
       border: none;
     }
 
-    .md-text-field__icon {
+    .text-field__icon {
       z-index: 2;
     }
 
-    &.md-text-field--with-leading-icon {
-      .md-floating-label {
+    &.text-field--with-leading-icon {
+      .floating-label {
         right: auto;
         left: 36px;
       }
 
-      .md-floating-label--float-above {
+      .floating-label--float-above {
         transform: translateY(-130%) translateX(-32px) scale(.75);
       }
     }
@@ -211,8 +211,8 @@
     --floating-label-color: RGB(var(--color-primary));
     --line-ripple-background: RGB(var(--color-primary));
 
-    .md-text-field__input:required ~ .md-floating-label::after,
-    .md-text-field__input:required ~ .md-notched .md-floating-label::after {
+    .text-field__input:required ~ .floating-label::after,
+    .text-field__input:required ~ .notched .floating-label::after {
       color: #d50000;
     }
 
@@ -231,12 +231,12 @@
   &--dense {
     height: 48px;
 
-    .md-floating-label {
+    .floating-label {
       bottom: 16px;
       font-size: 15px;
     }
 
-    .md-text-field__help-text {
+    .text-field__help-text {
       bottom: -4px;
     }
   }
@@ -244,7 +244,7 @@
   &--textarea {
     height: auto;
 
-    .md-text-field__input {
+    .text-field__input {
       align-self: auto;
       height: auto;
       margin: 8px 1px 1px 0;
@@ -254,7 +254,7 @@
   }
 
   &--disabled {
-    .md-floating-label {
+    .floating-label {
       color: var(--color-app-disable);
     }
   }

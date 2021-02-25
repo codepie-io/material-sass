@@ -2,18 +2,18 @@
 
 // ==========  Nav   ========== //
 
-.md-tab-link {
+.tab-link {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.md-nav-bar {
+.nav-bar {
   width: 100%;
 }
 
-.md-nav-scroller {
+.nav-scroller {
   overflow-y: hidden;
 
   &__scroll-area {
@@ -34,7 +34,7 @@
   }
 }
 
-.md-nav-indicator {
+.nav-indicator {
   display: flex;
   position: absolute;
   top: 0;
@@ -59,13 +59,13 @@
   }
 
   &--active {
-    .md-nav-indicator__content {
+    .nav-indicator__content {
       opacity: 1;
     }
   }
 }
 
-.md-nav-item {
+.nav-item {
   position: relative;
   display: flex;
   flex: 0 0 auto;
@@ -111,7 +111,7 @@
     padding-left: 12px;
   }
 
-  // todo @include md-animation-default();
+  // todo @include animation-default();
 
   & .material-icons {
     vertical-align: middle;
@@ -128,7 +128,7 @@
 
   &--active {
     color: var(--nav-active-color);
-    .md-nav-indicator__content {
+    .nav-indicator__content {
       opacity: 1;
     }
   }
@@ -145,7 +145,7 @@
   }
 }
 
-.md-nav {
+.nav {
   display: flex;
   flex-flow: row nowrap;
   margin: 0;
@@ -153,7 +153,7 @@
   list-style: none;
 
   &--has-gap {
-    &:not(.md-nav--column) .md-nav-item {
+    &:not(.nav--column) .nav-item {
       margin-right: 8px;
       margin-left: 8px;
       &:first-child {
@@ -164,7 +164,7 @@
       }
     }
 
-    &.md-nav--column .md-nav-item {
+    &.nav--column .nav-item {
       margin-top: 8px;
       margin-bottom: 8px;
       &:first-child {
@@ -177,7 +177,7 @@
   }
 
   &--hover-effect {
-    > .md-nav-item {
+    > .nav-item {
       position: relative;
       &::before,
       &::after {
@@ -208,14 +208,14 @@
   }
 
   &--dense {
-    > .md-nav-item {
+    > .nav-item {
       min-width: 0;
       height: 40px;
     }
   }
 
   &--compact {
-    > .md-nav-item {
+    > .nav-item {
       padding-right: 16px;
       padding-left: 16px;
     }
@@ -223,7 +223,7 @@
 
   &--column {
     flex-direction: column;
-    > .md-nav-item {
+    > .nav-item {
       padding-right: 16px;
       padding-left: 16px;
       text-align: left;
@@ -231,53 +231,53 @@
   }
 
   &--submenu {
-    &.md-nav--column > .md-nav-item {
+    &.nav--column > .nav-item {
       padding-left: 32px;
     }
   }
 
   &--stretch {
-    > .md-nav-item {
+    > .nav-item {
       flex: 1 0 auto;
     }
   }
 
   // Pills
   &--pills {
-    .md-nav-item {
+    .nav-item {
       border-radius: 2px;
     }
   }
 
   &--pills-raised {
-    .md-nav-item--active {
+    .nav-item--active {
       box-shadow: var(--elevation-z2);
     }
   }
 
   &--pills-primary {
-    .md-nav-item--active {
+    .nav-item--active {
       color: RGB(var(--color-primary-contrast));
       background-color: RGB(var(--color-primary));
     }
   }
 
   &--pills-accent {
-    .md-nav-item--active {
+    .nav-item--active {
       color: RGB(var(--color-accent-contrast));
       background-color: RGB(var(--color-accent));
     }
   }
 
   &--pills-dark {
-    .md-nav-item--active {
+    .nav-item--active {
       color: RGB(var(--color-dark-contrast));
       background-color: RGB(var(--color-dark));
     }
   }
 
   &--pills-light {
-    .md-nav-item--active {
+    .nav-item--active {
       color: RGB(var(--color-light-contrast));
       background-color: RGB(var(--color-light));
     }

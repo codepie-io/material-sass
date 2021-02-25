@@ -2,7 +2,7 @@
 
 // ==========  Bottom Navigation  ========== //
 
-.md-bottom-nav {
+.bottom-nav {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -44,11 +44,11 @@
     &--icon-only {
       justify-content: center;
 
-      .md-bottom-nav__icon {
+      .bottom-nav__icon {
         padding-top: 0;
       }
 
-      .md-bottom-nav__text {
+      .bottom-nav__text {
         display: none;
       }
     }
@@ -68,7 +68,7 @@
     color: RGB(var(--color-primary-contrast));
     background: RGB(var(--color-primary));
 
-    .md-bottom-nav__item {
+    .bottom-nav__item {
       &--active {
         color: RGB(var(--color-primary-contrast));
       }
@@ -79,7 +79,7 @@
 body.has-bottom-nav {
   padding-bottom: var(--bottom-tab-height);
 
-  .md-button--fab.md-button--fixed {
+  .button--fab.button--fixed {
     transform: translateY(-$bottom-tab-height);
   }
 }

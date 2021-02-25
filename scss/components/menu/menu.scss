@@ -2,30 +2,30 @@
 
 // ==========  Menu   ========== //
 
-.md-menu {
+.menu {
   min-width: 112px;
   overflow-y: auto;
 
-  .md-list-item {
+  .list-item {
     cursor: pointer;
     user-select: none;
   }
 
-  a.md-list-item .md-list-content,
-  a.md-list-item .md-list-graphic {
+  a.list-item .list-content,
+  a.list-item .list-graphic {
     pointer-events: none;
   }
 
-  .md-list-item--disabled {
+  .list-item--disabled {
     cursor: auto;
   }
 
-  .md-list-divider {
+  .list-divider {
     margin: 8px 0;
   }
 
   &--dense {
-    .md-list-item {
+    .list-item {
       height: 32px;
       min-height: 32px;
       font-size: 13px;

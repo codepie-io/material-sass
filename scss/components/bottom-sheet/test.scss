@@ -2,7 +2,7 @@
 
 // ==========  Bottom Sheets  ========== //
 
-.md-bottom-sheet {
+.bottom-sheet {
   position: fixed;
   top: 0;
   left: 0;
@@ -73,13 +73,13 @@
     pointer-events: auto;
     z-index: 20;
 
-    & .md-bottom-sheet__shadow {
+    & .bottom-sheet__shadow {
       opacity: 1;
       pointer-events: auto;
       z-index: 4;
     }
 
-    & .md-bottom-sheet__surface {
+    & .bottom-sheet__surface {
       transform: translateX(0);
     }
 
@@ -89,22 +89,22 @@
 
     z-index: 20;
 
-    .md-bottom-sheet__shadow {
+    .bottom-sheet__shadow {
       z-index: 4;
     }
 
-    .md-bottom-sheet__surface {
+    .bottom-sheet__surface {
       @include material-animation-default(0.3s);
       transition-property: transform;
     }
 
-    &--visible .md-bottom-sheet__surface {
+    &--visible .bottom-sheet__surface {
       @include material-animation-default(0.3s);
       transition-property: transform;
       will-change: transform;
     }
 
-    & .md-bottom-sheet__shadow {
+    & .bottom-sheet__shadow {
       @include material-animation-default(0.3s);
       transition-property: opacity;
       will-change: opacity;
@@ -119,7 +119,7 @@
     bottom: 0;
     z-index: 5;
 
-    & .md-bottom-sheet__shadow {
+    & .bottom-sheet__shadow {
       display: none;
       pointer-events: none;
     }
@@ -127,7 +127,7 @@
 
   &--full-width {
 
-    .md-bottom-sheet__surface {
+    .bottom-sheet__surface {
       max-width: 100% !important;
       width: 100% !important;
     }
@@ -135,14 +135,14 @@
 
   &--full-height {
 
-    .md-bottom-sheet__surface {
+    .bottom-sheet__surface {
       max-height: 100%;
     }
   }
 
 }
 
-.md-bottom-sheet-navigation {
+.bottom-sheet-navigation {
   display: flex;
   flex-direction: column;
 
@@ -182,11 +182,11 @@
   }
 }
 
-.md-bottom-sheet-grid {
+.bottom-sheet-grid {
 
 }
 
-.md-bottom-sheet-header {
+.bottom-sheet-header {
   line-height: 56px;
   font-size: 16px;
   color: rgba(0, 0, 0, .54);
@@ -197,13 +197,13 @@
     padding: 0 24px;
   }
 
-  & + .md-bottom-sheet-grid .md-bottom-sheet-grid__row:first-child {
+  & + .bottom-sheet-grid .bottom-sheet-grid__row:first-child {
     margin-top: 0;
   }
 
 }
 
-.md-bottom-sheet-grid {
+.bottom-sheet-grid {
   display: flex;
   flex-direction: column;
 
@@ -225,7 +225,7 @@
   display: flex;
   flex-direction: column;
 
-  & .md-button--icon {
+  & .button--icon {
     height: 48px;
     width: 48px;
     border-radius: 0;
@@ -255,9 +255,9 @@ body.is-bsheet-open:not(.has-bsheet-persistent) {
 
 //Effect on other components
 
-.md-bottom-sheet {
-  & .md-list {
-    .md-list__item-icon {
+.bottom-sheet {
+  & .list {
+    .list__item-icon {
       height: 48px;
       width: 24px;
       line-height: 48px;
@@ -265,7 +265,7 @@ body.is-bsheet-open:not(.has-bsheet-persistent) {
       font-size: 24px;
     }
 
-    .md-list__item-content {
+    .list__item-content {
       margin-left: 16px;
     }
   }

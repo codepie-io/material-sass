@@ -1,6 +1,6 @@
 // ==========  Tabs   ========== //
 
-.md-tabs {
+.tabs {
   display: block;
   width: 100%;
 
@@ -22,10 +22,10 @@
   }
 
   &--stretch {
-    & .md-tabs__tab-bar {
+    & .tabs__tab-bar {
       flex-grow: 1;
     }
-    & .md-tabs__tab {
+    & .tabs__tab {
       flex: 1 1 0;
       text-align: center;
     }
@@ -39,7 +39,7 @@
   }
 
   &--color-light-light {
-    .md-tabs__tab {
+    .tabs__tab {
       color: $tab-light-text-color;
 
       &.is-active,
@@ -50,7 +50,7 @@
   }
 
   &--color-light-primary {
-    .md-tabs__tab {
+    .tabs__tab {
       color: $tab-light-text-color;
 
       &.is-active,
@@ -61,7 +61,7 @@
   }
 
   &--color-dark-primary {
-    .md-tabs__tab {
+    .tabs__tab {
       color: $tab-dark-text-color;
 
       &.is-active,
@@ -119,7 +119,7 @@
       background: $tab-highlight-light-color;
     }
 
-    .md-tabs.is-animating & {
+    .tabs.is-animating & {
       transition: all 0.2s cubic-bezier(0.4, 0.0, 1, 1);
     }
   }
@@ -146,12 +146,12 @@
     overflow: hidden;
     transition: color 0.2s cubic-bezier(0.4, 0.0, 1, 1);
 
-    /*.md-tabs  &.is-active,
-    .md-tabs  &:hover {
+    /*.tabs  &.is-active,
+    .tabs  &:hover {
       color: $tab-active-text-color;
     }*/
 
-    & .md-tabs__ripple-container {
+    & .tabs__ripple-container {
       display: block;
       position: absolute;
       height: 100%;
@@ -161,7 +161,7 @@
       z-index: 1;
       overflow: hidden;
 
-      & .md-ripple {
+      & .ripple {
         background: $tab-highlight-color;
       }
     }
@@ -184,49 +184,49 @@
   &__wrapper-inner {
     display: flex;
     flex-direction: row;
-    .md-tabs__wrapper-outer.is-animating & {
+    .tabs__wrapper-outer.is-animating & {
       transition: transform 0.2s cubic-bezier(0.4, 0.0, 1, 1);
     }
   }
 
 }
 
-.md-tabs__tab-bar--has-title {
+.tabs__tab-bar--has-title {
   position: relative;
 }
 
-.md-tabs__tab--white {
+.tabs__tab--white {
   background-color: #FFF;
   color: rgba(0, 0, 0, .50);
 }
 
-.md-tabs__tab--diff {
+.tabs__tab--diff {
   &.is-active {
     color: rgba(0, 0, 0, 1);
   }
-  .md-tabs &.is-active,
-  .md-tabs &:focus,
-  .md-tabs &:hover {
+  .tabs &.is-active,
+  .tabs &:focus,
+  .tabs &:hover {
     color: unquote("rgb(#{$color-primary})");
   }
-  .md-tabs &.is-active:after,
-  .md-tabs &:hover:after {
+  .tabs &.is-active:after,
+  .tabs &:hover:after {
     background: unquote("rgb(#{$color-primary})");
   }
 }
 
-.md-tabs__tab--grey {
+.tabs__tab--grey {
   padding: 0 8px;
-  .md-tabs &:focus,
-  .md-tabs &:hover {
+  .tabs &:focus,
+  .tabs &:hover {
     color: $button-primary-color;
   }
-  .md-tabs &:hover:after {
+  .tabs &:hover:after {
     background: $button-primary-color;
   }
 }
 
-.md-tabs__tab--title {
+.tabs__tab--title {
   position: absolute;
   top: 0;
   left: 0;
